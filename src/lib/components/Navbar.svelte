@@ -21,7 +21,7 @@
 <svelte:window on:click={handleClickOutside} />
 
 <!-- src/lib/components/Navbar.svelte -->
-<nav class="bg-white shadow">
+<nav class="bg-white drop-shadow-lg z-60">
     <div class="mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between h-16">
         <div class="flex w-full">
@@ -30,9 +30,9 @@
             <img 
             src="/page-home-lubkitalogo-icon.png" 
             alt="Lubkita Logo" 
-            class="h-16 w-auto mr-2"
+            class="h-10 md:h-16 w-auto mr-3"
             />
-            <a href="/" class="text-xl font-bold">LUMBUNG DIGITAL RAKYAT</a>
+            <a href="/" class="md:text-xl text-base font-bold">LUMBUNG DIGITAL RAKYAT</a>
         </div>
 
         <!-- Desktop Navigation -->
@@ -42,7 +42,7 @@
             </a>
 
             <!-- About Dropdown -->
-            <div class="relative about-dropdown group h-16 flex items-center justify-center mx-auto"> <!-- Added h-16 and flex items-center -->
+            <div class="relative about-dropdown group h-16 flex items-center justify-center mx-auto"> <!-- Ensure this is relative -->
             <button 
                 class="text-gray-500 hover:text-gray-900 inline-flex items-center px-1 text-sm font-medium border-b-2 border-transparent group-hover:border-gray-300"
             >
@@ -51,7 +51,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
             </button>
-            <div class="invisible group-hover:visible absolute z-10 top-16 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 group-hover:opacity-100 transition-all duration-200">
+            <div class="invisible group-hover:visible absolute z-40 top-16 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 group-hover:opacity-100 transition-all duration-200"> <!-- Changed z-30 to z-40 -->
                 <div class="py-1">
                 <a href="/paket-kami/paket-gold" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Paket Gold</a>
                 <div class="w-full border-t border-gray"></div>
@@ -63,7 +63,7 @@
             </div>
 
             <!-- Contact Dropdown -->
-            <div class="relative contact-dropdown group h-16 flex items-center"> <!-- Added h-16 and flex items-center -->
+            <div class="relative contact-dropdown group h-16 flex items-center"> <!-- Ensure this is relative -->
             <button 
                 class="text-gray-500 hover:text-gray-900 inline-flex items-center px-1 text-sm font-medium border-b-2 border-transparent group-hover:border-gray-300"
             >
@@ -72,7 +72,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
             </button>
-            <div class="invisible group-hover:visible absolute z-10 top-16 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 group-hover:opacity-100 transition-all duration-200">
+            <div class="invisible group-hover:visible absolute z-30 top-16 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 group-hover:opacity-100 transition-all duration-200"> <!-- Changed z-20 to z-30 -->
                 <div class="py-1">
                 <a href="/tentang-kami/visi-misi" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Visi & Misi</a>
                 <div class="w-full border-t border-gray"></div>

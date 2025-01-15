@@ -8,10 +8,10 @@
              style="background-image: url('/page-home-header1.jpg')">
             <div class="flex flex-col md:flex-row md:space-x-32">
                 <div class="w-full md:w-1/2 flex flex-col p-4 md:p-9">
-                    <div class="text-3xl md:text-5xl font-bold text-white">
+                    <div class="text-xl md:text-4xl font-bold text-white md:pt-0 pt-48">
                         Lumbung Digital Rakyat (LDR) Mitra sukses pengusaha desa.
                     </div>
-                    <div class="text-xl md:text-2xl text-white my-5 md:my-10 pt-48 md:pt-20">
+                    <div class="text-sm md:text-2xl text-white my-5 md:my-10 md:pt-20">
                         Lumbung Digital Rakyat (LDR), kunci sukses dalam memperluas jangkauan bisnis anda di Lubkita.com, platform dikhususkan untuk mengembangkan memberdayakan ekonomi lokal dalam digitalisasi dan pelatihan.
                     </div>
                     <div class="flex space-x-10">
@@ -19,7 +19,7 @@
 
 
 
-                    <a href="/pendaftaran" class="text-2xl md:text-3xl text-center p-3 bg-yellow-400 rounded-2xl font-bold w-full md:w-1/2 flex flex-col justify-center">
+                    <a href="/pendaftaran" class="text-xl md:text-3xl text-center p-1 md:p-3 bg-yellow-400 rounded-2xl font-bold w-full md:w-2/3 flex flex-col justify-center">
                         Pendaftaran
                     </a>
 
@@ -29,7 +29,7 @@
                     </div>
                 </div>
 
-                <div class="w-full md:w-1/2 mt-6 md:mt-0 h-full flex flex-col justify-center text-right md:pl-32 md:pt-32"> 
+                <div class="w-full md:w-1/2 md:mt-0 h-full md:flex hidden flex-col justify-center text-right md:pl-32 md:pt-32"> 
                     <video 
                         class="w-full rounded-lg shadow-lg"
                         controls
@@ -43,7 +43,19 @@
                 </div>
             </div>
         </div>
-
+        <div class="w-11/12 md:hidden h-full flex mt-10 mx-auto"> 
+            <video 
+                class="w-full rounded-lg shadow-lg"
+                controls
+                autoplay
+                muted
+                loop
+            >
+                <source src="/lubkita-animasi.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
 
         <div class="w-11/12 md:w-5/6 flex flex-col md:flex-row justify-center mx-auto my-10 shadow-lg rounded-2xl p-5 border">
             <div class="flex w-full md:w-1/3 hover:bg-slate-300 mb-4 md:mb-0">
@@ -86,11 +98,10 @@
                 class="w-full flex justify-center rounded-lg shadow-lg"
                 controls
                 autoplay
-                preload="none"
                 muted
                 loop
                 >
-                <source src="/testimoni-lubkita.mp4" type="video/mp4">
+                <source src="/testimoni-lubkita2-2-2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             </div>
