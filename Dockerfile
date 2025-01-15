@@ -11,12 +11,9 @@ RUN npm run build
 FROM node:18-alpine
 
 WORKDIR /app
-COPY --from=builder /app/.svelte-kit/output output/
+COPY --from=builder /app/build build/
 COPY --from=builder /app/package.json .
 COPY --from=builder /app/node_modules node_modules/
 
 EXPOSE 3000
-ENV NODE_ENV=production
-ENV ORIGIN=http://localhost:3000
-
-CMD ["node", "./output/server/index.js"]
+CMD ["node", "build"]
