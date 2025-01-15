@@ -8,7 +8,7 @@
     city: '',
     province: '',
     referralCode: 'LDRX',
-    referralCode2: 'LDR1'
+    referralCode2: 'LDRA01'
   };
   
   let isSubmitting = false;
@@ -46,21 +46,6 @@
     return true;
   }
 
-  function resetForm() {
-    formData = {
-      fullName: '',
-      email: '',
-      nik: '',
-      streetAddress: '',
-      district: '',
-      city: '',
-      province: '',
-      referralCode: 'LDRX',
-      referralCode2: 'LDRA'
-    };
-    submitError = null;
-  }
-
   async function handleSubmit(event: SubmitEvent) {
     event.preventDefault();
     
@@ -72,14 +57,14 @@
       isSubmitting = true;
       submitError = null;
 
-      const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbytH6JBPO8JFURvFXDV5sH32nN5ssYJSI79lg__m6qdQ4vBEbxq-GIqZwuhFJ1bEwyD/exec';
+      const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzTwYUkV_2WZ_43myeW5TLqp0mzWHEk5n_8X-TUQv6vWvr8YQsroEmhb1uSLxaDY1pN/exec';
       const formDataObj = new FormData();
       
       Object.entries(formData).forEach(([key, value]) => {
         formDataObj.append(key, value);
       });
 
-      const response = await fetch(GOOGLE_SHEETS_URL, {
+      await fetch(GOOGLE_SHEETS_URL, {
         method: 'POST',
         body: formDataObj,
         mode: 'no-cors'
@@ -96,6 +81,21 @@
       isSubmitting = false;
     }
   }
+
+  function resetForm() {
+    formData = {
+      fullName: '',
+      email: '',
+      nik: '',
+      streetAddress: '',
+      district: '',
+      city: '',
+      province: '',
+      referralCode: 'LDRX',
+      referralCode2: 'LDRA'
+    };
+    submitError = null;
+  }
 </script>
 
 <div class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
@@ -104,7 +104,7 @@
       <div class="mx-auto">
         <div class="flex items-center space-x-5">
           <div class="pl-2 font-semibold text-xl self-start text-gray-700">
-            <h2 class="leading-relaxed">Formulir Pendaftaran</h2>
+            <h2 class="leading-relaxed">Formulir Pendaftaran LDR</h2>
             <p class="text-sm text-gray-500 font-normal leading-relaxed">Silakan lengkapi semua field di bawah ini</p>
           </div>
         </div>
@@ -210,7 +210,7 @@
 </div>
 
 <style>
-  /* Svelte scopes styles automatically */
+  /* Add any additional styles here */
   input, textarea {
     @apply p-3;
   }
