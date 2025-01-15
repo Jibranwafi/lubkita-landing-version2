@@ -86,10 +86,11 @@
                 class="w-full flex justify-center rounded-lg shadow-lg"
                 controls
                 autoplay
+                preload="none"
                 muted
                 loop
                 >
-                <source src="/testimoni-lubkita2.mp4" type="video/mp4">
+                <source src="/testimoni-lubkita.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             </div>
