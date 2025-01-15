@@ -22,9 +22,6 @@
                     <a href="/pendaftaran" class="text-2xl md:text-3xl text-center p-3 bg-yellow-400 rounded-2xl font-bold w-full md:w-1/2 flex flex-col justify-center">
                         Pendaftaran
                     </a>
-                    <a href="/pendaftaran/LDR0A" class="text-2xl md:text-3xl text-center p-3 bg-yellow-400 rounded-2xl font-bold w-full md:w-1/2">
-                        Pendaftaran LDR0A
-                    </a>
 
 
 
@@ -85,8 +82,16 @@
                 <div class="text-4xl md:text-5xl font-bold">Pengguna LDR</div>
             </div>
             <div class="px-4 md:px-20 pb-10 md:pb-20 pt-5 rounded-full flex flex-col justify-center"> <!-- Adjust height as needed -->
-
-                
+                <video 
+                class="w-full flex justify-center rounded-lg shadow-lg"
+                controls
+                autoplay
+                muted
+                loop
+                >
+                <source src="/testimoni-lubkita.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             </div>
             <!--
             <div class="flex justify-center w-full border-2 border-black h-[600px] p-8">
