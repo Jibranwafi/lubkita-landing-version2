@@ -1,3 +1,42 @@
+<script lang="ts">
+    import { onMount } from 'svelte';
+    let Carousel: any;
+    let carouselRef: any;
+    let videos: HTMLVideoElement[] = [];
+    
+    onMount(async () => {
+        const module = await import('svelte-carousel');
+        Carousel = module.default;
+    });
+ 
+    function handlePageChange(event: CustomEvent) {
+        videos.forEach(video => video.pause());
+        // Play the video on the current slide
+        const currentVideo = videos[event.detail];
+        if (currentVideo) {
+            currentVideo.play();
+        }
+    }
+ 
+    function handleVideoEnd() {
+        if (carouselRef) {
+            carouselRef.goToNext();
+        }
+    }
+ 
+    function registerVideo(node: HTMLVideoElement) {
+        node.addEventListener('ended', handleVideoEnd);
+        videos = [...videos, node];
+        
+        return {
+            destroy() {
+                node.removeEventListener('ended', handleVideoEnd);
+                videos = videos.filter(v => v !== node);
+            }
+        };
+    }
+ </script>
+
 
 <div class="min-h-screen bg-gray-50">
 
@@ -29,31 +68,90 @@
                     </div>
                 </div>
 
-                <div class="w-full md:w-1/2 md:mt-0 h-full md:flex hidden flex-col justify-center text-right md:pl-32 md:pt-32"> 
-                    <video 
-                        class="w-full rounded-lg shadow-lg"
-                        controls
-                        autoplay
-                        muted
-                        loop
-                    >
-                        <source src="/lubkita-animasi.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                <div class="w-full md:w-1/2 md:mt-0 h-full md:flex hidden flex-col justify-center text-right md:pl-20 md:pt-32"> 
+
+
+
+
+                        {#if Carousel}
+                            <svelte:component 
+                                this={Carousel}
+                                bind:this={carouselRef}
+                                particlesToShow={1}
+                                particlesToScroll={1}
+                                autoplay={false}
+                                on:pageChange={handlePageChange}
+                            >
+                                <div class="w-full p-4">
+                                    <!-- svelte-ignore a11y_media_has_caption -->
+                                    <video 
+                                        use:registerVideo
+                                        controls 
+                                        class="w-full"
+                                    >
+                                        <source src="/lubkita-animasi1.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                     
+                                <div class="w-full p-4">
+                                    <!-- svelte-ignore a11y_media_has_caption -->
+                                    <video 
+                                        use:registerVideo
+                                        controls 
+                                        class="w-full"
+                                    >
+                                        <source src="/lubkita-animasi2.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </svelte:component>
+                        {:else}
+                            <div class="w-full h-48 bg-gray-100 animate-pulse rounded-lg"></div>
+                        {/if}
+
+
+                    
+
+
+
                 </div>
             </div>
         </div>
-        <div class="w-11/12 md:hidden h-full flex mt-10 mx-auto"> 
-            <video 
-                class="w-full rounded-lg shadow-lg"
-                controls
-                autoplay
-                muted
-                loop
-            >
-                <source src="/lubkita-animasi.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+        <div class="w-full md:w-1/2 md:mt-0 h-full flex md:hidden flex-col justify-center text-right md:pl-32 md:pt-32"> 
+                {#if Carousel}
+                <svelte:component 
+                    this={Carousel}
+                    bind:this={carouselRef}
+                    particlesToShow={1}
+                    particlesToScroll={1}
+                    autoplay={false}
+                    on:pageChange={handlePageChange}
+                >
+                    <div class="w-full p-4">
+                        <!-- svelte-ignore a11y_media_has_caption -->
+                        <video 
+                            use:registerVideo
+                            controls 
+                            class="w-full"
+                        >
+                            <source src="/lubkita-animasi1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+        
+                    <div class="w-full p-4">
+                        <!-- svelte-ignore a11y_media_has_caption -->
+                        <video 
+                            use:registerVideo
+                            controls 
+                            class="w-full"
+                        >
+                            <source src="/lubkita-animasi2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </svelte:component>
+            {:else}
+                <div class="w-full h-48 bg-gray-100 animate-pulse rounded-lg"></div>
+            {/if}
+
         </div>
         
 
@@ -191,3 +289,5 @@
       @apply p-3;
     }
   </style>
+
+
