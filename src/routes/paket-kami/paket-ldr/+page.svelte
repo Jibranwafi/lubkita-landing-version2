@@ -11,31 +11,31 @@
           <div class="absolute inset-x-0 bottom-0 md:h-64 h-24 bg-gradient-to-t from-white to-transparent md:flex hidden"></div>
           <div class="absolute inset-x-0 bottom-0 md:h-64 h-24 bg-gradient-to-t from-white to-transparent md:flex hidden"></div>
       </div>
+      <div class=" p-3 text-center text-3xl md:text-4xl font-bold italic">
+        Raih target bisnis anda secara maksimal!
+      </div>
+      <div class=" p-3 text-center text-lg md:text-2xl italic">
+        Paket LDR atau dikenal dengan Lumbung Digital Rakyat memberikan akses eksklusif ke fitur premium seperti dukungan prioritas, kampanye iklan komprehensif, dan konsultasi profesional. Sempurna untuk pelaku usaha yang ingin memaksimalkan dampak di pasar dan meraih hasil luar biasa!
+      </div>
       <div class="flex w-full">
-          <div class="w-1/6 hidden md:flex">
+          <div class="w-full hidden md:flex p-10">
               <img 
               src="/page-paket-gold-man.png" 
               alt="LDR Wallpaper" 
               class="w-full object-cover rounded-t-2xl"
               >
           </div>
-          <div class="flex flex-col mx-auto md:w-2/3 w-full md:px-10 px-5 pt-10">
-              <div class=" p-3 text-center text-3xl md:text-4xl font-bold italic">
-                Raih target bisnis anda secara maksimal!
-              </div>
-              <div class=" p-3 text-center text-lg md:text-2xl italic">
-                Paket LDR atau dikenal dengan Lumbung Digital Rakyat memberikan akses eksklusif ke fitur premium seperti dukungan prioritas, kampanye iklan komprehensif, dan konsultasi profesional. Sempurna untuk pelaku usaha yang ingin memaksimalkan dampak di pasar dan meraih hasil luar biasa!
-              </div>
+          <div class="flex flex-col mx-auto md:w-11/12 w-full px-5 pt-10">
               <img 
                 src="/lubkita-dan-ldr.png" 
                 alt="Lubkita dan LDR" 
-                class="w-full object-cover mt-6 md:w-2/3 flex mx-auto rounded-2xl"
+                class="w-full object-cover mt-6 flex mx-auto rounded-2xl"
               >
-              <a href="/pendaftaran/LDR0A" class="text-xl md:text-3xl text-center p-1 md:p-3 bg-yellow-400 rounded-2xl font-bold w-full md:w-2/3 flex justify-center mx-auto mt-10">
+              <a href="/pendaftaran/LDR0A" class="text-xl md:text-3xl text-center p-1 md:p-3 bg-yellow-400 rounded-2xl font-bold w-full flex justify-center mx-auto mt-10">
                 Daftar Paket LDR Sekarang!
             </a>
           </div>
-          <div class="w-1/6 hidden md:flex">
+          <div class="w-full hidden md:flex p-10">
               <img 
               src="/page-paket-gold-woman.png" 
               alt="LDR Wallpaper" 

@@ -52,7 +52,7 @@
       isSendingEmail = true;
       error = null;
 
-      const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzsKIncCnHDP9hDCYD2UfYUWTzLfWeRKp_Glyf_ev99wmP4XeoIFP-Z1z_dOuvZCy321Q/exec';
+      const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxQlyiVyVFMWopwHFv9aCKb7Vpx1iLQhYieJMWsKGTdxAt8w-W_b0OMFJKb3RBDPNZcJA/exec';
 
       console.log('Sending email with data:', formData);
 

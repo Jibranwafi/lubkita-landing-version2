@@ -4,6 +4,7 @@ export const formStore = writable({
   fullName: '',
   email: '',
   nik: '',
+  phoneNumber: '',
   streetAddress: '',
   district: '',
   city: '',

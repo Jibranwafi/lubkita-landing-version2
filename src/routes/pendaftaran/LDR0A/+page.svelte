@@ -1,17 +1,18 @@
 <script lang="ts">
-  let formData = {
+let formData = {
     fullName: '',
     email: '',
     nik: '',
+    phoneNumber: '', // Add this line
     streetAddress: '',
     district: '',
     city: '',
     province: '',
     referralCode: 'LDRX',
     referralCode2: 'LDRA'
-  };
+};
 
-  function validateForm() {
+function validateForm() {
     if (!formData.fullName.trim()) {
       alert('Silakan masukkan nama lengkap');
       return false;
@@ -22,6 +23,10 @@
     }
     if (!formData.nik.trim() || formData.nik.length !== 16) {
       alert('Silakan masukkan NIK yang valid (16 digit)');
+      return false;
+    }
+    if (!formData.phoneNumber.trim()) {
+      alert('Silakan masukkan nomor telepon');
       return false;
     }
     if (!formData.streetAddress.trim()) {
@@ -41,7 +46,7 @@
       return false;
     }
     return true;
-  }
+}
 
   function handleSubmit(event: SubmitEvent) {
     event.preventDefault();
@@ -65,14 +70,15 @@
       fullName: '',
       email: '',
       nik: '',
+      phoneNumber: '', // Add this line
       streetAddress: '',
       district: '',
       city: '',
       province: '',
       referralCode: 'LDRX',
       referralCode2: 'LDRA'
-    };
-  }
+    }
+}
 </script>
 
 <div class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
@@ -116,6 +122,16 @@
                 maxlength="16"
                 class="px-4 py-2 border w-full sm:text-sm border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Masukkan 16 digit NIK"
+              >
+            </div>
+            
+            <div class="flex flex-col">
+              <label class="leading-loose">Nomor Telepon</label>
+              <input 
+                type="tel" 
+                bind:value={formData.phoneNumber}
+                class="px-4 py-2 border w-full sm:text-sm border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Masukkan nomor telepon"
               >
             </div>
 

@@ -28,6 +28,7 @@ onMount(() => {
     fullName: params.get('fullName') || '',
     email: params.get('email') || '',
     nik: params.get('nik') || '',
+    phoneNumber: params.get('phoneNumber') || '',
     streetAddress: params.get('streetAddress') || '',
     district: params.get('district') || '',
     city: params.get('city') || '',
@@ -100,7 +101,7 @@ async function handleSubmit() {
     isSubmitting = true;
     submitError = null;
 
-    const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzsKIncCnHDP9hDCYD2UfYUWTzLfWeRKp_Glyf_ev99wmP4XeoIFP-Z1z_dOuvZCy321Q/exec';
+    const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxQlyiVyVFMWopwHFv9aCKb7Vpx1iLQhYieJMWsKGTdxAt8w-W_b0OMFJKb3RBDPNZcJA/exec';
 
     const payload = {
         ...formData,
@@ -116,6 +117,7 @@ async function handleSubmit() {
         fullName: formData.fullName,
         email: formData.email,
         nik: formData.nik,
+        phoneNumber: formData.phoneNumber,
         streetAddress: formData.streetAddress,
         district: formData.district,
         city: formData.city,
@@ -139,6 +141,7 @@ async function handleSubmit() {
         fullName: formData.fullName,
         email: formData.email,
         nik: formData.nik,
+        phoneNumber: formData.phoneNumber,
         streetAddress: formData.streetAddress,
         district: formData.district,
         city: formData.city,
@@ -472,7 +475,7 @@ async function downloadPDF() {
             </div>
             <div class="flex flex-col bg-gray-200 p-3 rounded-lg">
                 <div class="font-semibold">Konfirmasi Whatsapp:</div>
-                <div class=" rounded-full">020204343343</div>
+                <div class=" rounded-full">{formData.phoneNumber}</div>
             </div>
         </div>
 
