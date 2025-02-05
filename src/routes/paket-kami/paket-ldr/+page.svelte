@@ -26,6 +26,14 @@
               <div class=" p-3 text-center text-lg md:text-2xl italic">
                 Paket LDR atau dikenal dengan Lumbung Digital Rakyat memberikan akses eksklusif ke fitur premium seperti dukungan prioritas, kampanye iklan komprehensif, dan konsultasi profesional. Sempurna untuk pelaku usaha yang ingin memaksimalkan dampak di pasar dan meraih hasil luar biasa!
               </div>
+              <img 
+                src="/lubkita-dan-ldr.png" 
+                alt="Lubkita dan LDR" 
+                class="w-full object-cover mt-6 md:w-2/3 flex mx-auto rounded-2xl"
+              >
+              <a href="/pendaftaran/LDR0A" class="text-xl md:text-3xl text-center p-1 md:p-3 bg-yellow-400 rounded-2xl font-bold w-full md:w-2/3 flex justify-center mx-auto mt-10">
+                Daftar Paket LDR Sekarang!
+            </a>
           </div>
           <div class="w-1/6 hidden md:flex">
               <img 

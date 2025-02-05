@@ -58,8 +58,8 @@
 
 
 
-                    <a href="/pendaftaran" class="text-xl md:text-3xl text-center p-1 md:p-3 bg-yellow-400 rounded-2xl font-bold w-full md:w-2/3 flex flex-col justify-center">
-                        Pendaftaran
+                    <a href="/pendaftaran/LDR0A" class="text-xl md:text-3xl text-center p-1 md:p-3 bg-yellow-400 rounded-2xl font-bold w-full md:w-2/3 flex flex-col justify-center">
+                        Pendaftaran LDR
                     </a>
 
 

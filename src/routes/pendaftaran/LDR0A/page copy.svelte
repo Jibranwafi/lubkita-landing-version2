@@ -8,8 +8,11 @@
     city: '',
     province: '',
     referralCode: 'LDRX',
-    referralCode2: 'LDRA'
+    referralCode2: 'LDRA01'
   };
+  
+  let isSubmitting = false;
+  let submitError = null;
 
   function validateForm() {
     if (!formData.fullName.trim()) {
@@ -43,21 +46,40 @@
     return true;
   }
 
-  function handleSubmit(event: SubmitEvent) {
+  async function handleSubmit(event: SubmitEvent) {
     event.preventDefault();
     
     if (!validateForm()) {
       return;
     }
 
-    // Create URL with form data
-    const params = new URLSearchParams();
-    Object.entries(formData).forEach(([key, value]) => {
-      params.append(key, value);
-    });
+    try {
+      isSubmitting = true;
+      submitError = null;
 
-    // Redirect to confirmation page with form data
-    window.location.href = `/confirm?${params.toString()}`;
+      const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzTwYUkV_2WZ_43myeW5TLqp0mzWHEk5n_8X-TUQv6vWvr8YQsroEmhb1uSLxaDY1pN/exec';
+      const formDataObj = new FormData();
+      
+      Object.entries(formData).forEach(([key, value]) => {
+        formDataObj.append(key, value);
+      });
+
+      await fetch(GOOGLE_SHEETS_URL, {
+        method: 'POST',
+        body: formDataObj,
+        mode: 'no-cors'
+      });
+
+      alert('Data berhasil dikirim!');
+      resetForm();
+
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      submitError = 'Terjadi kesalahan saat mengirim data. Silakan coba lagi.';
+      alert(submitError);
+    } finally {
+      isSubmitting = false;
+    }
   }
 
   function resetForm() {
@@ -72,6 +94,7 @@
       referralCode: 'LDRX',
       referralCode2: 'LDRA'
     };
+    submitError = null;
   }
 </script>
 
@@ -166,13 +189,18 @@
               on:click={resetForm}
               class="flex justify-center items-center w-full text-gray-900 px-4 py-3 rounded-md focus:outline-none hover:bg-gray-100"
             >
-              <span class="bg-gray-100 px-4 py-2 rounded-md">Reset</span>
+              <span class="bg-gray-100 px-4 py-2 rounded-md">Batal</span>
             </button>
             <button 
               type="submit"
-              class="bg-blue-500 flex justify-center items-center w-full text-white px-4 py-3 rounded-md focus:outline-none hover:bg-blue-600"
+              disabled={isSubmitting}
+              class="bg-blue-500 flex justify-center items-center w-full text-white px-4 py-3 rounded-md focus:outline-none hover:bg-blue-600 disabled:bg-blue-300 disabled:cursor-not-allowed"
             >
-              <span>Lanjut ke Konfirmasi</span>
+              {#if isSubmitting}
+                <span>Mengirim...</span>
+              {:else}
+                <span>Kirim</span>
+              {/if}
             </button>
           </div>
         </form>

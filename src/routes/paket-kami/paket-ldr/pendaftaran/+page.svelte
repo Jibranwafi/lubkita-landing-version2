@@ -3,13 +3,10 @@
     fullName: '',
     email: '',
     nik: '',
-    streetAddress: '',
-    district: '',
-    city: '',
-    province: '',
-    referralCode: 'LDRX',
-    referralCode2: 'LDRA'
   };
+  
+  let isSubmitting = false;
+  let submitError = null;
 
   function validateForm() {
     if (!formData.fullName.trim()) {
@@ -24,40 +21,7 @@
       alert('Silakan masukkan NIK yang valid (16 digit)');
       return false;
     }
-    if (!formData.streetAddress.trim()) {
-      alert('Silakan masukkan alamat jalan');
-      return false;
-    }
-    if (!formData.district.trim()) {
-      alert('Silakan masukkan kecamatan');
-      return false;
-    }
-    if (!formData.city.trim()) {
-      alert('Silakan masukkan kabupaten/kota');
-      return false;
-    }
-    if (!formData.province.trim()) {
-      alert('Silakan masukkan provinsi');
-      return false;
-    }
     return true;
-  }
-
-  function handleSubmit(event: SubmitEvent) {
-    event.preventDefault();
-    
-    if (!validateForm()) {
-      return;
-    }
-
-    // Create URL with form data
-    const params = new URLSearchParams();
-    Object.entries(formData).forEach(([key, value]) => {
-      params.append(key, value);
-    });
-
-    // Redirect to confirmation page with form data
-    window.location.href = `/confirm?${params.toString()}`;
   }
 
   function resetForm() {
@@ -65,13 +29,44 @@
       fullName: '',
       email: '',
       nik: '',
-      streetAddress: '',
-      district: '',
-      city: '',
-      province: '',
-      referralCode: 'LDRX',
-      referralCode2: 'LDRA'
     };
+    submitError = null;
+  }
+
+  async function handleSubmit(event: SubmitEvent) {
+    event.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+
+    try {
+      isSubmitting = true;
+      submitError = null;
+
+      const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxscx7bpBsaZsABsZvsdIswXFrkaYM3pvnWadcfJcGHtbcFUJDfqIQvy6OkEWkYyCOI6g/exec';
+      const formDataObj = new FormData();
+      
+      Object.entries(formData).forEach(([key, value]) => {
+        formDataObj.append(key, value);
+      });
+
+      const response = await fetch(GOOGLE_SHEETS_URL, {
+        method: 'POST',
+        body: formDataObj,
+        mode: 'no-cors'
+      });
+
+      alert('Data berhasil dikirim!');
+      resetForm();
+
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      submitError = 'Terjadi kesalahan saat mengirim data. Silakan coba lagi.';
+      alert(submitError);
+    } finally {
+      isSubmitting = false;
+    }
   }
 </script>
 
@@ -118,46 +113,6 @@
                 placeholder="Masukkan 16 digit NIK"
               >
             </div>
-
-            <div class="flex flex-col">
-              <label class="leading-loose">Alamat Jalan</label>
-              <textarea 
-                bind:value={formData.streetAddress}
-                rows="2"
-                class="px-4 py-2 border w-full sm:text-sm border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Masukkan alamat lengkap"
-              ></textarea>
-            </div>
-
-            <div class="flex flex-col">
-              <label class="leading-loose">Kecamatan</label>
-              <input 
-                type="text" 
-                bind:value={formData.district}
-                class="px-4 py-2 border w-full sm:text-sm border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Masukkan nama kecamatan"
-              >
-            </div>
-
-            <div class="flex flex-col">
-              <label class="leading-loose">Kabupaten/Kota</label>
-              <input 
-                type="text" 
-                bind:value={formData.city}
-                class="px-4 py-2 border w-full sm:text-sm border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Masukkan nama kabupaten/kota"
-              >
-            </div>
-
-            <div class="flex flex-col">
-              <label class="leading-loose">Provinsi</label>
-              <input 
-                type="text" 
-                bind:value={formData.province}
-                class="px-4 py-2 border w-full sm:text-sm border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Masukkan nama provinsi"
-              >
-            </div>
           </div>
 
           <div class="pt-4 flex items-center space-x-4">
@@ -166,13 +121,18 @@
               on:click={resetForm}
               class="flex justify-center items-center w-full text-gray-900 px-4 py-3 rounded-md focus:outline-none hover:bg-gray-100"
             >
-              <span class="bg-gray-100 px-4 py-2 rounded-md">Reset</span>
+              <span class="bg-gray-100 px-4 py-2 rounded-md">Batal</span>
             </button>
             <button 
               type="submit"
-              class="bg-blue-500 flex justify-center items-center w-full text-white px-4 py-3 rounded-md focus:outline-none hover:bg-blue-600"
+              disabled={isSubmitting}
+              class="bg-blue-500 flex justify-center items-center w-full text-white px-4 py-3 rounded-md focus:outline-none hover:bg-blue-600 disabled:bg-blue-300 disabled:cursor-not-allowed"
             >
-              <span>Lanjut ke Konfirmasi</span>
+              {#if isSubmitting}
+                <span>Mengirim...</span>
+              {:else}
+                <span>Kirim</span>
+              {/if}
             </button>
           </div>
         </form>
@@ -182,7 +142,7 @@
 </div>
 
 <style>
-  /* Add any additional styles here */
+  /* Svelte scopes styles automatically */
   input, textarea {
     @apply p-3;
   }
