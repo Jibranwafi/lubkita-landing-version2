@@ -524,7 +524,7 @@ async function downloadPDF() {
                     </span>
                 {/if}
             </button>
-            <a href="https://www.lubkita.com" class="w-1/2">
+            <a href="https://admin-store.lubkita.com/Auth" class="w-1/2">
                 <div class="text-white bg-gradient-to-r from-blue-400 to-blue-600 p-2 md:text-xl text-base flex flex-col justify-center font-bold rounded-lg text-center hover:opacity-90 transition-opacity">
                     Login ke Lubkita.com
                 </div>
@@ -611,7 +611,7 @@ async function downloadPDF() {
                         </span>
                         {/if}
                     </button>
-                    <a href="https://www.lubkita.com" class="w-1/2">
+                    <a href="https://admin-store.lubkita.com/Auth" class="w-1/2">
                         <div class="text-white bg-gradient-to-r from-blue-400 to-blue-600 p-2 md:text-xl text-base flex flex-col justify-center font-bold rounded-lg text-center hover:opacity-90 transition-opacity">
                             Login ke Lubkita.com
                         </div>
