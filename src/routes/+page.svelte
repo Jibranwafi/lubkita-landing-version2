@@ -265,6 +265,16 @@
 
 
         </div>
+        <div class="flex flex-col justify-center my-10">
+            <div class="text-center text-4xl font-bold ">Cek katalog kami sekarang!</div>
+        <a href="https://online.fliphtml5.com/mweze/qnik/" target="_blank" rel="noopener noreferrer">
+            <img 
+                src="/salinan-lubkita.png" 
+                alt="Lubkita Logo" 
+                class="rounded-3xl cursor-pointer hover:opacity-90 transition-opacity w-1/2 mx-auto my-10"
+            />
+        </a>
+        </div>
         <div class="flex flex-col bg-amber-300 mx-4 md:mx-10 rounded-t-3xl">
             <div class="p-5 md:p-10 text-center flex flex-col">
                 <div class="text-3xl md:text-4xl">Review</div>
