@@ -25,7 +25,7 @@
               >
           </div>
           <div class="md:text-2xl text-xl">
-              PT Lumbung Artha Kita. Melalui platform e-commers grosir Lubkita.com solusi inovatif untuk memberdayakan pengusaha desa dan UMKM di Indonesia. Berbeda dengan Shopee, Tokped, Lazada dll, Lubkita.com focus pada penjualan grosir, menawarkan berbagai pilihan harga yang kompetitif berdasarkan Volume pembelian ( dari 1 ton hingga ratusan ton ). LDR (Lumbung Digital Rakyat) agen Lubkita.com berperan penting menghubungkan pengusaha desa dengan Lubkita.com, membuka akses ke pasar yg lebih luas dan potensi keuntungan yang signifikan.
+              PT Lumbung Artha Kita. Melalui platform e-commers grosir Lubkita.com solusi inovatif untuk memberdayakan pengusaha desa dan UMKM di Indonesia. Lubkita.com focus pada penjualan grosir, menawarkan berbagai pilihan harga yang kompetitif berdasarkan Volume pembelian ( dari 1 ton hingga ratusan ton ). LDR (Lumbung Digital Rakyat) agen Lubkita.com berperan penting menghubungkan pengusaha desa dengan Lubkita.com, membuka akses ke pasar yg lebih luas dan potensi keuntungan yang signifikan.
           </div>
       </div>
     </div>
