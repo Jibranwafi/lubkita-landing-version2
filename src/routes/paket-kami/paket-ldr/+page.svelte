@@ -2,7 +2,7 @@
 
   <div class="flex flex-col">
           <img 
-              src="/page-paket-gold-header.png" 
+              src="/paket-ldr2.png" 
               alt="LDR Wallpaper" 
               class="w-full object-cover"
           >
@@ -12,10 +12,19 @@
           <div class="absolute inset-x-0 bottom-0 md:h-64 h-24 bg-gradient-to-t from-white to-transparent md:flex hidden"></div>
       </div>
       <div class=" p-3 text-center text-3xl md:text-4xl font-bold italic">
-        Raih target bisnis anda secara maksimal!
+        Digitalisasikan Bisinis Anda Sekarang Juga
       </div>
-      <div class=" p-3 text-center text-lg md:text-2xl italic">
-        Paket LDR atau dikenal dengan Lumbung Digital Rakyat memberikan akses eksklusif ke fitur premium seperti dukungan prioritas, kampanye iklan komprehensif, dan konsultasi profesional. Sempurna untuk pelaku usaha yang ingin memaksimalkan dampak di pasar dan meraih hasil luar biasa!
+      <div class=" p-3 text-center text-lg md:text-2xl italic md:px-6">
+        <br><br>LDR (Lumbung Digital Rakyat) hadir sebagai pionir transformasi digital yang membangun jembatan kokoh antara potensi desa dengan pasar modern melalui Lubkita.com! Sebagai agen resmi, kami membawa misi besar untuk memperkuat ketahanan pangan nasional dan memberdayakan ekonomi kerakyatan melalui digitalisasi yang tepat guna.<br><br>
+        Kami tidak hanya memberikan akses teknologi, tapi juga pendampingan lengkap - dari pelatihan digital marketing hingga akses pendanaan - yang memungkinkan petani dan UMKM desa memasarkan produknya ke seluruh Indonesia dengan mudah dan menguntungkan.<br><br>
+        Dengan platform canggih Lubkita.com, kami menghapus kendala jarak dan rantai distribusi yang merugikan, membuka jalan bagi produk unggulan desa untuk bersaing di pasar nasional bahkan internasional. Mari bergabung dalam revolusi digital ini dan jadilah bagian dari gerakan yang mengubah wajah pertanian dan UMKM Indonesia menjadi lebih modern, efisien, dan menguntungkan - karena masa depan Indonesia ada di tangan kita!<br><br>
+      </div>
+      <div>
+        <img 
+          src="/ldr2.png" 
+          alt="LDR Logo" 
+          class="w-full object-cover md:px-6"
+        >
       </div>
       <div class="flex w-full">
           <div class="w-full hidden md:flex p-10">
