@@ -56,22 +56,22 @@
           <h2 class="text-xl font-semibold mb-4">2. PAKET KEANGGOTAAN</h2>
           <div class="space-y-6 md:ml-6 ml-2">
             <div>
-              <h3 class="font-medium mb-2">2.1. Keanggotaan Gold (Rp22.000.000 per bulan)</h3>
+              <h3 class="font-medium mb-2">2.1. Keanggotaan Gold (Rp22.000.000 per tahun)</h3>
               <ul class="list-disc pl-5 space-y-1">
                 <li>Termasuk layanan promosi: Flashsale dan Bandages.</li>
                 <li>Akses ke fitur Iklan, Dukungan Prioritas 2, dan Dashboard.</li>
                 <li>Listing Produk Unggulan, Pertemuan Langsung, dan layanan Lubkita Care.</li>
-                <li>Hingga 5 postingan media sosial dan 3 reels per bulan.</li>
+                <li>Hingga 5 postingan media sosial dan 3 reels per tahun.</li>
               </ul>
             </div>
             
             <div>
-              <h3 class="font-medium mb-2">2.2. Keanggotaan Platinum (Rp28.000.000 per bulan)</h3>
+              <h3 class="font-medium mb-2">2.2. Keanggotaan Platinum (Rp32.000.000 per tahun)</h3>
               <ul class="list-disc pl-5 space-y-1">
                 <li>Termasuk semua fitur dalam Keanggotaan Gold dan Prioritas 1 untuk listing toko.</li>
                 <li>Layanan SEO untuk 4 kata kunci dengan tingkat persaingan tinggi.</li>
                 <li>Alokasi anggaran yang lebih tinggi untuk iklan Google hingga Rp3.000.000 per 30 hari.</li>
-                <li>Keterlibatan media sosial yang ditingkatkan dengan 15 postingan dan 6 reels per bulan.</li>
+                <li>Keterlibatan media sosial yang ditingkatkan dengan 15 postingan dan 6 reels per tahun.</li>
               </ul>
             </div>
           </div>
@@ -101,7 +101,7 @@
             
             <p>4.2. Lubkita.com tidak memberikan jaminan terhadap hasil layanan tertentu, termasuk namun tidak terbatas pada peningkatan lalu lintas atau konversi penjualan, yang dapat dipengaruhi oleh faktor eksternal di luar kendali Lubkita.com.</p>
             
-            <p>4.3. Alokasi lalu lintas maksimum per bulan adalah 500 untuk Keanggotaan Gold dan 1.200 untuk Keanggotaan Platinum.</p>
+            <p>4.3. Alokasi lalu lintas maksimum per tahun adalah 500 untuk Keanggotaan Gold dan 1.200 untuk Keanggotaan Platinum.</p>
           </div>
         </div>
 
@@ -115,19 +115,10 @@
           </div>
         </div>
 
-        <!-- Section 6 -->
-        <div class="mb-8">
-          <h2 class="text-xl font-semibold mb-4">6. PEMBATALAN DAN PENGEMBALIAN DANA</h2>
-          <div class="space-y-4 md:ml-6 ml-2">
-            <p>6.1. Pembatalan keanggotaan hanya dapat diajukan secara tertulis paling lambat 15 (lima belas) hari sebelum tanggal siklus tagihan berikutnya.</p>
-            
-            <p>6.2. Tidak ada pengembalian dana untuk layanan yang tidak digunakan atau apabila Pengguna mengakhiri perjanjian sebelum masa berlaku layanan berakhir.</p>
-          </div>
-        </div>
 
         <!-- Section 7 -->
         <div class="mb-8">
-          <h2 class="text-xl font-semibold mb-4">7. TANGGUNG JAWAB DAN GANTI RUGI</h2>
+          <h2 class="text-xl font-semibold mb-4">6. TANGGUNG JAWAB DAN GANTI RUGI</h2>
           <div class="space-y-4 md:ml-6 ml-2">
             <p>7.1. Lubkita.com tidak bertanggung jawab atas kehilangan, kerusakan akibat penundaan atau kegagalan pelaksanaan layanan karena keadaan yang diakibatkan oleh keadaan kahar (force majeure), termasuk tetapi tidak terbatas pada bencana alam, gangguan jaringan, atau tindakan pihak ketiga.</p>
             
@@ -137,7 +128,7 @@
 
         <!-- Section 8 -->
         <div class="mb-8">
-          <h2 class="text-xl font-semibold mb-4">8. KONTAK DAN DUKUNGAN</h2>
+          <h2 class="text-xl font-semibold mb-4">7. KONTAK DAN DUKUNGAN</h2>
           <div class="space-y-4 md:ml-6 ml-2">
             <p>8.1. Tingkat dukungan diberikan berdasarkan paket keanggotaan: Prioritas 1 untuk Keanggotaan Platinum dan Prioritas 2 untuk Keanggotaan Gold.</p>
             
@@ -147,7 +138,7 @@
 
         <!-- Section 9 -->
         <div class="mb-8">
-          <h2 class="text-xl font-semibold mb-4">9. HAK KEKAYAAN INTELEKTUAL</h2>
+          <h2 class="text-xl font-semibold mb-4">8. HAK KEKAYAAN INTELEKTUAL</h2>
           <div class="space-y-4 md:ml-6 ml-2">
             <p>9.1. Seluruh materi, konten, dan perangkat lunak yang disediakan oleh Lubkita.com merupakan hak kekayaan intelektual eksklusif milik Lubkita.com, kecuali dinyatakan lain secara tertulis.</p>
             
@@ -157,7 +148,7 @@
 
         <!-- Section 10 -->
         <div class="mb-8">
-          <h2 class="text-xl font-semibold mb-4">10. PERLINDUNGAN DATA PRIBADI</h2>
+          <h2 class="text-xl font-semibold mb-4">9. PERLINDUNGAN DATA PRIBADI</h2>
           <div class="space-y-4 md:ml-6 ml-2">
             <p>10.1. Data pribadi anggota yang dikumpulkan oleh Lubkita.com akan digunakan semata-mata untuk keperluan administrasi dan pelaksanaan program, sesuai dengan Undang-Undang No. 27 Tahun 2022 tentang Perlindungan Data Pribadi.</p>
             
@@ -167,7 +158,7 @@
 
         <!-- Section 11 -->
         <div class="mb-8">
-          <h2 class="text-xl font-semibold mb-4">11. PENYELESAIAN SENGKETA DAN HUKUM YANG BERLAKU</h2>
+          <h2 class="text-xl font-semibold mb-4">10. PENYELESAIAN SENGKETA DAN HUKUM YANG BERLAKU</h2>
           <div class="space-y-4 md:ml-6 ml-2">
             <p>11.1. Syarat dan Ketentuan ini diatur berdasarkan hukum Indonesia, khususnya tetapi tidak terbatas pada:</p>
             <ul class="list-disc pl-5 space-y-1">
@@ -187,7 +178,7 @@
 
         <!-- Section 12 -->
         <div class="mb-8">
-          <h2 class="text-xl font-semibold mb-4">12. KEADAAN MEMAKSA (FORCE MAJEURE)</h2>
+          <h2 class="text-xl font-semibold mb-4">11. KEADAAN MEMAKSA (FORCE MAJEURE)</h2>
           <div class="space-y-4 md:ml-6 ml-2">
             <p>Keadaan memaksa mencakup tetapi tidak terbatas pada bencana alam, kebakaran, banjir, kerusuhan sipil, pandemi, gangguan sistem teknologi informasi, atau peraturan pemerintah yang tidak terduga. Dalam keadaan memaksa, pelaksanaan kewajiban akan ditunda sampai keadaan tersebut berakhir.</p>
           </div>
@@ -195,7 +186,7 @@
 
         <!-- Section 13 -->
         <div class="mb-8">
-          <h2 class="text-xl font-semibold mb-4">13. DISCLAIMER PELUANG USAHA</h2>
+          <h2 class="text-xl font-semibold mb-4">12. DISCLAIMER PELUANG USAHA</h2>
           <div class="space-y-4 md:ml-6 ml-2">
             <p>13.1. Lubkita.com tidak menjamin keberhasilan finansial, peningkatan keuntungan, atau hasil usaha tertentu dari keanggotaan.</p>
             
@@ -205,7 +196,7 @@
 
         <!-- Section 14 -->
         <div class="mb-8">
-          <h2 class="text-xl font-semibold mb-4">14. PERNYATAAN PERSETUJUAN</h2>
+          <h2 class="text-xl font-semibold mb-4">13. PERNYATAAN PERSETUJUAN</h2>
           <div class="space-y-4 md:ml-6 ml-2">
             <p>Dengan mendaftar dan/atau berlangganan keanggotaan di Lubkita.com, pengguna menyatakan bahwa mereka telah membaca, memahami, dan menyetujui seluruh Syarat dan Ketentuan ini tanpa terkecuali.</p>
           </div>
@@ -227,7 +218,7 @@
         </ol>
 
         <p class="mt-4 font-semibold md:text-xl my-3">2. FASILITAS MEMBERSHIP</p>
-        <p>Dengan membayar biaya keanggotaan sebesar Rp32.000.000, anggota akan menerima fasilitas berikut:</p>
+        <p>Dengan membayar biaya keanggotaan sebesar Rp50.000.000, anggota akan menerima fasilitas berikut:</p>
         <ul class="list-disc list-inside space-y-2 text-gray-600 ml-6">
           <li>Kemitraan eksklusif dengan Lubkita.com.</li>
           <li>Satu unit TV 32 inci.</li>
@@ -262,25 +253,20 @@
           <li>Lumbung Digital Rakyat tidak memberikan jaminan hasil usaha tertentu bagi anggota. Keberhasilan anggota sepenuhnya bergantung pada strategi, usaha, dan kondisi eksternal masing-masing.</li>
         </ol>
 
-        <p class="mt-4 font-semibold md:text-xl my-3">6. PEMBATALAN KEANGGOTAAN</p>
-        <ol class="list-decimal list-inside space-y-2 text-gray-600 ml-6">
-          <li>Anggota dapat membatalkan keanggotaan dengan mengajukan permohonan tertulis minimal 90 hari sebelum tanggal efektif pembatalan.</li>
-          <li>Lumbung Digital Rakyat berhak membatalkan keanggotaan anggota yang melanggar Syarat dan Ketentuan yang berlaku tanpa kewajiban untuk memberikan kompensasi.</li>
-        </ol>
 
-        <p class="mt-4 font-semibold md:text-xl my-3">7. KEKAYAAN INTELEKTUAL</p>
+        <p class="mt-4 font-semibold md:text-xl my-3">6. KEKAYAAN INTELEKTUAL</p>
         <ol class="list-decimal list-inside space-y-2 text-gray-600 ml-6">
           <li>Semua materi pelatihan, perangkat lunak, dan dokumentasi lain yang disediakan adalah milik eksklusif Lumbung Digital Rakyat.</li>
           <li>Anggota tidak diperbolehkan menggandakan, menyebarluaskan, atau memodifikasi materi pelatihan tanpa izin tertulis dari Lumbung Digital Rakyat.</li>
         </ol>
 
-        <p class="mt-4 font-semibold md:text-xl my-3">8. PERLINDUNGAN DATA PRIBADI</p>
+        <p class="mt-4 font-semibold md:text-xl my-3">7. PERLINDUNGAN DATA PRIBADI</p>
         <ol class="list-decimal list-inside space-y-2 text-gray-600 ml-6">
           <li>Data pribadi anggota yang dikumpulkan oleh Lumbung Digital Rakyat akan digunakan semata-mata untuk keperluan administrasi dan pelaksanaan program, sesuai dengan Undang-Undang No. 27 Tahun 2022 tentang Perlindungan Data Pribadi.</li>
           <li>Lumbung Digital Rakyat tidak akan membagikan data pribadi anggota kepada pihak ketiga tanpa persetujuan tertulis kecuali diwajibkan oleh hukum.</li>
         </ol>
 
-        <p class="mt-4 font-semibold md:text-xl my-3">9. PENYELESAIAN SENGKETA DAN HUKUM YANG BERLAKU</p>
+        <p class="mt-4 font-semibold md:text-xl my-3">8. PENYELESAIAN SENGKETA DAN HUKUM YANG BERLAKU</p>
         <ol class="list-decimal list-inside space-y-2 text-gray-600 ml-6">
           <li>Syarat dan Ketentuan ini diatur berdasarkan hukum Indonesia, khususnya tetapi tidak terbatas pada:</li>
           <ul class="list-disc list-inside space-y-2 text-gray-600 ml-6">
@@ -295,16 +281,16 @@
           <li>Apabila tidak tercapai kesepakatan melalui musyawarah, sengketa akan diselesaikan di pengadilan yang berwenang di Indonesia sesuai dengan hukum yang berlaku.</li>
         </ol>
 
-        <p class="mt-4 font-semibold md:text-xl my-3">10. KEADAAN MEMAKSA (FORCE MAJEURE)</p>
+        <p class="mt-4 font-semibold md:text-xl my-3">9. KEADAAN MEMAKSA (FORCE MAJEURE)</p>
         <p>Keadaan memaksa mencakup tetapi tidak terbatas pada bencana alam, kebakaran, banjir, kerusuhan sipil, pandemi, gangguan sistem teknologi informasi, atau peraturan pemerintah yang tidak terduga. Dalam keadaan memaksa, pelaksanaan kewajiban akan ditunda sampai keadaan tersebut berakhir.</p>
 
-        <p class="mt-4 font-semibold md:text-xl my-3">11. DISCLAIMER PELUANG USAHA</p>
+        <p class="mt-4 font-semibold md:text-xl my-3">10. DISCLAIMER PELUANG USAHA</p>
         <ol class="list-decimal list-inside space-y-2 text-gray-600 ml-6">
           <li>Lumbung Digital Rakyat tidak menjamin keberhasilan finansial, peningkatan keuntungan, atau hasil usaha tertentu dari keanggotaan.</li>
           <li>Anggota memahami bahwa segala bentuk kerugian atau kerusakan yang timbul akibat keanggotaan adalah tanggung jawab penuh anggota.</li>
         </ol>
 
-        <p class="mt-4 font-semibold md:text-xl my-3">12. PERNYATAAN PERSETUJUAN</p>
+        <p class="mt-4 font-semibold md:text-xl my-3">11. PERNYATAAN PERSETUJUAN</p>
         <p>Dengan mendaftar dan/atau berlangganan keanggotaan di Lubkita.com, pengguna menyatakan bahwa mereka telah membaca, memahami, dan menyetujui seluruh Syarat dan Ketentuan ini tanpa terkecuali.</p>
       </div>
       {/if}

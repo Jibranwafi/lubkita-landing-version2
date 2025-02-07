@@ -1,41 +1,99 @@
+<script context="module" lang="ts">
+    declare const YT: any;
+</script>
+
 <script lang="ts">
     import { onMount } from 'svelte';
     let Carousel: any;
-    let carouselRef: any;
-    let videos: HTMLVideoElement[] = [];
+    let topCarouselRef: any;
+    let bottomCarouselRef: any;
+    let topVideos: HTMLVideoElement[] = [];
+    let bottomVideos: HTMLVideoElement[] = [];
+    let youtubePlayers: any[] = [];
     
     onMount(async () => {
         const module = await import('svelte-carousel');
         Carousel = module.default;
+
+        // Load YouTube API
+        const tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag);
+
+        // Initialize YouTube API
+        window.onYouTubeIframeAPIReady = () => {
+            const iframes = document.querySelectorAll('.youtube-player');
+            iframes.forEach((iframe, index) => {
+                youtubePlayers[index] = new YT.Player(iframe, {
+                    events: {
+                        'onStateChange': (event: { data: number }) => {
+                            // When video ends (state = 0)
+                            if (event.data === 0) {
+                                if (bottomCarouselRef) {
+                                    bottomCarouselRef.goToNext();
+                                }
+                            }
+                        }
+                    }
+                });
+            });
+        };
     });
  
-    function handlePageChange(event: CustomEvent) {
-        videos.forEach(video => video.pause());
-        // Play the video on the current slide
-        const currentVideo = videos[event.detail];
+    function handleTopCarouselChange(event: CustomEvent) {
+        topVideos.forEach(video => video.pause());
+        const currentVideo = topVideos[event.detail];
         if (currentVideo) {
             currentVideo.play();
         }
     }
+
+    function handleBottomCarouselChange(event: CustomEvent) {
+        // Pause all YouTube videos
+        youtubePlayers.forEach(player => {
+            if (player && player.pauseVideo) {
+                player.pauseVideo();
+            }
+        });
+    }
  
-    function handleVideoEnd() {
-        if (carouselRef) {
-            carouselRef.goToNext();
+    function handleTopVideoEnd() {
+        if (topCarouselRef) {
+            topCarouselRef.goToNext();
+        }
+    }
+
+    function handleBottomVideoEnd() {
+        if (bottomCarouselRef) {
+            bottomCarouselRef.goToNext();
         }
     }
  
-    function registerVideo(node: HTMLVideoElement) {
-        node.addEventListener('ended', handleVideoEnd);
-        videos = [...videos, node];
+    function registerTopVideo(node: HTMLVideoElement) {
+        node.addEventListener('ended', handleTopVideoEnd);
+        topVideos = [...topVideos, node];
         
         return {
             destroy() {
-                node.removeEventListener('ended', handleVideoEnd);
-                videos = videos.filter(v => v !== node);
+                node.removeEventListener('ended', handleTopVideoEnd);
+                topVideos = topVideos.filter(v => v !== node);
             }
         };
     }
- </script>
+
+    function registerBottomVideo(node: HTMLVideoElement) {
+        node.addEventListener('ended', handleBottomVideoEnd);
+        bottomVideos = [...bottomVideos, node];
+        
+        return {
+            destroy() {
+                node.removeEventListener('ended', handleBottomVideoEnd);
+                bottomVideos = bottomVideos.filter(v => v !== node);
+            }
+        };
+    }
+</script>
 
 
 <div class="min-h-screen bg-gray-50">
@@ -76,16 +134,16 @@
                         {#if Carousel}
                             <svelte:component 
                                 this={Carousel}
-                                bind:this={carouselRef}
+                                bind:this={topCarouselRef}
                                 particlesToShow={1}
                                 particlesToScroll={1}
                                 autoplay={false}
-                                on:pageChange={handlePageChange}
+                                on:pageChange={handleTopCarouselChange}
                             >
                                 <div class="w-full p-4">
                                     <!-- svelte-ignore a11y_media_has_caption -->
                                     <video 
-                                        use:registerVideo
+                                        use:registerTopVideo
                                         controls 
                                         class="w-full"
                                     >
@@ -96,11 +154,21 @@
                                 <div class="w-full p-4">
                                     <!-- svelte-ignore a11y_media_has_caption -->
                                     <video 
-                                        use:registerVideo
+                                        use:registerTopVideo
                                         controls 
                                         class="w-full"
                                     >
                                         <source src="/lubkita-animasi2.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="w-full p-4">
+                                    <!-- svelte-ignore a11y_media_has_caption -->
+                                    <video 
+                                        use:registerTopVideo
+                                        controls 
+                                        class="w-full"
+                                    >
+                                        <source src="/lubkita-animasi4.mp4" type="video/mp4">
                                     </video>
                                 </div>
                             </svelte:component>
@@ -120,16 +188,16 @@
                 {#if Carousel}
                 <svelte:component 
                     this={Carousel}
-                    bind:this={carouselRef}
+                    bind:this={topCarouselRef}
                     particlesToShow={1}
                     particlesToScroll={1}
                     autoplay={false}
-                    on:pageChange={handlePageChange}
+                    on:pageChange={handleTopCarouselChange}
                 >
                     <div class="w-full p-4">
                         <!-- svelte-ignore a11y_media_has_caption -->
                         <video 
-                            use:registerVideo
+                            use:registerTopVideo
                             controls 
                             class="w-full"
                         >
@@ -140,11 +208,22 @@
                     <div class="w-full p-4">
                         <!-- svelte-ignore a11y_media_has_caption -->
                         <video 
-                            use:registerVideo
+                            use:registerTopVideo
                             controls 
                             class="w-full"
                         >
                             <source src="/lubkita-animasi2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    
+                    <div class="w-full p-4">
+                        <!-- svelte-ignore a11y_media_has_caption -->
+                        <video 
+                            use:registerTopVideo
+                            controls 
+                            class="w-full"
+                        >
+                            <source src="/lubkita-animasi4.mp4" type="video/mp4">
                         </video>
                     </div>
                 </svelte:component>
@@ -192,6 +271,7 @@
                 <div class="text-4xl md:text-5xl font-bold">Pengguna LDR</div>
             </div>
             <div class="px-4 md:px-20 pb-10 md:pb-20 pt-5 rounded-full flex flex-col justify-center"> <!-- Adjust height as needed -->
+                <!--
                 <video 
                 class="w-full flex justify-center rounded-lg shadow-lg"
                 controls
@@ -201,7 +281,73 @@
                 >
                 <source src="/testimoni-lubkita2-2-2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
-            </video>
+                </video>
+                -->
+
+
+
+                <div class="w-full h-full flex-col justify-center text-right"> 
+
+
+
+
+                    {#if Carousel}
+                        <svelte:component 
+                            this={Carousel}
+                            bind:this={bottomCarouselRef}
+                            particlesToShow={1}
+                            particlesToScroll={1}
+                            autoplay={false}
+                            on:pageChange={handleBottomCarouselChange}
+                        >
+                            <div class="w-full p-4 rounded-xl">
+                                <iframe
+                                    id="youtube-player-1"
+                                    class="youtube-player w-full aspect-video rounded-xl shadow-lg"
+                                    src="https://www.youtube.com/embed/biBuA07GBIU?enablejsapi=1"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen
+                                ></iframe>
+                            </div>
+                 
+                            <div class="w-full p-4 rounded-xl">
+                                <iframe
+                                    id="youtube-player-2"
+                                    class="youtube-player w-full aspect-video rounded-xl shadow-lg"
+                                    src="https://www.youtube.com/embed/g77BMHYMSDc?enablejsapi=1"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen
+                                ></iframe>
+                            </div>
+                            <div class="w-full p-4 rounded-xl">
+                                <iframe
+                                    id="youtube-player-2"
+                                    class="youtube-player w-full aspect-video rounded-xl shadow-lg"
+                                    src="https://www.youtube.com/embed/EGIGaXAv5U4"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen
+                                ></iframe>
+                            </div>
+                        </svelte:component>
+                    {:else}
+                        <div class="w-full h-48 bg-gray-100 animate-pulse rounded-lg"></div>
+                    {/if}
+
+
+                
+
+
+
+            </div>
+
+
+                
             </div>
             <!--
             <div class="flex justify-center w-full border-2 border-black h-[600px] p-8">
