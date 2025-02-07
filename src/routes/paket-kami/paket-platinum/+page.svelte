@@ -3,7 +3,7 @@
     <div class="flex flex-col">
         
             <img 
-                src="/paket-platinum2.png" 
+                src="/paket-platinum3.png" 
                 alt="LDR Wallpaper" 
                 class="w-full object-cover"
             >
@@ -21,7 +21,7 @@
         <div class="flex w-full">
             <div class="flex md:flex-row flex-col w-full justify-center p-10 md:space-x-10 md:p-5">
                 <img 
-                    src="/Paket-gold-premium1.png" 
+                    src="/paket-gold-premium1-1.png" 
                     alt="Gold Package Premium Feature 1" 
                     class="md:w-6/12 w-full object-cover"
                 >
