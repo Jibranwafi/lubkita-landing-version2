@@ -235,12 +235,12 @@
         
 
         <div class="w-11/12 md:w-5/6 flex flex-col md:flex-row justify-center mx-auto my-10 shadow-lg rounded-2xl p-5 border">
-            <div class="flex w-full md:w-1/3 hover:bg-slate-300 mb-4 md:mb-0">
+            <a href="/panduan-membership2.pdf" class="flex w-full md:w-1/3 hover:bg-slate-300 mb-4 md:mb-0">
                 <div class="p-2 w-1/5">
                     <img src="/page-home-networking-icon.png" alt="networking" class="h-12 w-12 md:h-16 md:w-16 mx-auto">
                 </div>
-                <div class="p-2 w-4/5 font-bold flex flex-col justify-center text-sm md:text-base">OUR NETWORKING</div>
-            </div>
+                <div class="p-2 w-4/5 font-bold flex flex-col justify-center text-sm md:text-base">PANDUAN MEMBERSHIP</div>
+            </a>
 
 
 
@@ -271,7 +271,7 @@
             <img 
                 src="/salinan-lubkita.png" 
                 alt="Lubkita Logo" 
-                class="rounded-3xl cursor-pointer hover:opacity-90 transition-opacity w-1/2 mx-auto my-10"
+                class="rounded-3xl cursor-pointer hover:opacity-90 transition-opacity md:w-1/2 w-5/6 mx-auto my-10"
             />
         </a>
         </div>
