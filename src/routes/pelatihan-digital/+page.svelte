@@ -7,29 +7,15 @@
       id: 1, 
       title: 'Cara daftar penjual di Lubkita.com', 
       duration: '0:30', 
-      url: '/lubkita-animasi.mp4', 
+      url: '/lubkita-animasi1.mp4', 
       thumbnail: '/page-videopelatihan-thumbnail.png' 
     },
     { 
       id: 2, 
-      title: 'Cara daftar penjual di Lubkita.com', 
+      title: 'Apa itu Lubkita.com?', 
       duration: '0:30', 
-      url: '/lubkita-animasi.mp4', 
-      thumbnail: '/page-videopelatihan-thumbnail.png' 
-    },
-    { 
-      id: 3, 
-      title: 'Cara daftar penjual di Lubkita.com', 
-      duration: '0:30', 
-      url: '/lubkita-animasi.mp4', 
-      thumbnail: '/page-videopelatihan-thumbnail.png' 
-    },
-    { 
-      id: 4, 
-      title: 'Cara daftar penjual di Lubkita.com', 
-      duration: '0:30', 
-      url: '/lubkita-animasi.mp4', 
-      thumbnail: '/page-videopelatihan-thumbnail.png' 
+      url: '/lubkita-animasi2.mp4', 
+      thumbnail: '/page-videopelatihan-thumbnail2.png' 
     },
   ]);
 
@@ -84,8 +70,8 @@
             <div class="text-gray-500 my-10 hidden md:flex">
               Pilih video untuk dimainkan
             </div>
-            <div class="text-gray-500 my-10 md:hidden flex justify-center mx-10 py-4 rounded-2xl bg-white">
-              <img src="/page-videopelatihan-selamatdatang.png" alt="Selamat Datang" class="w-1/5 h-auto">
+            <div class="text-gray-500 md:hidden flex justify-center m-3 p-5 rounded-2xl bg-white">
+              <img src="/page-videopelatihan-selamatdatang.png" alt="Selamat Datang" class="w-1/6 h-auto">
               <div class="flex flex-col justify-center pl-4">
                 <div class="font-bold text-2xl">Selamat datang!</div>
                 <div>Pilih video untuk dimainkan</div>
@@ -116,7 +102,7 @@
           </button>
         {/each}
       </div>
-      <a href="/pendaftaran" class="bg-yellow-400 mx-auto w-full text-center font-bold py-3 2xl hover:bg-yellow-400 md:hidden">
+      <a href="/pendaftaran" class="bg-yellow-400 mx-auto w-full text-center font-bold py-3 2xl hover:bg-yellow-400 md:hidden mt-20">
         Pendaftaran
       </a>
     </div>
@@ -129,7 +115,7 @@
         <div class="text-center mt-6 font-bold text-xl lg:text-2xl">Selamat Datang</div>
       </div>
       
-      <div class="p-3 justify-center flex py-5 lg:py-10">
+      <div class="p-5 justify-center flex py-5 lg:py-10">
         <a href="/pendaftaran" class="bg-yellow-200 w-5/6 rounded-full text-center font-bold py-3 lg:py-4 text-xl lg:text-2xl hover:bg-yellow-400 shadow-lg">
           Pendaftaran
         </a>
@@ -175,14 +161,14 @@
             href={link.href}
             target="_blank" 
             rel="noopener noreferrer" 
-            class="flex py-4 lg:py-6 cursor-pointer hover:bg-gray-50 transition-all transform hover:-translate-y-1"
+            class="flex cursor-pointer hover:bg-gray-50 transition-all transform hover:-translate-y-1 border-y border-gray-300 py-10"
           >
-            <div class="aspect-square w-1/3 flex flex-col justify-center">
-              <img src={link.icon} alt={link.alt} class="w-16 object-cover">
+            <div class="aspect-square w-1/3  flex flex-col justify-center mx-auto">
+              <img src={link.icon} alt={link.alt} class="w-16 object-cover mx-auto">
             </div>
-            <div class="flex flex-col justify-center w-2/3 p-1">
-              <div class="font-bold text-lg">{link.title}</div>
-              <div class="text-lg">{link.text}</div>
+            <div class="flex flex-col justify-center w-2/3 md:p-1">
+              <div class="font-bold md:text-lg text-sm">{link.title}</div>
+              <div class="md:text-lg text-sm">{link.text}</div>
             </div>
           </a>
         {/each}

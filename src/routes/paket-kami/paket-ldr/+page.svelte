@@ -19,6 +19,17 @@
         Kami tidak hanya memberikan akses teknologi, tapi juga pendampingan lengkap - dari pelatihan digital marketing hingga akses pendanaan - yang memungkinkan petani dan UMKM desa memasarkan produknya ke seluruh Indonesia dengan mudah dan menguntungkan.<br><br>
         Dengan platform canggih Lubkita.com, kami menghapus kendala jarak dan rantai distribusi yang merugikan, membuka jalan bagi produk unggulan desa untuk bersaing di pasar nasional bahkan internasional. Mari bergabung dalam revolusi digital ini dan jadilah bagian dari gerakan yang mengubah wajah pertanian dan UMKM Indonesia menjadi lebih modern, efisien, dan menguntungkan - karena masa depan Indonesia ada di tangan kita!<br><br>
       </div>
+      <div class="flex flex-col w-1/2 mx-auto">
+      <div class="text-center md:text-4xl text-xl font-bold my-10">Cek katalog kami sekarang!</div>
+
+      <a href="https://online.fliphtml5.com/mweze/qnik/" target="_blank" rel="noopener noreferrer">
+        <img 
+            src="/salinan-lubkita.png" 
+            alt="Lubkita Logo" 
+            class="w-full rounded-3xl cursor-pointer hover:opacity-90 transition-opacity"
+        />
+      </a>
+    </div>
       <div>
         <img 
           src="/ldr2.png" 
@@ -27,28 +38,30 @@
         >
       </div>
       <div class="flex w-full">
-          <div class="w-full hidden md:flex p-10">
+        
+          <div class="w-2/3 hidden md:flex md:flex-col justify-end p-10">
               <img 
               src="/page-paket-gold-man.png" 
               alt="LDR Wallpaper" 
-              class="w-full object-cover rounded-t-2xl"
+              class="w-full object-contain rounded-t-2xl"
               >
           </div>
+          
           <div class="flex flex-col mx-auto md:w-11/12 w-full px-5 pt-10">
               <img 
                 src="/lubkita-dan-ldr.png" 
                 alt="Lubkita dan LDR" 
-                class="w-full object-cover mt-6 flex mx-auto rounded-2xl"
+                class="w-full object-cover flex mx-auto py-20 rounded-2xl"
               >
               <a href="/pendaftaran/LDR0A" class="text-xl md:text-3xl text-center p-1 md:p-3 bg-yellow-400 rounded-2xl font-bold w-full flex justify-center mx-auto mt-10">
                 Daftar Paket LDR Sekarang!
             </a>
           </div>
-          <div class="w-full hidden md:flex p-10">
+          <div class="w-2/3 hidden md:flex md:flex-col justify-end p-10">
               <img 
               src="/page-paket-gold-woman.png" 
               alt="LDR Wallpaper" 
-              class="w-full object-cover"
+              class="w-full object-contain rounded-t-2xl"
               >
           </div>
       </div>

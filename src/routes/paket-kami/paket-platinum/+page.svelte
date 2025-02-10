@@ -44,6 +44,7 @@
     </div>
     -->
     <div class="flex justify-center my-10">
+        <!--
         <div class="w-1/10 hidden md:flex">
             <img 
             src="/page-paket-gold-man.png" 
@@ -51,7 +52,9 @@
             class="w-full object-contain p-20"
             >
         </div>
+        -->
         <div class="flex flex-col items-center w-5/6">
+            <!--
             <div class="flex flex-col">
             <div class="text-center md:text-4xl text-xl font-bold mb-5">Cek katalog kami sekarang!</div>
             <a href="https://online.fliphtml5.com/mweze/qnik/" target="_blank" rel="noopener noreferrer">
@@ -62,6 +65,7 @@
                 />
             </a>
             </div>
+            -->
             <a href="https://www.lubkita.com/landing_page/register" class="flex flex-col justify-center md:mt-10 mt-5">
                 <button class="bg-slate-300 hover:bg-slate-500 text-black font-bold py-4 px-8 rounded-full transform hover:scale-105 transition-all duration-200 shadow-lg uppercase tracking-wider text-lg">
                     Daftar Membership platinum Sekarang
@@ -74,6 +78,7 @@
                 Lihat Panduan Membership
             </a>
         </div>
+        <!--
         <div class="1/10 hidden md:flex">
             <img 
             src="/page-paket-gold-woman.png" 
@@ -81,6 +86,7 @@
             class="w-full h-auto object-contain p-20"
             >
         </div>
+        -->
     </div>
     <div class="mt-20 text-center flex mx-auto w-full md:w-1/2">
         <div class="w-1/2 flex flex-col text-right p-4 bg-yellow-300 md:rounded-l-3xl hover:bg-yellow-200">
