@@ -194,7 +194,7 @@
                     autoplay={false}
                     on:pageChange={handleTopCarouselChange}
                 >
-                    <div class="w-full p-4">
+                    <div class="w-full p-4 bg-black">
                         <!-- svelte-ignore a11y_media_has_caption -->
                         <video 
                             use:registerTopVideo
@@ -205,7 +205,7 @@
                         </video>
                     </div>
         
-                    <div class="w-full p-4">
+                    <div class="w-full p-4 bg-black">
                         <!-- svelte-ignore a11y_media_has_caption -->
                         <video 
                             use:registerTopVideo
@@ -216,7 +216,7 @@
                         </video>
                     </div>
                     
-                    <div class="w-full p-4">
+                    <div class="w-full p-4 bg-black">
                         <!-- svelte-ignore a11y_media_has_caption -->
                         <video 
                             use:registerTopVideo
@@ -267,13 +267,13 @@
         </div>
         <div class="flex flex-col justify-center my-10">
             <div class="text-center text-4xl font-bold ">Cek katalog kami sekarang!</div>
-        <a href="https://online.fliphtml5.com/mweze/qnik/" target="_blank" rel="noopener noreferrer">
-            <img 
-                src="/salinan-lubkita.png" 
-                alt="Lubkita Logo" 
-                class="rounded-3xl cursor-pointer hover:opacity-90 transition-opacity md:w-1/2 w-5/6 mx-auto my-10"
-            />
-        </a>
+            <a href="https://online.fliphtml5.com/mweze/qnik/" target="_blank" rel="noopener noreferrer">
+                <img 
+                    src="/salinan-lubkita.png" 
+                    alt="Lubkita Logo" 
+                    class="rounded-3xl cursor-pointer hover:opacity-90 transition-opacity md:w-1/2 w-5/6 mx-auto my-10"
+                />
+            </a>
         </div>
         <div class="flex flex-col bg-amber-300 mx-4 md:mx-10 rounded-t-3xl">
             <div class="p-5 md:p-10 text-center flex flex-col">

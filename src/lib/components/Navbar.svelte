@@ -91,7 +91,7 @@
             <a href="mailto:info@lubkita.com">
                 <img src="/page-home-email-icon.png" alt="email" class="h-8 w-8">
             </a>
-            <a href="https://wa.me/6282177726868" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/6281188801078" target="_blank" rel="noopener noreferrer">
                 <img src="/page-home-whatsapp-icon.png" alt="WhatsApp" class="h-8 w-8">
             </a>
         </div>
@@ -155,7 +155,6 @@
             <div class="bg-gray-50">
                 <a href="/tentang-kami/visi-misi" class="block pl-6 pr-4 py-2 text-sm text-gray-500 hover:text-gray-900">Visi & Misi</a>
                 <a href="/tentang-kami/pt-lubkita" class="block pl-6 pr-4 py-2 text-sm text-gray-500 hover:text-gray-900">PT Lumbung Artha Kita</a>
-                <a href="/tentang-kami/lubkita-com" class="block pl-6 pr-4 py-2 text-sm text-gray-500 hover:text-gray-900">Grosir online Lubkita.com</a>
                 <a href="/tentang-kami/lumbung-digital-rakyat" class="block pl-6 pr-4 py-2 text-sm text-gray-500 hover:text-gray-900">LDR (Lumbung Digital Rakyat)</a>
             </div>
             {/if}
@@ -168,7 +167,7 @@
             <a href="mailto:info@lubkita.com">
                 <img src="/page-home-email-icon.png" alt="email" class="h-8 w-8">
             </a>
-            <a href="https://wa.me/6282177726868" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/6281188801078" target="_blank" rel="noopener noreferrer">
                 <img src="/page-home-whatsapp-icon.png" alt="WhatsApp" class="h-8 w-8">
             </a>
         </div>

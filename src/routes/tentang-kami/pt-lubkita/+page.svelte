@@ -1,25 +1,25 @@
 <div 
     class="flex flex-col md:flex-row border-2 justify-center p-5 md:space-x-10 space-y-5 md:space-y-0 bg-cover bg-center bg-no-repeat min-h-screen w-full" 
-    style="background-image:url('/page-ptlubkita-wallpaper.jpg');"
+    style="background-image:url('/page-ptlubkita-wallpaper-blurred.png');"
 >
     <!-- Image container - hidden on mobile -->
-    <div class="hidden md:flex border-2 p-5 w-full md:w-2/6 rounded-3xl flex-col justify-center h-full my-auto bg-white">
+    <div class="hidden md:flex border-2 p-2 w-full md:w-2/6 rounded-3xl flex-col justify-center h-full my-auto bg-white">
         <img 
-            src="/page-ptlubkita-wallpaper2.jpg" 
+            src="/page-ptlubkita-wallpaper2.png" 
             alt="LDR Wallpaper" 
-            class="w-full object-cover aspect-square"
+            class="w-full object-cover aspect-square rounded-3xl"
         >
     </div>
     <div class="flex flex-col justify-center w-full md:w-3/6">
-      <div class="flex flex-col border-2 p-7 space-y-5 rounded-3xl justify-center my-auto bg-white py-10">
+      <div class="flex flex-col border-2 p-7 space-y-5 rounded-3xl justify-center my-auto bg-white py-10 bg-opacity-60">
           <div class="text-4xl md:text-5xl font-bold">
               Kami adalah,<br>PT.Lumbung Artha Kita
           </div>
           
           <!-- Image container - shown only on mobile -->
-          <div class="md:hidden unded-3xl">
+          <div class="md:hidden rounded-3xl">
               <img 
-                  src="/page-ptlubkita-wallpaper2.jpg" 
+                  src="/page-ptlubkita-wallpaper2.png" 
                   alt="LDR Wallpaper" 
                   class="w-full object-cover"
               >
@@ -103,6 +103,27 @@
                     <div class="flex justify-end">
                     </div>
                 </div>
+            </div>
+            <div class="relative z-20 mt-[15vh] w-2/3 ml-auto">
+                <a 
+                    href="https://lubkita.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 rounded-l-full p-6 shadow-lg flex 
+                           transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 
+                           cursor-pointer hover:shadow-xl"
+                >
+                    <img 
+                        src="/page-ptlubkita-arrow.png" 
+                        alt="LDR Wallpaper" 
+                        class="aspect-square w-1/3 object-cover rounded-full"
+                    >
+                    <h2 class="text-3xl text-white mb-2 italic pl-6 flex flex-col justify-center">
+                        Klik disini untuk mengunjungi <b>Lubkita.com</b>
+                    </h2>
+                    <div class="flex justify-end">
+                    </div>
+                </a>
             </div>
         </div>
     </div>
