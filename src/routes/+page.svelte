@@ -96,7 +96,7 @@
 </script>
 
 
-<div class="min-h-screen bg-gray-50">
+<div class="min-h-screen bg-cover bg-center bg-repeat" style="background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('/page-home-wallpaper4.png')">
 
     <!-- Hero Section -->
     <div class="flex flex-col">
@@ -126,7 +126,7 @@
                     </div>
                 </div>
 
-                <div class="w-full md:w-1/2 md:mt-0 h-full md:flex hidden flex-col justify-center text-right md:pl-20 md:pt-32"> 
+                <div class="w-full md:w-1/2 md:mt-0 h-full md:flex hidden flex-col justify-center text-right md:pl-28 md:pt-32"> 
 
 
 
@@ -140,7 +140,7 @@
                                 autoplay={false}
                                 on:pageChange={handleTopCarouselChange}
                             >
-                                <div class="w-full p-4">
+                                <div class="w-full bg-black">
                                     <!-- svelte-ignore a11y_media_has_caption -->
                                     <video 
                                         use:registerTopVideo
@@ -151,7 +151,7 @@
                                     </video>
                                 </div>
                      
-                                <div class="w-full p-4">
+                                <div class="w-full bg-black">
                                     <!-- svelte-ignore a11y_media_has_caption -->
                                     <video 
                                         use:registerTopVideo
@@ -161,7 +161,7 @@
                                         <source src="/lubkita-animasi2.mp4" type="video/mp4">
                                     </video>
                                 </div>
-                                <div class="w-full p-4">
+                                <div class="w-full bg-black">
                                     <!-- svelte-ignore a11y_media_has_caption -->
                                     <video 
                                         use:registerTopVideo
@@ -194,37 +194,43 @@
                     autoplay={false}
                     on:pageChange={handleTopCarouselChange}
                 >
-                    <div class="w-full p-4 bg-black">
-                        <!-- svelte-ignore a11y_media_has_caption -->
-                        <video 
-                            use:registerTopVideo
-                            controls 
-                            class="w-full"
-                        >
-                            <source src="/lubkita-animasi1.mp4" type="video/mp4">
-                        </video>
+                    <div class="w-full p-5">
+                        <div class="bg-black">
+                            <!-- svelte-ignore a11y_media_has_caption -->
+                            <video 
+                                use:registerTopVideo
+                                controls 
+                                class="w-full"
+                            >
+                                <source src="/lubkita-animasi1.mp4" type="video/mp4">
+                            </video>
+                        </div>
                     </div>
         
-                    <div class="w-full p-4 bg-black">
-                        <!-- svelte-ignore a11y_media_has_caption -->
-                        <video 
-                            use:registerTopVideo
+                    <div class="w-full p-5">
+                        <div class="bg-black">
+                            <!-- svelte-ignore a11y_media_has_caption -->
+                            <video 
+                                use:registerTopVideo
                             controls 
-                            class="w-full"
-                        >
-                            <source src="/lubkita-animasi2.mp4" type="video/mp4">
-                        </video>
+                                class="w-full"
+                            >
+                                <source src="/lubkita-animasi2.mp4" type="video/mp4">
+                            </video>
+                        </div>
                     </div>
-                    
-                    <div class="w-full p-4 bg-black">
-                        <!-- svelte-ignore a11y_media_has_caption -->
-                        <video 
+
+                    <div class="w-full p-5">
+                        <div class="bg-black">
+                            <!-- svelte-ignore a11y_media_has_caption -->
+                            <video 
                             use:registerTopVideo
                             controls 
                             class="w-full"
-                        >
-                            <source src="/lubkita-animasi4.mp4" type="video/mp4">
-                        </video>
+                            >
+                                <source src="/lubkita-animasi4.mp4" type="video/mp4">
+                            </video>
+                        </div>
                     </div>
                 </svelte:component>
             {:else}
@@ -234,7 +240,7 @@
         </div>
         
 
-        <div class="w-11/12 md:w-5/6 flex flex-col md:flex-row justify-center mx-auto my-10 shadow-lg rounded-2xl p-5 border">
+        <div class="w-11/12 md:w-5/6 flex flex-col md:flex-row justify-center mx-auto my-10 shadow-lg rounded-2xl p-5 border bg-white">
             <a href="/panduan-membership2.pdf" class="flex w-full md:w-1/3 hover:bg-slate-300 mb-4 md:mb-0">
                 <div class="p-2 w-1/5">
                     <img src="/page-home-networking-icon.png" alt="networking" class="h-12 w-12 md:h-16 md:w-16 mx-auto">
@@ -265,7 +271,9 @@
 
 
         </div>
-        <div class="flex flex-col justify-center my-10">
+
+
+        <div class="flex flex-col justify-center my-10 md:hidden">
             <div class="text-center text-4xl font-bold ">Cek katalog kami sekarang!</div>
             <a href="https://online.fliphtml5.com/mweze/qnik/" target="_blank" rel="noopener noreferrer">
                 <img 
@@ -275,164 +283,108 @@
                 />
             </a>
         </div>
-        <div class="flex flex-col bg-amber-300 mx-4 md:mx-10 rounded-t-3xl">
-            <div class="p-5 md:p-10 text-center flex flex-col">
-                <div class="text-3xl md:text-4xl">Review</div>
-                <div class="text-4xl md:text-5xl font-bold">Pengguna LDR</div>
-            </div>
-            <div class="px-4 md:px-20 pb-10 md:pb-20 pt-5 rounded-full flex flex-col justify-center"> <!-- Adjust height as needed -->
-                <!--
-                <video 
-                class="w-full flex justify-center rounded-lg shadow-lg"
-                controls
-                autoplay
-                muted
-                loop
-                >
-                <source src="/testimoni-lubkita2-2-2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video>
-                -->
 
 
 
-                <div class="w-full h-full flex-col justify-center text-right"> 
+        <div class="flex justify-center mx-10">
+            <div class="flex flex-col bg-amber-300 mx-4 md:mx-0 rounded-t-3xl md:rounded-t-none md:rounded-tl-3xl md:w-3/4 w-full bg-opacity-70 border-2 border-amber-200 hover:shadow-lg shadow-slate-200">
+                <div class="flex">
+                    <img src="/page-home-logo-review.png" alt="Katalog Logo" class="aspect-square mx-auto object-contain p-3 w-1/6 pl-10 hidden md:block">
+                    <div class="p-5 md:p-10 md:text-left text-center flex flex-col w-5/6 mx-auto">
+                        <div class="text-3xl md:text-4xl">Review</div>
+                        <div class="text-4xl md:text-5xl font-bold">Pengguna LDR</div>
+                    </div>
+                </div>
 
 
 
 
-                    {#if Carousel}
-                        <svelte:component 
-                            this={Carousel}
-                            bind:this={bottomCarouselRef}
-                            particlesToShow={1}
-                            particlesToScroll={1}
-                            autoplay={false}
-                            on:pageChange={handleBottomCarouselChange}
+                <div class="flex justify-center p-5">
+                    <div class="rounded-full flex flex-col justify-center w-full mx-auto"> <!-- Adjust height as needed -->
+                        <!--
+                        <video 
+                        class="w-full flex justify-center rounded-lg shadow-lg"
+                        controls
+                        autoplay
+                        muted
+                        loop
                         >
-                            <div class="w-full p-4 rounded-xl">
-                                <iframe
-                                    id="youtube-player-1"
-                                    class="youtube-player w-full aspect-video rounded-xl shadow-lg"
-                                    src="https://www.youtube.com/embed/biBuA07GBIU?enablejsapi=1"
-                                    title="YouTube video player"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen
-                                ></iframe>
-                            </div>
-                 
-                            <div class="w-full p-4 rounded-xl">
-                                <iframe
-                                    id="youtube-player-2"
-                                    class="youtube-player w-full aspect-video rounded-xl shadow-lg"
-                                    src="https://www.youtube.com/embed/g77BMHYMSDc?enablejsapi=1"
-                                    title="YouTube video player"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen
-                                ></iframe>
-                            </div>
-                            <div class="w-full p-4 rounded-xl">
-                                <iframe
-                                    id="youtube-player-2"
-                                    class="youtube-player w-full aspect-video rounded-xl shadow-lg"
-                                    src="https://www.youtube.com/embed/EGIGaXAv5U4"
-                                    title="YouTube video player"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen
-                                ></iframe>
-                            </div>
-                        </svelte:component>
-                    {:else}
-                        <div class="w-full h-48 bg-gray-100 animate-pulse rounded-lg"></div>
-                    {/if}
-
-
-                
-
+                        <source src="/testimoni-lubkita2-2-2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                        </video>
+                        -->
+                        
+                        <div class="w-full h-full flex-col justify-center text-right"> 
+                            {#if Carousel}
+                                <svelte:component 
+                                    this={Carousel}
+                                    bind:this={bottomCarouselRef}
+                                    particlesToShow={1}
+                                    particlesToScroll={1}
+                                    autoplay={false}
+                                    on:pageChange={handleBottomCarouselChange}
+                                >
+                                    <div class="w-full p-4 rounded-xl">
+                                        <iframe
+                                            id="youtube-player-1"
+                                            class="youtube-player w-full aspect-video rounded-xl shadow-lg"
+                                            src="https://www.youtube.com/embed/biBuA07GBIU?enablejsapi=1"
+                                            title="YouTube video player"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen
+                                        ></iframe>
+                                    </div>
+                        
+                                    <div class="w-full p-4 rounded-xl">
+                                        <iframe
+                                            id="youtube-player-2"
+                                            class="youtube-player w-full aspect-video rounded-xl shadow-lg"
+                                            src="https://www.youtube.com/embed/g77BMHYMSDc?enablejsapi=1"
+                                            title="YouTube video player"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen
+                                        ></iframe>
+                                    </div>
+                                    <div class="w-full p-4 rounded-xl">
+                                        <iframe
+                                            id="youtube-player-2"
+                                            class="youtube-player w-full aspect-video rounded-xl shadow-lg"
+                                            src="https://www.youtube.com/embed/EGIGaXAv5U4"
+                                            title="YouTube video player"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen
+                                        ></iframe>
+                                    </div>
+                                </svelte:component>
+                            {:else}
+                                <div class="w-full h-48 bg-gray-100 animate-pulse rounded-lg"></div>
+                            {/if}
+                        </div>    
+                    </div>
+                </div>
 
 
             </div>
 
 
-                
-            </div>
-            <!--
-            <div class="flex justify-center w-full border-2 border-black h-[600px] p-8">
-                <Carousel :slides="slides">
-                        <template #slide-0>
-                            <div class="w-full h-full flex items-center justify-center p-16">
-                                <span class="text-3xl bg-blue-300 w-full h-full rounded-3xl">
-                                    Image1
-                                </span>
-                            </div>
-                        </template>
 
-                        <template #slide-1>
-                            <div class="w-full h-full flex flex-col items-center justify-center p-16">
-                                <div class="text-2xl italic">"quotes"</div>
-                                <div class="border-t border-red-200 w-full mx-10 my-8"></div>
-                                <div class="text-2xl font-bold">Name</div>
-                            </div>
-                        </template>
+            <div class="flex-col justify-center md:w-1/4 hidden md:flex bg-slate-700 bg-opacity-70 border-y-2 border-r-2 border-slate-200 rounded-tr-3xl p-10">
 
-                        <template #slide-2>
-                            <div class="w-full h-full flex items-center justify-center p-16">
-                                <span class="text-3xl bg-yellow-300 w-full h-full rounded-3xl">
-                                    Image3
-                                </span>
-                            </div>
-                        </template>
-                    </Carousel>
+                <div class="text-center text-white text-4xl italic w-full p-3">Cek<br><b>katalog kami</b><br>sekarang!</div>
+                <img src="/page-home-logo-katalog.png" alt="Katalog Logo" class="w-1/3 mx-auto object-contain mb-10 mt-5">
+                <a href="https://online.fliphtml5.com/mweze/qnik/" target="_blank" rel="noopener noreferrer">
+                    <img src="/salinan-lubkita.png" alt="Lubkita Logo" class="rounded-2xl cursor-pointer hover:opacity-90 transition-opacity mx-auto shadow-lg shadow-slate-400" />
+                </a>
             </div>
-            -->
-            <!--
-            <div class="grid grid-cols-2 bg-blue-400 p-10">
-                <div class="flex flex-col p-4 bg-slate-100 py-16">
-                    <div class="text-center text-xl font-bold">Name</div>
-                    <div class="border-t border-slate-400 m-3"></div>
-                    <div class="text-center italic">"Review"</div>
-                </div>
-                <div class="flex flex-col p-4 bg-gray-200 py-16">
-                    <div class="text-center text-xl font-bold">Name</div>
-                    <div class="border-t border-slate-400 m-3"></div>
-                    <div class="text-center italic">"Review"</div>
-                </div>
-                <div class="flex flex-col p-4 bg-gray-200 py-16">
-                    <div class="text-center text-xl font-bold">Name</div>
-                    <div class="border-t border-slate-400 m-3"></div>
-                    <div class="text-center italic">"Review"</div>
-                </div>
-                <div class="flex flex-col p-4 bg-slate-100 py-16">
-                    <div class="text-center text-xl font-bold">Name</div>
-                    <div class="border-t border-slate-400 m-3"></div>
-                    <div class="text-center italic">"Review"</div>
-                </div>
-                <div class="flex flex-col p-4 bg-slate-100 py-16">
-                    <div class="text-center text-xl font-bold">Name</div>
-                    <div class="border-t border-slate-400 m-3"></div>
-                    <div class="text-center italic">"Review"</div>
-                </div>
-                <div class="flex flex-col p-4 bg-gray-200 py-16">
-                    <div class="text-center text-xl font-bold">Name</div>
-                    <div class="border-t border-slate-400 m-3"></div>
-                    <div class="text-center italic">"Review"</div>
-                </div>
-                <div class="flex flex-col p-4 bg-gray-200 py-16">
-                    <div class="text-center text-xl font-bold">Name</div>
-                    <div class="border-t border-slate-400 m-3"></div>
-                    <div class="text-center italic">"Review"</div>
-                </div>
-                <div class="flex flex-col p-4 bg-slate-100 py-16">
-                    <div class="text-center text-xl font-bold">Name</div>
-                    <div class="border-t border-slate-400 m-3"></div>
-                    <div class="text-center italic">"Review"</div>
-                </div>
-            </div>
-            -->
+
         </div>
+
+
+
+
     </div>
 
     <!-- Contact Section -->
