@@ -21,7 +21,7 @@
 
 
 
-        <div class="mt-20 md:text-4xl text-2xl font-bold text-center bg-slate-100 w-fit mx-auto px-10 py-5 rounded-t-3xl">Fitur yang akan di dapat</div>
+        <div class="mt-20 md:text-4xl text-2xl font-bold text-center bg-slate-100 w-fit mx-auto px-10 py-5 rounded-t-3xl">Fitur yang akan di dapat:</div>
 
 
 
