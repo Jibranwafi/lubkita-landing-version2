@@ -18,6 +18,216 @@
         <div class=" p-3 text-center text-lg md:text-2xl italic">
             Paket Gold memberikan Anda akses lengkap ke fitur promosi flashsale, dukungan iklan terintegrasi, dan priority support dengan respons cepat. Dengan 2 keyword SEO kompetitif menengah, paket social media starter (5 Feed + 3 Reels), dan traffic hingga 500 pengunjung/hari, bisnis Anda akan mendapat posisi listing prioritas 2 di marketplace. Lengkap dengan budget iklan Google 15/15 hari dan setup website profesional, paket Gold adalah investasi cerdas untuk membangun presence digital yang kuat.
         </div>
+
+
+
+        <div class="mt-20 md:text-4xl text-2xl font-bold text-center bg-slate-100 w-fit mx-auto px-10 py-5 rounded-t-3xl">Fitur yang akan di dapat</div>
+
+
+
+
+
+        <div class="flex md:space-x-5 items-start bg-slate-100 p-5 md:flex-row flex-col md:space-y-0 space-y-5">
+
+            
+            <div class="flex flex-col w-full md:w-1/2 bg-yellow-200 pl-3 pb-3 rounded-2xl space-y-2">
+
+
+                
+                <div class="flex rounded-t-2xl text-2xl font-bold h-44 justify-start" style="background-image: url('/page-paket-benefit2.png'); background-size: cover; background-position: center;">
+                    <div class="bg-yellow-200 w-fit md:text-3xl text-2xl p-5 h-fit rounded-br-2xl">IN MARKETING</div>
+                </div>
+
+
+                <div class="accordion-item bg-yellow-50 border-yellow-300 p-4 mr-3 rounded-xl hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+                    <button 
+                        class="w-full flex items-center gap-3"
+                        on:click={() => toggleDropdown('care')}
+                    >
+                        <img 
+                            src="/page-paket-gold-inmarketing-icons1.png" 
+                            alt="Weezer Symbol" 
+                            class="w-[10%] aspect-square object-contain p-1"
+                        />
+                        <div class="flex-1 border-b border-slate-300 flex items-center justify-between">
+                            <span class="text-2xl font-semibold py-1 text-left text-yellow-800">Promo (Flashsale & Premium Bandages Gold)</span>
+                            <svg 
+                                class="h-6 w-6 transition-transform duration-300 {openStates.care ? 'rotate-180' : ''}"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                fill="none"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </div>
+                    </button>
+                    
+                    {#if openStates.care}
+                        <div transition:slide={{ duration: 300 }} class="mt-3">
+                            Di paket Gold, kamu mendapatkan akses penuh ke sistem flash sale dan profil tokomu akan menerima badges Membership Gold dan Verified Seller,yang menandakan toko mu adalah toko terpercaya dengan promo-promo esklusif.
+                        </div>
+                    {/if}
+                </div>
+
+
+                <div class="accordion-item bg-yellow-50 border-yellow-300 p-4 mr-3 rounded-xl hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+                    <button 
+                        class="w-full flex items-center gap-3"
+                        on:click={() => toggleDropdown('benefit2')}
+                    >
+                        <img 
+                            src="/page-paket-gold-inmarketing-icons2.png" 
+                            alt="Weezer Symbol" 
+                            class="w-[10%] aspect-square object-contain p-1"
+                        />
+                        <div class="flex-1 border-b border-slate-300 flex items-center justify-between">
+                            <span class="text-2xl font-semibold py-1 text-left text-yellow-800">Monitor Performa Real-Time</span>
+                            <svg 
+                                class="h-6 w-6 transition-transform duration-300 {openStates.benefit2 ? 'rotate-180' : ''}"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                fill="none"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </div>
+                    </button>
+                    
+                    {#if openStates.benefit2}
+                        <div transition:slide={{ duration: 300 }} class="mt-3">
+                            Performa promosi secara langsung melalui dashboard yang menunjukkan jumlah pengunjung, tingkat konversi, nilai rata-rata pesanan, dan sumber traffic. Data ini membantu Anda mengambil keputusan cepat untuk optimasi promosi yang sedang berjalan.
+                        </div>
+                    {/if}
+                </div>
+
+                <div class="accordion-item bg-yellow-50 border-yellow-300 p-4 mr-3 rounded-xl hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+                    <button 
+                        class="w-full flex items-center gap-3"
+                        on:click={() => toggleDropdown('benefit3')}
+                    >
+                        <img 
+                            src="/page-paket-gold-inmarketing-icons3.png" 
+                            alt="Weezer Symbol" 
+                            class="w-[10%] aspect-square object-contain p-1"
+                        />
+                        <div class="flex-1 border-b border-slate-300 flex items-center justify-between">
+                            <span class="text-2xl font-semibold py-1 text-left text-yellow-800">Priority Support dan Dashboard</span>
+                            <svg 
+                                class="h-6 w-6 transition-transform duration-300 {openStates.benefit3 ? 'rotate-180' : ''}"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                fill="none"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </div>
+                    </button>
+                    
+                    {#if openStates.benefit3}
+                        <div transition:slide={{ duration: 300 }} class="mt-3">
+                            Tim support akan merespon pertanyaan, keluhan, atau bantuan teknis yang Anda butuhkan dalam waktu maksimal 60 menit, sehingga operasional bisnis Anda tidak terganggu terlalu lama.
+                        </div>
+                    {/if}
+                </div>
+
+
+                <div class="accordion-item bg-yellow-50 border-yellow-300 p-4 mr-3 rounded-xl hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+                    <button 
+                        class="w-full flex items-center gap-3"
+                        on:click={() => toggleDropdown('benefit4')}
+                    >
+                        <img 
+                            src="/page-paket-gold-inmarketing-icons4.png" 
+                            alt="Weezer Symbol" 
+                            class="w-[10%] aspect-square object-contain p-1"
+                        />
+                        <div class="flex-1 border-b border-slate-300 flex items-center justify-between">
+                            <span class="text-2xl font-semibold py-1 text-left text-yellow-800">Prioritas Listing</span>
+                            <svg 
+                                class="h-6 w-6 transition-transform duration-300 {openStates.benefit4 ? 'rotate-180' : ''}"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                fill="none"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </div>
+                    </button>
+                    
+                    {#if openStates.benefit4}
+                        <div transition:slide={{ duration: 300 }} class="mt-3">
+                            Membantu produk Anda muncul lebih sering di hasil pencarian yang relevan. Sistem akan mengoptimasi kata kunci produk Anda dan menempatkannya di posisi strategis saat pembeli mencari produk serupa.
+                        </div>
+                    {/if}
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+
+            <div class="flex flex-col md:w-1/2 w-full bg-yellow-200 pl-3 pb-3 rounded-2xl space-y-2 ">
+                <div class="flex rounded-t-2xl text-2xl font-bold h-44 justify-start" style="background-image: url('/page-paket-benefit2.png'); background-size: cover; background-position: center;">
+                    <div class="bg-yellow-200 w-fit md:text-3xl text-2xl p-5 h-fit rounded-br-2xl">OUT MARKETING</div>
+                </div>
+                
+                <!-- Social Media Package Content -->
+                <div class="p-6 space-y-6 bg-white rounded-xl shadow-md border-2 border-yellow-300 mr-3 ">
+                    <h2 class="text-3xl font-bold text-yellow-800 border-b-2 border-yellow-200 pb-3">
+                        Social Media and Profile Intensive Class
+                    </h2>
+                    <p class="text-xl text-yellow-700 bg-yellow-50 p-3 rounded-lg inline-block">
+                        (6 Feed, 2 Reels)
+                    </p>
+                    
+                    <p class="text-lg text-gray-700 bg-yellow-50 p-4 rounded-lg">
+                        Kami memiliki akun media sosial dengan follower yang cukup besar untuk membantu engagment toko anda.
+                    </p>
+                    
+                    <div class="mt-8 bg-gradient-to-br from-yellow-50 to-white p-6 rounded-xl border border-yellow-200">
+                        <h3 class="text-2xl font-bold text-[#4A3419] mb-4">Full-scale social presence:</h3>
+                        <ul class="list-none space-y-4 mt-4 text-lg">
+                            <li class="flex items-center gap-2 bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                                <span class="text-yellow-500 text-xl">•</span> 
+                                <span class="text-gray-800">6 curated feed posts</span>
+                            </li>
+                            <li class="flex items-center gap-2 bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                                <span class="text-yellow-500 text-xl">•</span> 
+                                <span class="text-gray-800">2 professional reels</span>
+                            </li>
+                            <li class="flex items-center gap-2 bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                                <span class="text-yellow-500 text-xl">•</span> 
+                                <span class="text-gray-800">Premium copywriting</span>
+                            </li>
+                            <li class="flex items-center gap-2 bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                                <span class="text-yellow-500 text-xl">•</span> 
+                                <span class="text-gray-800">Viral optimization strategy</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+            
+
+
+
+
+        </div>
+
+
+
+
+         <!--
         <div class="flex w-full">
                 <div class="flex md:flex-row flex-col w-full justify-center p-10 md:space-x-10 md:p-5">
                     <img 
@@ -32,6 +242,7 @@
                     >
                 </div>
         </div>
+        -->
         <!--
         <div class="border-2 border-black p-5 mt-20 text-center">
             Mengapa memilih paket gold?
@@ -109,7 +320,47 @@
 
 <style>
     /* Svelte scopes styles automatically, no need for scoped attribute */
+    
     input, textarea {
     @apply p-3;
     }
 </style>
+
+<script>
+    import { slide } from 'svelte/transition';
+    let openStates = {
+        care: false,
+        benefit2: false,
+        benefit3: false,
+        benefit4: false,
+        care2: false,
+        benefit2_2: false,
+        benefit3_2: false,
+        benefit4_2: false
+    };
+
+    /** @param {string} key */
+    function toggleDropdown(key) {
+        let currentState = false;
+        if (key === 'care') currentState = openStates.care;
+        else if (key === 'benefit2') currentState = openStates.benefit2;
+        else if (key === 'benefit3') currentState = openStates.benefit3;
+        else if (key === 'benefit4') currentState = openStates.benefit4;
+        else if (key === 'care2') currentState = openStates.care2;
+        else if (key === 'benefit2_2') currentState = openStates.benefit2_2;
+        else if (key === 'benefit3_2') currentState = openStates.benefit3_2;
+        else if (key === 'benefit4_2') currentState = openStates.benefit4_2;
+
+        openStates = {
+            care: false,
+            benefit2: false,
+            benefit3: false,
+            benefit4: false,
+            care2: false,
+            benefit2_2: false,
+            benefit3_2: false,
+            benefit4_2: false,
+            [key]: !currentState
+        };
+    }
+</script>

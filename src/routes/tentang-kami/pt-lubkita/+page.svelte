@@ -12,8 +12,8 @@
     </div>
     <div class="flex flex-col justify-center w-full md:w-3/6">
       <div class="flex flex-col border-2 p-7 space-y-5 rounded-3xl justify-center my-auto bg-white py-10 bg-opacity-60">
-          <div class="text-4xl md:text-5xl font-bold">
-              Kami adalah,<br>PT.Lumbung Artha Kita
+          <div class="text-4xl md:text-5xl">
+              Kami adalah,<br><b>PT.Lumbung Artha Kita</b>
           </div>
           
           <!-- Image container - shown only on mobile -->

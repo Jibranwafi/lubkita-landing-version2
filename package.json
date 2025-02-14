@@ -31,6 +31,7 @@
 	"dependencies": {
 		"@tailwindcss/forms": "^0.5.9",
 		"flowbite-svelte": "^0.47.4",
+		"framer-motion": "^12.4.2",
 		"html2pdf.js": "^0.10.2"
 	}
 }
