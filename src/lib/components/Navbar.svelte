@@ -57,9 +57,7 @@
                 <div class="w-full border-t border-gray"></div>
                 <a href="/paket-kami/paket-platinum" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Paket Platinum</a>
                 <div class="w-full border-t border-gray"></div>
-                <!--
                 <a href="/paket-kami/paket-ldr" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Paket LDR</a>
-                -->
                 </div>
             </div>
             </div>
@@ -80,14 +78,13 @@
                 <div class="w-full border-t border-gray"></div>
                 <a href="/tentang-kami/pt-lubkita" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">PT Lumbung Artha Kita</a>
                 <div class="w-full border-t border-gray"></div>
-                <!--
                 <a href="/tentang-kami/lumbung-digital-rakyat" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">LDR (Lumbung Digital Rakyat)</a>
-                -->
                 </div>
             </div>
             </div>
         </div>
 
+        
         <div class="hidden md:flex items-center space-x-8 w-1/5 justify-center">
             <a href="https://www.instagram.com/lubkita.id" target="_blank" rel="noopener noreferrer">
                 <img src="/page-home-instagram-icon.png" alt="Instagram" class="h-8 w-8">
