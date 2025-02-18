@@ -2,16 +2,16 @@
   let activeTab = 'lubkita';
 </script>
 
-<div class="min-h-screen bg-gray-100 p-6">
+<div class="min-h-screen bg-syarat-ketentuan p-6">
   <div class="max-w-7xl mx-auto">
     <!-- Header -->
-    <div class="bg-gray-600 text-white py-6 rounded-t-lg">
+    <div class="bg-gray-600 text-white py-6 rounded-lg">
       <h1 class="text-4xl font-bold text-center">Syarat Dan Ketentuan</h1>
     </div>
 
     <!-- Tabs -->
-    <div class="flex justify-center border-b my-8">
-      <div class="inline-flex bg-gray-100 rounded-lg p-1">
+    <div class="flex justify-center border-b-2 mt-8">
+      <div class="inline-flex bg-gray-100 rounded-t-lg p-1">
         <button 
           on:click={() => activeTab = 'lubkita'}
           class="px-8 py-2 rounded-lg font-medium transition-colors duration-200 {activeTab === 'lubkita' 
@@ -32,10 +32,10 @@
     </div>
 
     <!-- Content -->
-    <div class="bg-white shadow-lg rounded-b-lg p-6">
+    <div class="bg-white bg-opacity-80 border-2 shadow-lg rounded-b-lg p-6">
       {#if activeTab === 'lubkita'}
       <div class="mx-auto py-8">
-        <h1 class="text-3xl font-bold text-center mb-8">SYARAT DAN KETENTUAN KEANGGOTAAN LUBKITA.COM</h1>
+        <h1 class="text-2xl font-bold text-center mb-8">SYARAT DAN KETENTUAN KEANGGOTAAN LUBKITA.COM</h1>
 
         <!-- Section 1 -->
         <div class="mb-8">
@@ -206,7 +206,7 @@
       {:else}
       <div class="py-8">
         <!-- LDR content here -->
-        <h2 class="text-3xl font-bold text-center mb-8">SYARAT DAN KETENTUAN KEANGGOTAAN LUMBUNG DIGITAL RAKYAT</h2>
+        <h2 class="text-2xl font-bold text-center mb-8">SYARAT DAN KETENTUAN KEANGGOTAAN LUMBUNG DIGITAL RAKYAT</h2>
 
         <p class="mt-4 font-semibold md:text-xl my-3">1. KETENTUAN UMUM</p>
         <ol class="list-decimal list-inside space-y-2 text-gray-600 ml-6">
@@ -299,5 +299,10 @@
 </div>
 
 <style>
-  /* Add any Svelte-specific styles here if needed */
+  .bg-syarat-ketentuan {
+    background-image: url('/page-syaratketentuan-wallpaper.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 </style>
