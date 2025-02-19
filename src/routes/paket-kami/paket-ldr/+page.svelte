@@ -5,7 +5,7 @@
             <img 
                 src="/paket-ldr2.png" 
                 alt="LDR Wallpaper" 
-                class="w-full object-cover h-[60vh] md:h-auto"
+                class="w-full object-cover h-[45vh] md:h-auto"
             >
             <div class="absolute inset-x-0 bottom-0 md:h-64 h-24 bg-gradient-to-t from-orange-100 to-transparent"></div>
             <div class="absolute inset-x-0 bottom-0 md:h-64 h-24 bg-gradient-to-t from-orange-100 to-transparent md:flex hidden"></div>
