@@ -142,37 +142,37 @@
                 <div class="md:w-fit w-full grid grid-cols-2 p-3 md:gap-4 gap-2">
                     <div class="flex flex-col bg-orange-200 md:hover:shadow-lg hover:shadow-none md:hover:shadow-slate-700 md:hover:translate-y-[-10px] hover:translate-y-[0px] transition-all duration-300 ease-out pr-5 border-l-8 border-orange-700 md:shadow-xl shadow-slate-500">
                         <div class="flex">
-                            <div class="bg-orange-700 md:rounded-br-3xl rounded-br-lg shadow-r w-1/4 md:p-3 p-2 my-auto">
+                            <div class="bg-orange-700 md:rounded-br-3xl rounded-br-lg shadow-r w-1/3 md:p-3 p-2 my-auto">
                                 <img src="/page-paket-ldr-icon-mitralubkita.png" alt="Mitra Lubkita" class="object-contain w-fit">
                             </div>
-                            <div class="w-3/4 md:text-2xl text-sm font-bold text-orange-700 flex flex-col justify-center md:px-5 px-2">Kemitraan Lubkita.com</div>
+                            <div class="w-2/3 md:text-2xl text-sm font-bold text-orange-700 flex flex-col justify-center md:px-5 px-2">Kemitraan Lubkita.com</div>
                         </div>
                         <div class="text-orange-700 h-full flex flex-col justify-center font-light md:text-xl text-xs pl-3 w-full md:py-0 py-5">Kemitraan Lubkita.com agar kita dapat menyediakan bisnis anda dengan seorang admin dari tim kami</div>
                     </div>
                     <div class="flex flex-col bg-orange-200 md:hover:shadow-lg hover:shadow-none md:hover:shadow-slate-700 md:hover:translate-y-[-10px] hover:translate-y-[0px] transition-all duration-300 ease-out pr-5 border-l-8 border-orange-700 md:shadow-xl shadow-slate-500">
                         <div class="flex">
-                            <div class="bg-orange-700 md:rounded-br-3xl rounded-br-lg shadow-r w-1/4 md:p-3 p-2 my-auto">
+                            <div class="bg-orange-700 md:rounded-br-3xl rounded-br-lg shadow-r w-1/3 md:p-3 p-2 my-auto">
                                 <img src="/page-paket-ldr-icon-tv32.png" alt="TV 32 inch" class="object-contain w-fit">
                             </div>
-                            <div class="w-3/4 md:text-2xl text-sm font-bold text-orange-700 flex flex-col justify-center md:px-5 px-2">TV 32 inch</div>
+                            <div class="w-2/3 md:text-2xl text-sm font-bold text-orange-700 flex flex-col justify-center md:px-5 px-2">TV 32 inch</div>
                         </div>
                         <div class="text-orange-700 h-full flex flex-col justify-center font-light md:text-xl text-xs pl-3 w-full md:py-0 py-5">TV 32 inch untuk zoom meeting, dan komunikasi dengan tim Lubkita.com setiap minggu</div>
                     </div>
                     <div class="flex flex-col bg-orange-200 md:hover:shadow-lg hover:shadow-none md:hover:shadow-slate-700 md:hover:translate-y-[-10px] hover:translate-y-[0px] transition-all duration-300 ease-out pr-5 border-l-8 border-orange-700 md:shadow-xl shadow-slate-500">
                         <div class="flex">
-                            <div class="bg-orange-700 md:rounded-br-3xl rounded-br-lg shadow-r w-1/4 md:p-3 p-2 my-auto">
+                            <div class="bg-orange-700 md:rounded-br-3xl rounded-br-lg shadow-r w-1/3 md:p-3 p-2 my-auto">
                                 <img src="/page-paket-ldr-icon-setpc.png" alt="1 set PC" class="object-contain w-fit">
                             </div>
-                            <div class="w-3/4 md:text-2xl text-sm font-bold text-orange-700 flex flex-col justify-center md:px-5 px-2">1 Set PC</div>
+                            <div class="w-2/3 md:text-2xl text-xs font-bold text-orange-700 flex flex-col justify-center md:px-5 px-2">1 Set PC</div>
                         </div>
                         <div class="text-orange-700 h-full flex flex-col justify-center font-light md:text-xl text-xs pl-3 w-full md:py-0 py-5">1 set PC lengkap untuk menjalankan kegiatan dropshipping dan mengelola akun Lubkita.com</div>
                     </div>
                     <div class="flex flex-col bg-orange-200 md:hover:shadow-lg hover:shadow-none md:hover:shadow-slate-700 md:hover:translate-y-[-10px] hover:translate-y-[0px] transition-all duration-300 ease-out pr-5 border-l-8 border-orange-700 md:shadow-xl shadow-slate-500">
                         <div class="flex">
-                            <div class="bg-orange-700 md:rounded-br-3xl rounded-br-lg shadow-r w-1/4 md:p-3 p-2 my-auto">
+                            <div class="bg-orange-700 md:rounded-br-3xl rounded-br-lg shadow-r w-1/3 md:p-3 p-2 my-auto">
                                 <img src="/page-paket-ldr-icon-pelatihan.png" alt="Webcam" class="object-contain w-fit">
                             </div>
-                            <div class="w-3/4 md:text-2xl text-sm font-bold text-orange-700 flex flex-col justify-center md:px-5 px-2">Pelatihan<br>Digital 3 Hari</div>
+                            <div class="w-2/3 md:text-2xl text-xs font-bold text-orange-700 flex flex-col justify-center md:px-5 px-2">Pelatihan<br>Digital 3 Hari</div>
                         </div>
                         <div class="text-orange-700 h-full flex flex-col justify-center font-light md:text-xl text-xs pl-3 w-full md:py-0 py-5">Sesi pelatihan digital selama 3 hari tentang cara mengelola bisnis anda menggunakan platform kami</div>
                     </div>
@@ -191,22 +191,22 @@
                             </div>
                             <div class="flex flex-col">
                                 <div class="flex items-center">
-                                    <div class="w-1/4 border-t-8 border-orange-700"></div>
-                                    <div class="bg-orange-700 mx-auto md:px-6 md:py-4 px-4 py-2 rounded-full flex md:space-x-5 space-x-2 w-1/2">
+                                    <div class="w-1/5 border-t-8 border-orange-700"></div>
+                                    <div class="bg-orange-700 mx-auto md:px-6 md:py-4 px-4 py-2 rounded-full flex md:space-x-5 space-x-2 w-3/5">
                                         <svg class="md:w-16 w-10 aspect-square" viewBox="0 0 24 24" fill="white">
                                             <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
                                         </svg>
                                         <div class="text-white md:text-2xl font-semibold flex flex-col justify-center text-sm">Membership<br>Gold Lubkita.com</div>
                                     </div>
-                                    <div class="w-1/4 border-t-8 border-orange-700"></div>
+                                    <div class="w-1/5 border-t-8 border-orange-700"></div>
                                 </div>
                                 <div class="flex flex-col space-y-2 py-5">
-                                    <div class="border-b border-orange-700 font-light text-xs text-orange-700 p-2">Prioritas Support dan Tampilan Utama Dashboard</div>
-                                    <div class="border-b border-orange-700 font-light text-xs text-orange-700 p-2">Tampilan Logo Produk Unggulan</div>
-                                    <div class="border-b border-orange-700 font-light text-xs text-orange-700 p-2">Prioritas Listing dan Toko Pilihan</div>
-                                    <div class="border-b border-orange-700 font-light text-xs text-orange-700 p-2">Support Dalam Pengiklanan Toko dan Produk</div>
-                                    <div class="border-b border-orange-700 font-light text-xs text-orange-700 p-2">Akses ke Lubkita Care</div>
-                                    <div class="border-b border-orange-700 font-light text-xs text-orange-700 p-2">Mendapat Peran Sebagai Admin Produk</div>
+                                    <div class="border-b border-orange-700 font-light text-sm text-orange-700 p-2">Prioritas Support dan Tampilan Utama Dashboard</div>
+                                    <div class="border-b border-orange-700 font-light text-sm text-orange-700 p-2">Tampilan Logo Produk Unggulan</div>
+                                    <div class="border-b border-orange-700 font-light text-sm text-orange-700 p-2">Prioritas Listing dan Toko Pilihan</div>
+                                    <div class="border-b border-orange-700 font-light text-sm text-orange-700 p-2">Support Dalam Pengiklanan Toko dan Produk</div>
+                                    <div class="border-b border-orange-700 font-light text-sm text-orange-700 p-2">Akses ke Lubkita Care</div>
+                                    <div class="border-b border-orange-700 font-light text-sm text-orange-700 p-2">Mendapat Peran Sebagai Admin Produk</div>
                                 </div>
                             </div>
                         </div>
@@ -258,7 +258,7 @@
             <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-orange-300 to-transparent"></div>
             <div class="w-full flex flex-col justify-center space-y-6">
                 <div class="text-white md:text-6xl text-3xl font-bold drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
-                    Paket LDR<br>akan membawa bisnis anda<br>ke level yang baru!
+                    Dengan LDR,<br>produk anda<br>dapat terjangkau<br>di seluruh Nusantara!
                 </div>
                 <div class="flex flex-col md:w-1/2 w-full space-y-5">
                     <div class="text-white text-sm font-light md:text-xl">
@@ -267,7 +267,7 @@
                     <a href="/pendaftaran/LDR0A"  class="w-3/5 text-orange-200 md:text-3xl font-bold bg-orange-700 px-4 py-2 rounded-xl uppercase tracking-wider text-center col-span-2 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 md:hidden">
                         daftar sekarang
                     </a>
-                    <div class="grid grid-cols-2 w-4/5 gap-4">
+                    <div class="grid grid-cols-2 md:w-4/5 w-full gap-4">
                         <a href="/pendaftaran/LDR0A"  class="text-orange-200 md:text-3xl font-bold bg-orange-700 px-4 py-2 rounded-xl uppercase tracking-wider text-center col-span-2 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 hidden md:flex justify-center">
                             daftar sekarang
                         </a>
