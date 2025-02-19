@@ -1,12 +1,12 @@
 <div class="bg-orange-100 flex flex-col">
 
 <div class="flex flex-col">
-        <img 
-            src="/paket-ldr2.png" 
-            alt="LDR Wallpaper" 
-            class="w-full object-cover"
-        >
-        <div class="relative">
+        <div class="flex flex-col relative">
+            <img 
+                src="/paket-ldr2.png" 
+                alt="LDR Wallpaper" 
+                class="w-full object-cover h-[60vh] md:h-auto"
+            >
             <div class="absolute inset-x-0 bottom-0 md:h-64 h-24 bg-gradient-to-t from-orange-100 to-transparent"></div>
             <div class="absolute inset-x-0 bottom-0 md:h-64 h-24 bg-gradient-to-t from-orange-100 to-transparent md:flex hidden"></div>
             <div class="absolute inset-x-0 bottom-0 md:h-64 h-24 bg-gradient-to-t from-orange-100 to-transparent md:flex hidden"></div>
