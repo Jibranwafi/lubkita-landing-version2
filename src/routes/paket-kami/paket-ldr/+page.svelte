@@ -145,7 +145,7 @@
                             <div class="bg-orange-700 md:rounded-br-3xl rounded-br-lg shadow-r w-1/3 md:p-3 p-2 my-auto">
                                 <img src="/page-paket-ldr-icon-mitralubkita.png" alt="Mitra Lubkita" class="object-contain w-fit">
                             </div>
-                            <div class="w-2/3 md:text-2xl text-sm font-bold text-orange-700 flex flex-col justify-center md:px-5 px-2">Kemitraan Lubkita.com</div>
+                            <div class="w-2/3 md:text-2xl text-xs font-bold text-orange-700 flex flex-col justify-center md:px-5 px-2">Kemitraan Lubkita.com</div>
                         </div>
                         <div class="text-orange-700 h-full flex flex-col justify-center font-light md:text-xl text-xs pl-3 w-full md:py-0 py-5">Kemitraan Lubkita.com agar kita dapat menyediakan bisnis anda dengan seorang admin dari tim kami</div>
                     </div>
@@ -154,7 +154,7 @@
                             <div class="bg-orange-700 md:rounded-br-3xl rounded-br-lg shadow-r w-1/3 md:p-3 p-2 my-auto">
                                 <img src="/page-paket-ldr-icon-tv32.png" alt="TV 32 inch" class="object-contain w-fit">
                             </div>
-                            <div class="w-2/3 md:text-2xl text-sm font-bold text-orange-700 flex flex-col justify-center md:px-5 px-2">TV 32 inch</div>
+                            <div class="w-2/3 md:text-2xl text-xs font-bold text-orange-700 flex flex-col justify-center md:px-5 px-2">TV 32 inch</div>
                         </div>
                         <div class="text-orange-700 h-full flex flex-col justify-center font-light md:text-xl text-xs pl-3 w-full md:py-0 py-5">TV 32 inch untuk zoom meeting, dan komunikasi dengan tim Lubkita.com setiap minggu</div>
                     </div>
@@ -201,7 +201,7 @@
                                     <div class="w-1/5 border-t-8 border-orange-700"></div>
                                 </div>
                                 <div class="flex flex-col space-y-2 py-5">
-                                    <div class="border-b border-orange-700 font-light text-sm text-orange-700 p-2">Prioritas Support dan Tampilan Utama Dashboard</div>
+                                    <div class="border-b border-orange-700 font-light text-sm text-orange-700 p-2">Tampilan Utama Dashboard</div>
                                     <div class="border-b border-orange-700 font-light text-sm text-orange-700 p-2">Tampilan Logo Produk Unggulan</div>
                                     <div class="border-b border-orange-700 font-light text-sm text-orange-700 p-2">Prioritas Listing dan Toko Pilihan</div>
                                     <div class="border-b border-orange-700 font-light text-sm text-orange-700 p-2">Support Dalam Pengiklanan Toko dan Produk</div>
@@ -237,7 +237,7 @@
                             </div>
                         </div>
                         <div class="flex flex-col space-y-2 py-5 text-xl">
-                            <div class=" text-orange-700 border-b border-orange-700 p-3 font-light">Prioritas Support dan Tampilan Utama Dashboard</div>
+                            <div class=" text-orange-700 border-b border-orange-700 p-3 font-light">Tampilan Utama Dashboard</div>
                             <div class=" text-orange-700 border-b border-orange-700 p-3 font-light">Tampilan Logo Produk Unggulan</div>
                             <div class=" text-orange-700 border-b border-orange-700 p-3 font-light">Prioritas Listing dan Toko Pilihan</div>
                             <div class=" text-orange-700 border-b border-orange-700 p-3 font-light">Support Dalam Pengiklanan Toko dan Produk</div>
