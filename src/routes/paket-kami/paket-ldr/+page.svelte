@@ -1,11 +1,14 @@
 <div class="bg-orange-100 flex flex-col">
+    <div class="relative z-50">
+        <slot></slot>
+    </div>
 
-<div class="flex flex-col">
+    <div class="flex flex-col">
         <div class="flex flex-col relative">
             <img 
                 src="/paket-ldr2.png" 
                 alt="LDR Wallpaper" 
-                class="w-full object-cover h-[45vh] md:h-auto"
+                class="w-full object-cover h-[vh] md:h-auto"
             >
             <div class="absolute inset-x-0 bottom-0 md:h-64 h-24 bg-gradient-to-t from-orange-100 to-transparent"></div>
             <div class="absolute inset-x-0 bottom-0 md:h-64 h-24 bg-gradient-to-t from-orange-100 to-transparent md:flex hidden"></div>
@@ -117,7 +120,7 @@
                         class:brightness-100={selectedOption === 'pendampingan'}
                     />
                     <div class="md:text-xl text-sm text-left font-bold hover:text-white transition-colors relative z-10 text-white w-fit p-2 md:p-5 rounded-br-3xl group-[.selected]:bg-orange-700 group-[.selected]:text-white group-[.selected]:bg-opacity-90">
-                        Pendampingan<br>UMKM Digital
+                        Pendampingan<br>Bisnis Digital
                     </div>
                     <div class="text-xs md:text-xl text-left md:p-4 p-2 bg-white/90 text-black transition-all duration-300 absolute bottom-0 left-0 right-0 group-[.selected]:bg-orange-700 group-[.selected]:text-white group-[.selected]:bg-opacity-90"
                         class:opacity-0={selectedOption !== 'pendampingan'}
@@ -156,7 +159,7 @@
                             </div>
                             <div class="w-2/3 md:text-2xl text-xs font-bold text-orange-700 flex flex-col justify-center md:px-5 px-2">TV 32 inch</div>
                         </div>
-                        <div class="text-orange-700 h-full flex flex-col justify-center font-light md:text-xl text-xs pl-3 w-full md:py-0 py-5">TV 32 inch untuk zoom meeting, dan komunikasi dengan tim Lubkita.com setiap minggu</div>
+                        <div class="text-orange-700 h-full flex flex-col justify-center font-light md:text-xl text-xs pl-3 w-full md:py-0 py-5">TV Monitor 32 inc, utk zoom meeting, pelatihan dan komunikasi dengan tim Lubkita.com</div>
                     </div>
                     <div class="flex flex-col bg-orange-200 md:hover:shadow-lg hover:shadow-none md:hover:shadow-slate-700 md:hover:translate-y-[-10px] hover:translate-y-[0px] transition-all duration-300 ease-out pr-5 border-l-8 border-orange-700 md:shadow-xl shadow-slate-500">
                         <div class="flex">
@@ -174,7 +177,7 @@
                             </div>
                             <div class="w-2/3 md:text-2xl text-xs font-bold text-orange-700 flex flex-col justify-center md:px-5 px-2">Pelatihan<br>Digital 3 Hari</div>
                         </div>
-                        <div class="text-orange-700 h-full flex flex-col justify-center font-light md:text-xl text-xs pl-3 w-full md:py-0 py-5">Sesi pelatihan digital selama 3 hari tentang cara mengelola bisnis anda menggunakan platform kami</div>
+                        <div class="text-orange-700 h-full flex flex-col justify-center font-light md:text-xl text-xs pl-3 w-full md:py-0 py-5">Pelatihan 3 hari, pelatihan intensif tentang cara menggunakan Lubkita.com menjadi seller dan mengelola bisnis online.</div>
                     </div>
 
 
@@ -206,7 +209,6 @@
                                     <div class="border-b border-orange-700 font-light text-sm text-orange-700 p-2">Prioritas Listing dan Toko Pilihan</div>
                                     <div class="border-b border-orange-700 font-light text-sm text-orange-700 p-2">Support Dalam Pengiklanan Toko dan Produk</div>
                                     <div class="border-b border-orange-700 font-light text-sm text-orange-700 p-2">Akses ke Lubkita Care</div>
-                                    <div class="border-b border-orange-700 font-light text-sm text-orange-700 p-2">Mendapat Peran Sebagai Admin Produk</div>
                                 </div>
                             </div>
                         </div>
@@ -236,13 +238,12 @@
                                 <div class="text-white md:text-3xl font-semibold flex flex-col justify-center text-base">Membership<br>Gold Lubkita.com</div>
                             </div>
                         </div>
-                        <div class="flex flex-col space-y-2 py-5 text-xl">
+                        <div class="flex flex-col space-y-2 py-5 text-2xl">
                             <div class=" text-orange-700 border-b border-orange-700 p-3 font-light">Tampilan Utama Dashboard</div>
                             <div class=" text-orange-700 border-b border-orange-700 p-3 font-light">Tampilan Logo Produk Unggulan</div>
                             <div class=" text-orange-700 border-b border-orange-700 p-3 font-light">Prioritas Listing dan Toko Pilihan</div>
                             <div class=" text-orange-700 border-b border-orange-700 p-3 font-light">Support Dalam Pengiklanan Toko dan Produk</div>
                             <div class=" text-orange-700 border-b border-orange-700 p-3 font-light">Akses ke Lubkita Care</div>
-                            <div class=" text-orange-700 border-b border-orange-700 p-3 font-light">Mendapat Peran Sebagai Admin Produk</div>
 
                         </div>
                     </div>
@@ -258,20 +259,19 @@
             <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-orange-300 to-transparent"></div>
             <div class="w-full flex flex-col justify-center space-y-6">
                 <div class="text-white md:text-6xl text-3xl font-bold drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
-                    Dengan LDR,<br>produk anda<br>dapat terjangkau<br>di seluruh Nusantara!
+                    Sebagai mitra LDR,<br>bisnis anda<br>dapat terjangkau<br>di seluruh Nusantara!
                 </div>
                 <div class="flex flex-col md:w-1/2 w-full space-y-5">
                     <div class="text-white text-sm font-light md:text-xl">
                         Dengan LDR, bisnis anda akan memiliki kemampuan<br>untuk bersaing di pasar nasional dan internasional.
                     </div>
-                    <a href="/pendaftaran/LDR0A"  class="w-3/5 text-orange-200 md:text-3xl font-bold bg-orange-700 px-4 py-2 rounded-xl uppercase tracking-wider text-center col-span-2 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 md:hidden">
-                        daftar sekarang
-                    </a>
-                    <div class="grid grid-cols-2 md:w-4/5 w-full gap-4">
-                        <a href="/pendaftaran/LDR0A"  class="text-orange-200 md:text-3xl font-bold bg-orange-700 px-4 py-2 rounded-xl uppercase tracking-wider text-center col-span-2 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 hidden md:flex justify-center">
+                    <div class="flex w-full gap-4">
+                        <a href="/pendaftaran/LDR0A"  class="text-orange-200 md:text-3xl font-bold bg-orange-700 px-4 py-2 rounded-xl uppercase tracking-wider text-center  drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 justify-center flex-col w-fit hidden md:flex">
                             daftar sekarang
                         </a>
-                        <a href="/paket-kami/paket-gold" class="border-y-4 md:text-sm text-xs border-y-yellow-600 bg-yellow-100 px-4 py-2 rounded-lg text-center text-yellow-800 bg-opacity-50 hover:bg-yellow-200 transition-all duration-300 transform hover:scale-105">Cek juga<br><b><i>paket gold</i></b> kami</a>
+                        <a href="/pendaftaran/LDR0A"  class="text-orange-200 md:text-3xl font-bold bg-orange-700 px-4 py-2 rounded-xl uppercase tracking-wider text-center  drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 flex justify-center flex-col w-fit md:hidden">
+                            daftar<br>sekarang
+                        </a>
                         <a href="/paket-kami/paket-platinum" class="border-y-4 md:text-sm text-xs border-y-slate-600 bg-slate-300 px-4 py-2 rounded-lg text-center text-slate-700 bg-opacity-50 hover:bg-slate-200 transition-all duration-300 transform hover:scale-105">Cek juga<br><b><i>paket platinum</i></b> kami</a>
                     </div>
                     
@@ -330,9 +330,9 @@
     let isWebcamSelected = false;
     
     const menuContent = {
-        pelatihan: "Memberikan pelatihan untuk petani dan pelaku usaha mikro dalam mengelola hasil tani, produksi, dan pemasaran menggunakan teknologi digital.",
-        pemasaran: "Membantu pelaku usaha desa memasarkan produk melalui Lubkita.com dan platform e-commerce lainnya, termasuk pelatihan pemasaran digital dan pengelolaan transaksi online.",
-        jaringan: "Membangun jaringan antar pelaku usaha desa untuk berbagi pengalaman, informasi, dan memperluas kolaborasi bisnis.",
-        pendampingan: "Menyediakan layanan pendampingan dan bimbingan ekslusif untuk mengelola usaha dan meningkatkan kesempatan untuk meraih keuntungan yang lebih besar."
+        pelatihan: "Memberikan pelatihan kepada pelaku usaha mengenai digitalisasi bisnis melalui platform e-commerce grosir Lubkita.com, dan dasar dasar dari digitalisasi pemasaran produk.",
+        pemasaran: "Membantu pelaku usaha desa memasarkan produk melalui platform e-commerce Lubkita.com dan media sosial lainnya, membantu mendesain dan memberikan template desain pemasaran produk digital bisnis anda, serta pelatihan pengelolaan transaksi & pemasaran online.",
+        jaringan: "Membangun jaringan antar pelaku usaha desa untuk berbagi pengalaman, informasi, dan memperluas kolaborasi bisnis melalui Zoom Meeting antar mitra Lumbung Digital Rakyat.",
+        pendampingan: "Menyediakan layanan pendampingan dan bimbingan ekslusif untuk mengelola usaha secara digital dan meningkatkan kesempatan untuk meraih keuntungan yang lebih besar."
     };
 </script>

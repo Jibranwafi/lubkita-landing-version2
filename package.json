@@ -33,6 +33,7 @@
 		"flowbite-svelte": "^0.47.4",
 		"framer-motion": "^12.4.2",
 		"html2pdf.js": "^0.10.2",
+		"pdfjs-dist": "^4.10.38",
 		"svelte-motion": "^0.12.2"
 	}
 }

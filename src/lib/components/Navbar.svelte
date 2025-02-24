@@ -21,7 +21,7 @@
 <svelte:window on:click={handleClickOutside} />
 
 <!-- src/lib/components/Navbar.svelte -->
-<nav class="bg-white drop-shadow-lg z-60">
+<nav class="bg-white drop-shadow-lg fixed w-full top-0 z-[100]">
     <div class="mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between h-16">
         <div class="flex w-full">
@@ -175,3 +175,8 @@
     </div>
     {/if}
 </nav>
+
+<!-- Add margin-top to the content below the navbar -->
+<div class="mt-16">
+    <slot></slot>
+</div>

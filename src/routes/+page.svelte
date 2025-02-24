@@ -4,6 +4,7 @@
 
 <script lang="ts">
     import { onMount } from 'svelte';
+    let showPdfModal = false;
     let Carousel: any;
     let topCarouselRef: any;
     let bottomCarouselRef: any;
@@ -102,7 +103,7 @@
     <div class="flex flex-col">
 
         <div class="p-4 md:p-8 mx-4 md:mx-10 rounded-b-3xl bg-cover bg-top bg-no-repeat" 
-             style="background-image: url('/page-home-header1.jpg')">
+             style="background-image: url('/page-home-header4.png')">
             <div class="flex flex-col md:flex-row md:space-x-32">
                 <div class="w-full md:w-1/2 flex flex-col p-4 md:p-9">
                     <div class="text-xl md:text-4xl font-bold text-white md:pt-0 pt-48">
@@ -116,7 +117,7 @@
 
 
 
-                    <a href="/pendaftaran/LDR0A" class="text-xl md:text-3xl text-center p-1 md:p-3 bg-yellow-400 rounded-2xl font-bold w-full md:w-2/3 flex flex-col justify-center">
+                    <a href="/pendaftaran/LDR0A" class="text-xl md:text-3xl text-center p-1 md:p-3 bg-yellow-400 rounded-2xl font-bold w-full md:w-2/3 flex flex-col justify-center hover:bg-yellow-800 hover:text-white transition-all duration-300 transform hover:scale-105">
                         Pendaftaran LDR
                     </a>
 
@@ -240,13 +241,17 @@
         </div>
         
 
+        
         <div class="w-11/12 md:w-5/6 flex flex-col md:flex-row justify-center mx-auto my-10 shadow-lg rounded-2xl p-5 border bg-white">
-            <a href="/panduan-membership2.pdf" class="flex w-full md:w-1/3 hover:bg-slate-300 mb-4 md:mb-0">
+            <button 
+                on:click={() => showPdfModal = true} 
+                class="flex w-full md:w-1/3 hover:bg-slate-300 mb-4 md:mb-0"
+            >
                 <div class="p-2 w-1/5">
                     <img src="/page-home-networking-icon.png" alt="networking" class="h-12 w-12 md:h-16 md:w-16 mx-auto">
                 </div>
-                <div class="p-2 w-4/5 font-bold flex flex-col justify-center text-sm md:text-base">PANDUAN MEMBERSHIP</div>
-            </a>
+                <div class="p-2 w-4/5 font-bold flex flex-col justify-center text-sm md:text-base my-auto text-left">LIHAT KATALOG KAMI</div>
+            </button>
 
 
 
@@ -272,7 +277,7 @@
 
         </div>
 
-
+<!--
         <div class="flex flex-col justify-center my-10 md:hidden">
             <div class="text-center text-4xl font-bold ">Cek katalog kami sekarang!</div>
             <a href="https://online.fliphtml5.com/mweze/qnik/" target="_blank" rel="noopener noreferrer">
@@ -283,11 +288,11 @@
                 />
             </a>
         </div>
+-->
 
 
-
-        <div class="flex justify-center mx-10">
-            <div class="flex flex-col bg-amber-300 mx-4 md:mx-0 rounded-t-3xl md:rounded-t-none md:rounded-tl-3xl md:w-3/4 w-full bg-opacity-70 border-2 border-amber-200 hover:shadow-lg shadow-slate-200">
+        <div class="flex justify-center md:mx-10">
+            <div class="flex flex-col bg-amber-300 mx-4 md:mx-0 rounded-t-none md:rounded-t-3xl w-full bg-opacity-70 border-2 border-amber-200 hover:shadow-lg shadow-slate-200">
                 <div class="flex">
                     <img src="/page-home-logo-review.png" alt="Katalog Logo" class="aspect-square mx-auto object-contain p-3 w-1/6 pl-10 hidden md:block">
                     <div class="p-5 md:p-10 md:text-left text-center flex flex-col w-5/6 mx-auto">
@@ -299,7 +304,7 @@
 
 
 
-                <div class="flex justify-center p-5">
+                <div class="flex justify-center md:p-5">
                     <div class="rounded-full flex flex-col justify-center w-full mx-auto"> <!-- Adjust height as needed -->
                         <!--
                         <video 
@@ -370,7 +375,7 @@
             </div>
 
 
-
+<!--
             <div class="flex-col justify-center md:w-1/4 hidden md:flex bg-slate-700 bg-opacity-70 border-y-2 border-r-2 border-slate-200 rounded-tr-3xl p-10">
 
                 <div class="text-center text-white text-4xl italic w-full p-3">Cek<br><b>katalog kami</b><br>sekarang!</div>
@@ -379,6 +384,7 @@
                     <img src="/salinan-lubkita.png" alt="Lubkita Logo" class="rounded-2xl cursor-pointer hover:opacity-90 transition-opacity mx-auto shadow-lg shadow-slate-400" />
                 </a>
             </div>
+-->
 
         </div>
 
@@ -397,5 +403,30 @@
       @apply p-3;
     }
   </style>
+
+{#if showPdfModal}
+    <div class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg w-full max-w-4xl">
+            <div class="flex justify-between items-center p-4 border-b">
+                <h3 class="text-xl font-semibold my-auto flex flex-col justify-center">Katalog Kami</h3>
+                <button 
+                    on:click={() => showPdfModal = false}
+                    class="text-gray-500 hover:text-gray-700"
+                >
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="h-[70vh] overflow-y-auto p-4">
+                <iframe
+                    src="/katalog-ldr.pdf"
+                    title="Panduan Membership PDF"
+                    class="w-full h-full"
+                ></iframe>
+            </div>
+        </div>
+    </div>
+{/if}
 
 

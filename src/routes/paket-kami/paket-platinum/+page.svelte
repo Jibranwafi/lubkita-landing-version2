@@ -32,6 +32,9 @@
                 >
             </div>
     </div>
+    <!---
+    <div class="bg-red-200">aaaa</div>
+    -->
     <!--
     <div class="border-2 border-black p-5 mt-20 text-center">
         Mengapa memilih paket gold?
@@ -71,12 +74,15 @@
                     Daftar Membership platinum Sekarang
                 </button>
             </a>
-            <a href="/panduan-membership2.pdf" target="_blank" class="inline-flex items-center gap-2 bg-white border-2 border-yellow-500 text-yellow-600 hover:bg-yellow-50 px-6 py-2 rounded-full mt-6 transition-all duration-200 font-medium">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-                Lihat Panduan Membership
-            </a>
+            <button 
+            on:click={() => showPdfModal = true} 
+            class="inline-flex items-center gap-2 bg-white border-2 border-yellow-500 text-yellow-600 hover:bg-yellow-50 px-6 py-2 rounded-full mt-6 transition-all duration-200 font-medium"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Lihat Panduan Membership
+        </button>
         </div>
         <!--
         <div class="1/10 hidden md:flex">
@@ -106,6 +112,31 @@
     </div>
     </div>             
     </div>
+
+    {#if showPdfModal}
+    <div class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg w-full max-w-4xl">
+            <div class="flex justify-between items-center p-4 border-b">
+                <h3 class="text-xl font-semibold">Panduan Membership Gold</h3>
+                <button 
+                    on:click={() => showPdfModal = false}
+                    class="text-gray-500 hover:text-gray-700"
+                >
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="h-[70vh] overflow-y-auto p-4">
+                <iframe
+                    src="/panduan-membership-platinum.pdf"
+                    title="Panduan Membership PDF"
+                    class="w-full h-full"
+                ></iframe>
+            </div>
+        </div>
+    </div>
+{/if}
     
     <style>
     /* Svelte scopes styles automatically, no need for scoped attribute */
@@ -113,3 +144,7 @@
     @apply p-3;
     }
     </style>
+
+    <script>
+        let showPdfModal = false;
+    </script>
