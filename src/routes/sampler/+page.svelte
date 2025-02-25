@@ -164,7 +164,7 @@
         <div class="pl-3 md:w-1/2 w-full flex flex-col space-y-3 bg-yellow-200 rounded-3xl pb-3">
         
         
-            <div class="flex rounded-t-2xl text-2xl font-bold h-64 justify-start" style="background-image: url('/page-paket-benefit2.png'); background-size: cover; background-position: center;">
+            <div class="flex rounded-t-2xl text-2xl font-bold h-64 justify-start" style="background-image: url('/page-paket-gold-outmarketing-icons.png'); background-size: cover; background-position: center;">
                 <div class="bg-yellow-50 w-fit md:text-3xl text-xl p-5 h-fit rounded-br-2xl rounded-tl-2xl">OUT MARKETING</div>
             </div>
 
