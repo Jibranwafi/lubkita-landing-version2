@@ -292,7 +292,7 @@
 
 
         <div class="flex justify-center md:mx-10">
-            <div class="flex flex-col bg-amber-300 mx-4 md:mx-0 rounded-t-none md:rounded-t-3xl w-full bg-opacity-70 border-2 border-amber-200 hover:shadow-lg shadow-slate-200">
+            <div class="flex flex-col bg-amber-300 mx-4 md:mx-0 rounded-t-none md:rounded-t-3xl w-full bg-opacity-70 border-2 border-amber-200 hover:shadow-lg shadow-slate-200 md:pb-5 pb-10">
                 <div class="flex">
                     <img src="/page-home-logo-review.png" alt="Katalog Logo" class="aspect-square mx-auto object-contain p-3 w-1/6 pl-10 hidden md:block">
                     <div class="p-5 md:p-10 md:text-left text-center flex flex-col w-5/6 mx-auto">
@@ -407,8 +407,8 @@
 {#if showPdfModal}
     <div class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
         <div class="bg-white rounded-lg w-full max-w-4xl">
-            <div class="flex justify-between items-center p-4 border-b">
-                <h3 class="text-xl font-semibold my-auto flex flex-col justify-center">Katalog Kami</h3>
+            <div class="flex justify-between items-center p-4">
+                <h3 class="md:text-xl text-sm font-semibold my-auto flex flex-col justify-center bg-orange-200 p-2 rounded-lg">Katalog Kami</h3>
                 <button 
                     on:click={() => showPdfModal = false}
                     class="text-gray-500 hover:text-gray-700"

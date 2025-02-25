@@ -301,9 +301,9 @@ function selectVideo(video: Video) {
                     {/each}
                 </div>
 
-                <div class="flex">
+                <div class="flex md:flex-row flex-col">
                     <button 
-                        class="w-1/12 flex flex-col justify-center items-center text-3xl font-bold
+                        class="w-1/12 md:flex flex-col justify-center items-center text-3xl font-bold hidden
                             transition-all duration-300
                             {hasPreviousPage 
                                 ? 'text-black cursor-pointer hover:scale-125 hover:text-amber-600 active:scale-95' 
@@ -314,7 +314,7 @@ function selectVideo(video: Video) {
                         ←
                     </button>
 
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-10/12">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-10/12 mx-auto">
                         {#each currentFeaturedVideos as video}
                             <!-- svelte-ignore a11y_click_events_have_key_events -->
                             <!-- svelte-ignore a11y_no_static_element_interactions -->
@@ -334,7 +334,7 @@ function selectVideo(video: Video) {
                                             class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                                         />
                                     </div>
-                                    <div class="absolute bottom-0 right-0 w-fit flex ml-auto rounded-tl-full px-5 text-xl border-l-8 border-t-8 transition-colors duration-300
+                                    <div class="absolute bottom-0 right-0 w-fit flex ml-auto rounded-tl-full px-5 md:text-xl text-base font-bold border-l-8 border-t-8 transition-colors duration-300
                                         {video.type === 'youtube-video' || video.type === 'local-video' 
                                             ? 'bg-red-200 border-red-200 hover:bg-red-300 hover:border-red-300' 
                                             : 'bg-teal-300 border-teal-300 hover:bg-teal-400 hover:border-teal-400'}">
@@ -348,9 +348,41 @@ function selectVideo(video: Video) {
                             </div>
                         {/each}
                     </div>
+                    <div class="flex justify-center space-x-2 mt-7 md:hidden">
+                        {#each Array(Math.ceil(getPlaylistVideos(selectedPlaylist).length / featuredVideosPerPage)) as _, index}
+                            <button 
+                                class="w-3 h-3 rounded-full transition-all duration-300 {currentFeaturedPage === index ? 'bg-yellow-700 scale-125' : 'bg-yellow-400 hover:bg-yellow-500'}"
+                                on:click={() => currentFeaturedPage = index}
+                            />
+                        {/each}
+                    </div>
+                    <div class="flex w-full justify-center md:hidden pt-5 space-x-4">
+                        <button 
+                        class="w-1/12 flex flex-col justify-center items-center text-3xl font-bold 
+                            transition-all duration-300
+                            {hasPreviousPage 
+                                ? 'text-black cursor-pointer hover:scale-125 hover:text-amber-600 active:scale-95' 
+                                : 'text-gray-400 cursor-not-allowed opacity-50'}"
+                        on:click={previousFeaturedPage}
+                        disabled={!hasPreviousPage}
+                        >
+                            ←
+                        </button>
+                        <button 
+                        class="w-1/12 flex flex-col justify-center items-center text-3xl font-bold
+                            transition-all duration-300
+                            {hasNextPage 
+                                ? 'text-black cursor-pointer hover:scale-125 hover:text-amber-600 active:scale-95' 
+                                : 'text-gray-400 cursor-not-allowed opacity-50'}"
+                        on:click={nextFeaturedPage}
+                        disabled={!hasNextPage}
+                        >
+                            →
+                        </button>
+                    </div>
 
                     <button 
-                        class="w-1/12 flex flex-col justify-center items-center text-3xl font-bold
+                        class="w-1/12 md:flex flex-col justify-center items-center text-3xl font-bold hidden
                             transition-all duration-300
                             {hasNextPage 
                                 ? 'text-black cursor-pointer hover:scale-125 hover:text-amber-600 active:scale-95' 
@@ -361,6 +393,17 @@ function selectVideo(video: Video) {
                         →
                     </button>
                 </div>
+
+                <div class=" justify-center space-x-2 mt-7 md:flex hidden">
+                    {#each Array(Math.ceil(getPlaylistVideos(selectedPlaylist).length / featuredVideosPerPage)) as _, index}
+                        <button 
+                            class="w-3 h-3 rounded-full transition-all duration-300 {currentFeaturedPage === index ? 'bg-yellow-700 scale-125' : 'bg-yellow-400 hover:bg-yellow-500'}"
+                            on:click={() => currentFeaturedPage = index}
+                        />
+                    {/each}
+                </div>
+
+                <!-- Add pagination dots -->
             </div>
         {/if}
 
@@ -449,13 +492,13 @@ function selectVideo(video: Video) {
                 </div>
 
                 <div class="{selectedVideo.type === 'youtube-video' || selectedVideo.type === 'local-video' ? 'md:w-1/3' : 'w-full'} flex flex-col space-y-4 {selectedVideo.type === 'materi' ? 'items-center text-center p-8' : ''}">
-                    <div class="font-semibold text-4xl">{selectedVideo.title}</div>
+                    <div class="font-semibold md:text-4xl text-2xl">{selectedVideo.title}</div>
                     <div class="flex my-2 {selectedVideo.type === 'materi' ? 'justify-center' : ''}">
                         {#if selectedVideo.type === 'youtube-video' || selectedVideo.type === 'local-video'}
-                            <div class="bg-red-100 px-2 text-xl">Video</div>
-                            <div class="bg-red-400 px-2 text-red-100 font-bold text-xl">{selectedVideo.duration}</div>
+                            <div class="bg-red-100 px-2 md:text-xl text-sm">Video</div>
+                            <div class="bg-red-400 px-2 text-red-100 font-bold md:text-xl text-sm">{selectedVideo.duration}</div>
                         {:else}
-                            <div class="bg-teal-300 px-2 text-xl">Materi Pelatihan</div>
+                            <div class="bg-teal-300 px-2 md:text-xl text-base">Materi Pelatihan</div>
                         {/if}
                     </div>
                     <div class="text-base md:text-xl font-light break-words">{selectedVideo.description}</div>
@@ -503,16 +546,15 @@ function selectVideo(video: Video) {
                 <div class="text-2xl md:text-4xl font-bold text-center">Jelajahi Materi Pelatihan Digital Kami</div>
             </div>
             
-            <div class="bg-amber-300 p-5 flex md:flex-row flex-col justify-center w-full mx-auto relative md:text-base text-sm ">
-                <div class="flex"></div>
+            <div class="bg-amber-300 p-5 flex justify-center w-full mx-auto relative md:text-base text-sm ">
                 <input
                     type="text"
                     bind:value={searchQuery}
                     placeholder="Cari materi pelatihan..."
-                    class="rounded-l-full p-3 w-1/2 bg-white focus:outline-none focus:ring-2 focus:ring-orange-400 md:text-base text-sm"
+                    class="rounded-l-full w-1/2 bg-white focus:outline-none focus:ring-2 focus:ring-orange-400 md:text-base text-sm"
                 />
                 <button 
-                    class="p-2 w-fit rounded-r-full px-5 bg-orange-400 hover:bg-orange-500 transition-colors flex flex-col justify-center items-center font-bold text-white md:text-base text-sm"
+                    class="w-fit rounded-r-full px-5 bg-orange-400 hover:bg-orange-500 transition-colors flex flex-col justify-center items-center font-bold text-white md:text-base text-sm"
                 >
                     Cari
                 </button>
@@ -520,14 +562,12 @@ function selectVideo(video: Video) {
 
                 <div class="relative">
                     <button 
-                        class="p-2 border-4 border-slate-400 w-fit mx-5 flex bg-slate-300 rounded-2xl hover:bg-slate-400 transition-colors"
+                        class="border-4 border-slate-400 w-fit md:mx-5 mx-3 md:px-0 px-2 flex bg-slate-300 rounded-2xl hover:bg-slate-400 transition-colors"
                         on:click={() => showFilters = !showFilters}
                     >
-                        <div class="w-fit flex flex-col justify-center items-center font-bold md:text-base text-sm">
-                            Atur pencarian
-                        </div>
-                        <div class="px-2 w-fit flex flex-col justify-center items-center my-auto">
-                            <img src="/page-videopelatihan-sort-icon.png" alt="filter" class="w-6 h-6">
+
+                        <div class="py-2 w-fit flex flex-col justify-center items-center my-auto md:px-5 px-2">
+                            <img src="/page-videopelatihan-sort-icon.png" alt="filter" class="w-6 h-auto">
                         </div>
                     </button>
 
@@ -600,7 +640,7 @@ function selectVideo(video: Video) {
                                 </div>
                             </div>
                             <div class="flex flex-col w-full md:w-1/2 p-5 space-y-2">
-                                <div class="font-semibold md:text-2xl text-base line-clamp-2">{video.title}</div>
+                                <div class="font-semibold md:text-2xl text-lg line-clamp-2">{video.title}</div>
                                 {#if video.type === 'youtube-video' || video.type === 'local-video'}
                                     <div class="flex">
                                         <div class="bg-red-200 px-2 font-light md:text-lg text-sm">Video</div>
@@ -609,7 +649,7 @@ function selectVideo(video: Video) {
                                 {:else}
                                     <div class="bg-teal-300 px-2 font-light text-lg w-fit">Materi Pelatihan</div>
                                 {/if}
-                                <div class="line-clamp-2 md:text-base text-xs">{video.description}</div>
+                                <div class="line-clamp-2 md:text-base text-sm">{video.description}</div>
                             </div>
                         </div>
                     {/each}
@@ -617,7 +657,7 @@ function selectVideo(video: Video) {
             </div>
 
 
-            <div class=" bg-amber-200 flex justify-center py-5 space-x-2 rounded-3xl w-fit px-44 mx-auto">
+            <div class=" bg-amber-200 flex justify-center py-5 space-x-2 rounded-3xl w-1/2 md:text-base text-sm mx-auto">
                 {#each Array(totalPages) as _, i}
                     <div 
                         class="px-5 py-2 w-fit rounded-xl cursor-pointer font-bold {currentPage === i + 1 ? 'bg-amber-400' : ''}"
