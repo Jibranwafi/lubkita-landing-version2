@@ -1,26 +1,26 @@
-<div class="bg-white md:p-6 flex flex-col">
+<div class="bg-white flex flex-col">
 
     <div class="flex flex-col">
     
             <img 
                 src="/paket-gold3.png" 
                 alt="LDR Wallpaper" 
-                class="w-full object-cover rounded-t-2xl"
+                class="w-full object-cover "
             >
         <div class="relative">
             <div class="absolute inset-x-0 bottom-0 md:h-64 h-24 bg-gradient-to-t from-white to-transparent"></div>
             <div class="absolute inset-x-0 bottom-0 md:h-64 h-24 bg-gradient-to-t from-white to-transparent md:flex hidden"></div>
             <div class="absolute inset-x-0 bottom-0 md:h-64 h-24 bg-gradient-to-t from-white to-transparent md:flex hidden"></div>
         </div>
-        <div class=" p-3 text-center text-3xl md:text-4xl font-bold italic">
+        <div class=" py-3 md:px-10 px-5 text-center text-3xl md:text-4xl font-bold italic">
             Solusi sempurna untuk bisnis yang siap naik level di dunia digital!
         </div>
-        <div class=" p-3 text-center text-base md:text-2xl italic mb-20">
+        <div class=" py-3 md:px-10 px-5 text-center text-base md:text-2xl italic mb-20">
             Paket Gold memberikan Anda akses lengkap ke fitur promosi flashsale, dukungan iklan terintegrasi, dan priority support dengan respons cepat. Dengan 2 keyword SEO kompetitif menengah, paket social media starter (5 Feed + 3 Reels), dan traffic hingga 500 pengunjung/hari, bisnis Anda akan mendapat posisi listing prioritas 2 di marketplace. Lengkap dengan budget iklan Google 15/15 hari dan setup website profesional, paket Gold adalah investasi cerdas untuk membangun presence digital yang kuat.
         </div>
     
         <div class="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 p-5">
-            <div class=" pl-3 md:w-1/2 w-full flex flex-col space-y-3 bg-lime-200 rounded-3xl pb-3">
+            <div class=" pl-3 md:w-1/2 w-full flex flex-col space-y-3 bg-amber-300 rounded-3xl pb-3">
             
             
     
@@ -344,7 +344,8 @@
     
         
         {#if mounted}
-            <div class="my-10 px-4">
+        <div class="bg-amber-100 md:text-4xl text-xl rounded-t-3xl font-extralight shadow-2xl shadow-slate-500 w-fit mx-auto px-10 py-5 ">Mengapa paket Gold?</div>
+            <div class="px-4">
                 <Carousel
                     particlesToShow={width >= 768 ? 3 : 1}
                     particlesToScroll={1}
@@ -449,9 +450,9 @@
     }
     
     :global(.carousel-item) {
-        background-color: white;
-        border-radius: 0.5rem;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        @apply bg-amber-100;
+        border-radius: 0.0rem;
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
         height: 100%;
         transition: transform 0.2s;
     }
