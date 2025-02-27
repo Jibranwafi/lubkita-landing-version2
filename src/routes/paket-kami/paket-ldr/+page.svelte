@@ -150,7 +150,7 @@
                             </div>
                             <div class="w-2/3 md:text-2xl text-xs font-bold text-orange-700 flex flex-col justify-center md:px-5 px-2">Kemitraan Lubkita.com</div>
                         </div>
-                        <div class="text-orange-700 h-full flex flex-col justify-center font-light md:text-xl text-xs pl-3 w-full md:py-0 py-5">Kemitraan Lubkita.com agar kita dapat menyediakan bisnis anda dengan seorang admin dari tim kami</div>
+                        <div class="text-orange-700 h-full flex flex-col justify-center font-light md:text-xl text-xs pl-3 w-full md:py-3 py-5">Kemitraan Lubkita.com agar kita dapat menyediakan bisnis anda dengan seorang admin dari tim kami</div>
                     </div>
                     <div class="flex flex-col bg-orange-200 md:hover:shadow-lg hover:shadow-none md:hover:shadow-slate-700 md:hover:translate-y-[-10px] hover:translate-y-[0px] transition-all duration-300 ease-out pr-5 border-l-8 border-orange-700 md:shadow-xl shadow-slate-500">
                         <div class="flex">
@@ -159,7 +159,7 @@
                             </div>
                             <div class="w-2/3 md:text-2xl text-xs font-bold text-orange-700 flex flex-col justify-center md:px-5 px-2">TV 32 inch</div>
                         </div>
-                        <div class="text-orange-700 h-full flex flex-col justify-center font-light md:text-xl text-xs pl-3 w-full md:py-0 py-5">TV Monitor 32 inc, utk zoom meeting, pelatihan dan komunikasi dengan tim Lubkita.com</div>
+                        <div class="text-orange-700 h-full flex flex-col justify-center font-light md:text-xl text-xs pl-3 w-full md:py-3 py-5">TV Monitor 32 inc, utk zoom meeting, pelatihan dan komunikasi dengan tim Lubkita.com</div>
                     </div>
                     <div class="flex flex-col bg-orange-200 md:hover:shadow-lg hover:shadow-none md:hover:shadow-slate-700 md:hover:translate-y-[-10px] hover:translate-y-[0px] transition-all duration-300 ease-out pr-5 border-l-8 border-orange-700 md:shadow-xl shadow-slate-500">
                         <div class="flex">
@@ -168,7 +168,7 @@
                             </div>
                             <div class="w-2/3 md:text-2xl text-xs font-bold text-orange-700 flex flex-col justify-center md:px-5 px-2">1 Set PC</div>
                         </div>
-                        <div class="text-orange-700 h-full flex flex-col justify-center font-light md:text-xl text-xs pl-3 w-full md:py-0 py-5">1 set PC lengkap untuk menjalankan kegiatan dropshipping dan mengelola akun Lubkita.com</div>
+                        <div class="text-orange-700 h-full flex flex-col justify-center font-light md:text-xl text-xs pl-3 w-full md:py-3 py-5">1 set PC lengkap untuk menjalankan kegiatan dropshipping dan mengelola akun Lubkita.com</div>
                     </div>
                     <div class="flex flex-col bg-orange-200 md:hover:shadow-lg hover:shadow-none md:hover:shadow-slate-700 md:hover:translate-y-[-10px] hover:translate-y-[0px] transition-all duration-300 ease-out pr-5 border-l-8 border-orange-700 md:shadow-xl shadow-slate-500">
                         <div class="flex">
@@ -177,7 +177,7 @@
                             </div>
                             <div class="w-2/3 md:text-2xl text-xs font-bold text-orange-700 flex flex-col justify-center md:px-5 px-2">Pelatihan<br>Digital 3 Hari</div>
                         </div>
-                        <div class="text-orange-700 h-full flex flex-col justify-center font-light md:text-xl text-xs pl-3 w-full md:py-0 py-5">Pelatihan 3 hari, pelatihan intensif tentang cara menggunakan Lubkita.com menjadi seller dan mengelola bisnis online.</div>
+                        <div class="text-orange-700 h-full flex flex-col justify-center font-light md:text-xl text-xs pl-3 w-full md:py-3 py-5">Pelatihan 3 hari, pelatihan intensif tentang cara menggunakan Lubkita.com menjadi seller dan mengelola bisnis online.</div>
                     </div>
 
 
@@ -208,7 +208,6 @@
                                     <div class="border-b border-orange-700 font-light text-sm text-orange-700 p-2">Tampilan Logo Produk Unggulan</div>
                                     <div class="border-b border-orange-700 font-light text-sm text-orange-700 p-2">Prioritas Listing dan Toko Pilihan</div>
                                     <div class="border-b border-orange-700 font-light text-sm text-orange-700 p-2">Support Dalam Pengiklanan Toko dan Produk</div>
-                                    <div class="border-b border-orange-700 font-light text-sm text-orange-700 p-2">Akses ke Lubkita Care</div>
                                 </div>
                             </div>
                         </div>
@@ -243,7 +242,6 @@
                             <div class=" text-orange-700 border-b border-orange-700 p-3 font-light">Tampilan Logo Produk Unggulan</div>
                             <div class=" text-orange-700 border-b border-orange-700 p-3 font-light">Prioritas Listing dan Toko Pilihan</div>
                             <div class=" text-orange-700 border-b border-orange-700 p-3 font-light">Support Dalam Pengiklanan Toko dan Produk</div>
-                            <div class=" text-orange-700 border-b border-orange-700 p-3 font-light">Akses ke Lubkita Care</div>
 
                         </div>
                     </div>

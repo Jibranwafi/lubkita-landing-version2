@@ -449,20 +449,17 @@
     }
     
     :global(.carousel-item) {
-        background-color: rgb(248 250 252); /* slate-50 color value */
-        /* or */
-        @apply bg-slate-200;
+        background-color: rgb(248 250 252);
         border-radius: 0.0rem;
         box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
         height: 100%;
         transition: transform 0.2s;
     }
-    
+
     :global(.carousel-item:hover) {
         transform: translateY(-4px);
     }
-    
-    /* Add styles for disabled carousel state */
+
     :global(.carousel-disabled) {
         display: flex;
         justify-content: space-between;
