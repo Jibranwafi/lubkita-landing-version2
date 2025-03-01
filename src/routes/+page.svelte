@@ -11,10 +11,19 @@
     let topVideos: HTMLVideoElement[] = [];
     let bottomVideos: HTMLVideoElement[] = [];
     let youtubePlayers: any[] = [];
+    let currentVideoIndex = 0;
+    const videoTitles = [
+        "Bisnis grosir online menjanjikan",
+        "Testimoni seller sukses online dengan grosir online Lubkita",
+        "Penyambutan program Lubkita oleh masyarakat Palu"
+    ];
     
     onMount(async () => {
         const module = await import('svelte-carousel');
         Carousel = module.default;
+
+        // Initialize currentVideoIndex to 0
+        currentVideoIndex = 0;
 
         // Load YouTube API
         const tag = document.createElement('script');
@@ -57,6 +66,8 @@
                 player.pauseVideo();
             }
         });
+        // Update current video index
+        currentVideoIndex = event.detail;
     }
  
     function handleTopVideoEnd() {
@@ -140,37 +151,65 @@
                                 particlesToScroll={1}
                                 autoplay={false}
                                 on:pageChange={handleTopCarouselChange}
+                                let:showPrevPage
+                                let:showNextPage
                             >
-                                <div class="w-full bg-black">
-                                    <!-- svelte-ignore a11y_media_has_caption -->
-                                    <video 
-                                        use:registerTopVideo
-                                        controls 
-                                        class="w-full"
+                            <!--
+                                <div slot="prev" let:showPrevPage>
+                                    <button 
+                                        on:click={showPrevPage} 
+                                        class="hidden md:block absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 text-sm rounded-r"
                                     >
-                                        <source src="/lubkita-animasi1.mp4" type="video/mp4">
-                                    </video>
+                                        ←
+                                    </button>
                                 </div>
-                     
-                                <div class="w-full bg-black">
-                                    <!-- svelte-ignore a11y_media_has_caption -->
-                                    <video 
-                                        use:registerTopVideo
-                                        controls 
-                                        class="w-full"
+                                
+                                <div slot="next" let:showNextPage>
+                                    <button 
+                                        on:click={showNextPage} 
+                                        class="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 text-sm rounded-l"
                                     >
-                                        <source src="/lubkita-animasi2.mp4" type="video/mp4">
-                                    </video>
+                                        →
+                                    </button>
                                 </div>
-                                <div class="w-full bg-black">
-                                    <!-- svelte-ignore a11y_media_has_caption -->
-                                    <video 
-                                        use:registerTopVideo
-                                        controls 
-                                        class="w-full"
-                                    >
-                                        <source src="/lubkita-animasi4.mp4" type="video/mp4">
-                                    </video>
+                            -->
+                                <div class="w-full p-5">
+                                    <div class="bg-black">
+                                        <!-- svelte-ignore a11y_media_has_caption -->
+                                        <video 
+                                            use:registerTopVideo
+                                            controls 
+                                            class="w-full"
+                                        >
+                                            <source src="/lubkita-animasi1.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                    
+                                <div class="w-full p-5">
+                                    <div class="bg-black">
+                                        <!-- svelte-ignore a11y_media_has_caption -->
+                                        <video 
+                                            use:registerTopVideo
+                                            controls 
+                                            class="w-full"
+                                        >
+                                            <source src="/lubkita-animasi2.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+
+                                <div class="w-full p-5">
+                                    <div class="bg-black">
+                                        <!-- svelte-ignore a11y_media_has_caption -->
+                                        <video 
+                                            use:registerTopVideo
+                                            controls 
+                                            class="w-full"
+                                        >
+                                            <source src="/lubkita-animasi4.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
                                 </div>
                             </svelte:component>
                         {:else}
@@ -187,53 +226,94 @@
         </div>
         <div class="w-full md:w-1/2 md:mt-0 h-full flex md:hidden flex-col justify-center text-right md:pl-32 md:pt-32"> 
                 {#if Carousel}
-                <svelte:component 
-                    this={Carousel}
-                    bind:this={topCarouselRef}
-                    particlesToShow={1}
-                    particlesToScroll={1}
-                    autoplay={false}
-                    on:pageChange={handleTopCarouselChange}
-                >
-                    <div class="w-full p-5">
-                        <div class="bg-black">
-                            <!-- svelte-ignore a11y_media_has_caption -->
-                            <video 
-                                use:registerTopVideo
-                                controls 
-                                class="w-full"
+                <div class="relative">
+                    <svelte:component 
+                        this={Carousel}
+                        bind:this={topCarouselRef}
+                        particlesToShow={1}
+                        particlesToScroll={1}
+                        autoplay={false}
+                        on:pageChange={handleTopCarouselChange}
+                        let:showPrevPage
+                        let:showNextPage
+                    >
+                        <!-- Side navigation buttons -->
+                        <div slot="prev" let:showPrevPage>
+                            <button 
+                                on:click={showPrevPage} 
+                                class="hidden md:block absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 text-3xl rounded-r"
                             >
-                                <source src="/lubkita-animasi1.mp4" type="video/mp4">
-                            </video>
+                                ←
+                            </button>
                         </div>
-                    </div>
-        
-                    <div class="w-full p-5">
-                        <div class="bg-black">
-                            <!-- svelte-ignore a11y_media_has_caption -->
-                            <video 
-                                use:registerTopVideo
-                            controls 
-                                class="w-full"
+                        
+                        <div slot="next" let:showNextPage>
+                            <button 
+                                on:click={showNextPage} 
+                                class="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 text-3xl rounded-l"
                             >
-                                <source src="/lubkita-animasi2.mp4" type="video/mp4">
-                            </video>
+                                →
+                            </button>
                         </div>
-                    </div>
 
-                    <div class="w-full p-5">
-                        <div class="bg-black">
-                            <!-- svelte-ignore a11y_media_has_caption -->
-                            <video 
-                            use:registerTopVideo
-                            controls 
-                            class="w-full"
-                            >
-                                <source src="/lubkita-animasi4.mp4" type="video/mp4">
-                            </video>
+
+
+                        <div class="w-full p-5">
+                            <div class="bg-black">
+                                <!-- svelte-ignore a11y_media_has_caption -->
+                                <video 
+                                    use:registerTopVideo
+                                    controls 
+                                    class="w-full"
+                                >
+                                    <source src="/lubkita-animasi1.mp4" type="video/mp4">
+                                </video>
+                            </div>
                         </div>
+            
+                        <div class="w-full p-5">
+                            <div class="bg-black">
+                                <!-- svelte-ignore a11y_media_has_caption -->
+                                <video 
+                                    use:registerTopVideo
+                                    controls 
+                                    class="w-full"
+                                >
+                                    <source src="/lubkita-animasi2.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+    
+                        <div class="w-full p-5">
+                            <div class="bg-black">
+                                <!-- svelte-ignore a11y_media_has_caption -->
+                                <video 
+                                    use:registerTopVideo
+                                    controls 
+                                    class="w-full"
+                                >
+                                    <source src="/lubkita-animasi4.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </svelte:component>
+
+                    <!-- Bottom navigation buttons (outside the carousel) -->
+                    <div class="flex justify-center gap-4 mt-4">
+                        <button 
+                            on:click={() => topCarouselRef.goToPrev()} 
+                            class="bg-black bg-opacity-50 text-white px-4 py-2 rounded"
+                        >
+                            ←
+                        </button>
+                        <button 
+                            on:click={() => topCarouselRef.goToNext()} 
+                            class="bg-black bg-opacity-50 text-white px-4 py-2 rounded"
+                        >
+                            →
+                        </button>
                     </div>
-                </svelte:component>
+                </div>
             {:else}
                 <div class="w-full h-48 bg-gray-100 animate-pulse rounded-lg"></div>
             {/if}
@@ -277,34 +357,77 @@
 
         </div>
 
-<!--
-        <div class="flex flex-col justify-center my-10 md:hidden">
-            <div class="text-center text-4xl font-bold ">Cek katalog kami sekarang!</div>
-            <a href="https://online.fliphtml5.com/mweze/qnik/" target="_blank" rel="noopener noreferrer">
-                <img 
-                    src="/salinan-lubkita.png" 
-                    alt="Lubkita Logo" 
-                    class="rounded-3xl cursor-pointer hover:opacity-90 transition-opacity md:w-1/2 w-5/6 mx-auto my-10"
-                />
-            </a>
+
+
+        <div class="md:px-10 px-0 flex justify-center md:flex-row flex-col md:space-x-6 space-x-0 md:bg-transparent bg-white shadow-lg md:shadow-none rounded-2xl pb-10 m-5 md:pb-0 md:m-0">
+            <div class="md:w-1/3 w-full">
+                <img src="/page-home-credential-icon2.png" alt="Lubkita Logo" class="w-full mx-auto p-5 md:p-0">
+            </div>
+            <div class="md:w-1/3 w-full flex flex-col justify-center px-5 space-y-5">
+                <div class="md:text-4xl text-xl font-bold">Membership lubkita.com sudah terintegrasi dengan LDR</div>
+                <div class="md:text-base text-sm">Dengan platform canggih Lubkita.com, kami membantu mitra LDR menghapus kendala jarak dan rantai distribusi yang merugikan</div>
+            </div>
         </div>
--->
-
-
-        <div class="flex justify-center md:mx-10">
-            <div class="flex flex-col bg-amber-300 mx-4 md:mx-0 rounded-t-none md:rounded-t-3xl w-full bg-opacity-70 border-2 border-amber-200 hover:shadow-lg shadow-slate-200 md:pb-5 pb-10">
-                <div class="flex">
-                    <img src="/page-home-logo-review.png" alt="Katalog Logo" class="aspect-square mx-auto object-contain p-3 w-1/6 pl-10 hidden md:block">
-                    <div class="p-5 md:p-10 md:text-left text-center flex flex-col w-5/6 mx-auto">
-                        <div class="text-3xl md:text-4xl">Review</div>
-                        <div class="text-4xl md:text-5xl font-bold">Pengguna LDR</div>
+        <div class="md:w-full flex md:p-10 p-4 m-5 md:m-0 md:space-x-10 space-y-5 md:space-y-0 md:flex-row flex-col md:mx-auto bg-white md:bg-transparent shadow-lg md:shadow-none rounded-2xl">
+            <div class="text-right flex flex-col justify-center md:space-y-5 space-y-2 md:w-1/4 w-full">
+                <div class="md:text-4xl text-xl font-bold text-left md:text-right">Kami menawarkan paket untuk berbagai kebutuhan bisnis anda!</div>
+                <div class="md:flex hidden text-4xl border-2 border-yellow-700 rounded-full px-2 w-fit ml-auto text-yellow-700">→</div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:w-3/4 w-full">
+                <div class="transition-transform duration-300 hover:scale-105 relative group">
+                    <div class="space-y-3 p-10 flex flex-col rounded-xl h-[50vh] justify-center text-center text-white" style="background-image: url('/page-home-paketkami-gold.png'); background-size: cover; background-position: center;">
+                        <div class="md:text-4xl text-2xl font-bold">Paket Gold</div>
+                        <div class="md:text-base font-thin">Solusi sempurna untuk bisnis yang siap naik level di dunia digital!</div>
+                        <a href="/pendaftaran/LDR0B" class="md:opacity-0 md:group-hover:opacity-100 text-center mt-4 bg-black bg-opacity-50 py-2 px-4 rounded-lg text-white font-bold transition-opacity duration-300 hover:bg-opacity-70 md:text-base text-sm">
+                            Ketahui Lebih Lanjut
+                        </a>
                     </div>
+                </div>
+                
+                <div class="transition-transform duration-300 hover:scale-105 relative group">
+                    <div class="space-y-3 p-10 flex flex-col rounded-xl h-[50vh] justify-center text-center text-white" style="background-image: url('/page-home-paketkami-ldr.png'); background-size: cover; background-position: center;">
+                        <div class="md:text-4xl text-2xl font-bold">Paket LDR</div>
+                        <div class="md:text-base font-thin">Digitalisasikan Bisinis dan Grosir Anda Sekarang Juga!</div>
+                        <a href="/pendaftaran/LDR0A" class="md:opacity-0 md:group-hover:opacity-100 text-center mt-4 bg-black bg-opacity-50 py-2 px-4 rounded-lg text-white font-bold transition-opacity duration-300 hover:bg-opacity-70 md:text-base text-sm">
+                            Ketahui Lebih Lanjut
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="transition-transform duration-300 hover:scale-105 relative group">
+                    <div class="space-y-3 p-10 flex flex-col rounded-xl h-[50vh] justify-center text-center text-white" style="background-image: url('/page-home-paketkami-platinum.png'); background-size: cover; background-position: center;">
+                        <div class="md:text-4xl text-2xl font-bold">Paket Platinum</div>
+                        <div class="md:text-base font-thin">Paket ultimate untuk mendominasi pasar dan bisnis digital!</div>
+                        <a href="/pendaftaran/LDR0C" class="md:opacity-0 md:group-hover:opacity-100 text-center mt-4 bg-black bg-opacity-50 py-2 px-4 rounded-lg text-white font-bold transition-opacity duration-300 hover:bg-opacity-70 md:text-base text-sm">
+                            Ketahui Lebih Lanjut
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="flex justify-center md:mx-10 md:mt-20">
+            <div class="flex flex-col bg-yellow-300 mx-4 md:mx-0 rounded-t-none md:rounded-t-3xl w-full bg-opacity-70 hover:shadow-lg shadow-slate-200 md:pb-5 pb-10">
+                <div class="flex md:justify-end flex-col w-full mx-auto md:my-5 md:mt-10 my-5 md:space-y-5 space-y-2">
+                    <div class="flex w-fit mx-auto md:space-x-8 space-x-0 md:flex-row flex-col items-center">
+                        <div class="my-auto text-2xl md:text-4xl font-bold text-center mb-2 md:mb-0">Review Pengguna LDR</div>
+                        <div class="my-auto text-2xl md:text-4xl font-bold text-center hidden md:block">•</div>
+                        <div class="bg-white md:py-2 py-1 md:px-5 px-4 md:text-2xl text-sm font-light rounded-full w-fit text-center">
+                            {videoTitles[currentVideoIndex ?? 0]}
+                        </div>
+                    </div>
+                    <!--
+                    <div class="text-2xl md:text-5xl font-bold text-center">Review Pengguna LDR</div>
+                    <div class="bg-white w-fit md:py-3 md:px-5 mx-auto px-4 md:text-2xl text-sm font-light rounded-full">
+                        {videoTitles[currentVideoIndex ?? 0]}
+                    </div>
+                    -->
                 </div>
 
 
 
-
-                <div class="flex justify-center md:p-5">
+                <div class="flex justify-center">
                     <div class="rounded-full flex flex-col justify-center w-full mx-auto"> <!-- Adjust height as needed -->
                         <!--
                         <video 
@@ -321,15 +444,44 @@
                         
                         <div class="w-full h-full flex-col justify-center text-right"> 
                             {#if Carousel}
-                                <svelte:component 
-                                    this={Carousel}
-                                    bind:this={bottomCarouselRef}
-                                    particlesToShow={1}
-                                    particlesToScroll={1}
-                                    autoplay={false}
-                                    on:pageChange={handleBottomCarouselChange}
-                                >
-                                    <div class="w-full p-4 rounded-xl">
+                                <div class="relative">
+                                    <svelte:component 
+                                        this={Carousel}
+                                        bind:this={bottomCarouselRef}
+                                        particlesToShow={1}
+                                        particlesToScroll={1}
+                                        autoplay={false}
+                                        initialPageIndex={0}
+                                        on:pageChange={handleBottomCarouselChange}
+                                    >
+                                        <!-- Side navigation buttons -->
+                                        <div slot="prev" let:showPrevPage>
+                                            <button 
+                                                on:click={showPrevPage} 
+                                                class="hidden md:block absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 text-3xl rounded-r z-10"
+                                            >
+                                                ←
+                                            </button>
+                                        </div>
+                                        
+                                        <div slot="next" let:showNextPage>
+                                            <button 
+                                                on:click={showNextPage} 
+                                                class="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 text-3xl rounded-l z-10"
+                                            >
+                                                →
+                                            </button>
+                                        </div>
+
+
+
+
+
+
+
+
+
+                                    <div class="w-full p-4 md:px-16 rounded-xl">
                                         <iframe
                                             id="youtube-player-1"
                                             class="youtube-player w-full aspect-video rounded-xl shadow-lg"
@@ -340,8 +492,7 @@
                                             allowfullscreen
                                         ></iframe>
                                     </div>
-                        
-                                    <div class="w-full p-4 rounded-xl">
+                                    <div class="w-full p-4 md:px-16 rounded-xl">
                                         <iframe
                                             id="youtube-player-2"
                                             class="youtube-player w-full aspect-video rounded-xl shadow-lg"
@@ -352,7 +503,7 @@
                                             allowfullscreen
                                         ></iframe>
                                     </div>
-                                    <div class="w-full p-4 rounded-xl">
+                                    <div class="w-full p-4 md:px-16 rounded-xl">
                                         <iframe
                                             id="youtube-player-2"
                                             class="youtube-player w-full aspect-video rounded-xl shadow-lg"
@@ -363,7 +514,26 @@
                                             allowfullscreen
                                         ></iframe>
                                     </div>
-                                </svelte:component>
+
+                                        <!-- Carousel items here -->
+                                    </svelte:component>
+
+                                    <!-- Bottom navigation buttons (outside the carousel) -->
+                                    <div class="flex justify-center gap-4 mt-4 md:hidden">
+                                        <button 
+                                            on:click={() => bottomCarouselRef.goToPrev()} 
+                                            class="bg-black bg-opacity-50 text-white px-4 py-2 rounded"
+                                        >
+                                            ←
+                                        </button>
+                                        <button 
+                                            on:click={() => bottomCarouselRef.goToNext()} 
+                                            class="bg-black bg-opacity-50 text-white px-4 py-2 rounded"
+                                        >
+                                            →
+                                        </button>
+                                    </div>
+                                </div>
                             {:else}
                                 <div class="w-full h-48 bg-gray-100 animate-pulse rounded-lg"></div>
                             {/if}
