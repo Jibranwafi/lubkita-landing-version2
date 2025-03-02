@@ -1,322 +1,551 @@
-<div class="flex flex-col bg-orange-300">
-    <div 
-        class="flex flex-col w-full bg-center bg-no-repeat bg-cover h-auto min-h-[100vh]"
-        style="background-image: url('/page-ldr-headerwallpaper.png');"
-    >
-        <div class=" rounded-r-3xl bg-orange-600/85 my-auto md:w-1/2 w-4/5 p-5 md:p-10">
-        <div class="font-bold md:text-5xl text-3xl text-white ">LUMBUNG DIGITAL RAKYAT
+<div class="bg-white flex flex-col">
+
+    <div class="flex flex-col">
+    
+            <img 
+                src="/paket-gold3.png" 
+                alt="LDR Wallpaper" 
+                class="w-full object-cover "
+            >
+        <div class="relative">
+            <div class="absolute inset-x-0 bottom-0 md:h-64 h-24 bg-gradient-to-t from-white to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 md:h-64 h-24 bg-gradient-to-t from-white to-transparent md:flex hidden"></div>
+            <div class="absolute inset-x-0 bottom-0 md:h-64 h-24 bg-gradient-to-t from-white to-transparent md:flex hidden"></div>
         </div>
-
-        <div class="flex flex-col space-y-4 md:my-10 my-6">
-            <div class="md:text-xl text-sm font-light text-white">
-            Lumbung Digital Rakyat (LDR) Mitra sukses pengusaha desa, dalam proses digitalisasi pasar. Lumbung Digital Rakyat (LDR), kunci sukses dalam memperluas jangkauan bisnis anda di Lubkita.com, platform dikhususkan untuk mengembangkan memberdayakan ekonomi lokal dalam digitalisasi dan pelatihan.
-            </div>
-            <div class="md:text-xl text-sm font-light text-white">
-            LDR memberikan dukungan teknis dan pelatihan digital, memastikan pengusaha desa dapat memanfaatkan teknologi dengan efektif untuk mengembangkan bisnis mereka.
-            </div>
+        <div class=" py-3 md:px-10 px-5 text-center text-3xl md:text-4xl font-bold italic">
+            Solusi sempurna untuk bisnis yang siap naik level di dunia digital!
         </div>
+        <div class=" py-3 md:px-10 px-5 text-center text-base md:text-2xl italic mb-20">
+            Paket Gold memberikan Anda akses lengkap ke fitur promosi flashsale, dukungan iklan terintegrasi, dan priority support dengan respons cepat. Dengan 2 keyword SEO kompetitif menengah, paket social media starter (5 Feed + 3 Reels), dan traffic hingga 500 pengunjung/hari, bisnis Anda akan mendapat posisi listing prioritas 2 di marketplace. Lengkap dengan budget iklan Google 15/15 hari dan setup website profesional, paket Gold adalah investasi cerdas untuk membangun presence digital yang kuat.
         </div>
-    </div>
-    <div class="relative">
-        <div class="absolute inset-x-0 bottom-0 md:h-64 h-24 bg-gradient-to-t from-orange-300 to-transparent"></div>
-        <div class="absolute inset-x-0 bottom-0 md:h-64 h-24 bg-gradient-to-t from-orange-300 to-transparent md:flex hidden"></div>
-    </div>
-    <div class="flex flex-col p-5 md:flex-row">
-        <div class="bg-orange-600 p-7 flex flex-col justify-center md:w-1/5 w-full text-white md:text-4xl text-2xl font-bold md:rounded-l-3xl md:rounded-tr-none rounded-t-3xl text-left md:text-right ">
-            Sebagai <span class="px-2 bg-orange-100 text-orange-600 w-fit md:ml-auto mr-auto md:mr-0">mitra LDR</span> anda akan mendapatkan berbagai keunggulan berikut:
-        </div>
-        <div class="bg-orange-100 md:grid md:grid-cols-2 gap-4 md:w-4/5 w-full md:px-7 px-4 md:py-5">
-
-
-            <div class="flex w-full  border-l-8 border-orange-400 p-4 md:space-x-8 space-x-3 rounded-xl bg-white border-y-2 border-y-orange-200 my-3 md:my-0">
-                <div class="w-1/3 flex flex-col justify-center items-center">
-                    <img src="/page-ldr-keunggulan-icons4.png" alt="keunggulan mitra LDR" />
-                </div>
-                <div class="flex flex-col w-2/3 my-auto space-y-3">
-                    <div class="font-bold md:text-xl text-base">Fee Bergabung</div>
-                    <div class="font-light md:text-base text-sm">Dapatkan fee sebesar Rp. 2.000.000 untuk setiap pengusaha atau distributor yang berhasil bergabung dengan Lubkita.com melalu jaringan anda.⁠</div>
-                </div>
-            </div>
-            <div class="flex w-full  border-l-8 border-orange-400 p-4 md:space-x-8 space-x-3 rounded-xl bg-white border-y-2 border-y-orange-200 my-3 md:my-0">
-                <div class="w-1/3 flex flex-col justify-center items-center">
-                    <img src="/page-ldr-keunggulan-icons2.png" alt="keunggulan mitra LDR" />
-                </div>
-                <div class="flex flex-col w-2/3 my-auto space-y-3">
-                    <div class="font-bold md:text-xl text-base">Komisi Transaksi</div>
-                    <div class="font-light md:text-base text-sm">Raih komisi sebesar Rp.2000 untuk setiap transaksi yang dilakukan oleh pengusaha yang anda ajak bergabung.</div>
-                </div>
-            </div>
-            
-
-            <div class="w-full  border-l-8 border-orange-400 p-4 md:space-x-8 space-x-3 rounded-t-xl bg-white -mb-5 relative border-t-2 border-y-orange-200 z-10 hidden md:flex">
-                <div class="w-1/3 flex flex-col justify-center items-center">
-                    <img src="/page-ldr-keunggulan-icons1.png" alt="keunggulan mitra LDR" />
-                </div>
-                <div class="flex flex-col w-2/3 my-auto space-y-3">
-                    <div class="font-bold md:text-xl text-base">Dukungan Penuh Fasilitas Pendukung</div>
-                    <div class="font-light md:text-base text-sm">Sebagai mitra dari LDR anda akan mendapatkan dukungan fasilitas seperti:</div>
+    
+        <div class="flex flex-col space-y-6 md:space-y-0 p-5">
+            <div class="w-full flex justify-center mb-4">
+                <div class="bg-yellow-100 p-2 rounded-full flex items-center">
+                    <button 
+                        class="px-6 py-2 rounded-full transition-all duration-300 {!showOutMarketing ? 'bg-amber-300 text-yellow-900' : 'text-yellow-700'}"
+                        on:click={() => showOutMarketing = false}
+                    >
+                        IN MARKETING
+                    </button>
+                    <button 
+                        class="px-6 py-2 rounded-full transition-all duration-300 {showOutMarketing ? 'bg-amber-300 text-yellow-900' : 'text-yellow-700'}"
+                        on:click={() => showOutMarketing = true}
+                    >
+                        OUT MARKETING
+                    </button>
                 </div>
             </div>
 
-            <div class="flex w-full  border-l-8 border-orange-400 p-4 md:space-x-8 space-x-3 bg-white rounded-xl border-y-2 border-y-orange-200 my-3 md:my-0">
-                <div class="w-1/3 flex flex-col justify-center items-center">
-                    <img src="/page-ldr-keunggulan-icons3.png" alt="keunggulan mitra LDR" />
-                </div>
-                <div class="flex flex-col w-2/3 my-auto space-y-3">
-                    <div class="font-bold md:text-xl text-base">Member Gold Lubkita.com</div>
-                    <div class="font-light md:text-base text-sm">Nikmati fasilitas member gold Lubkita.com yang memberikan akses ke berbagai fitur dan keunggulan eksklusif.</div>
-                </div>
-            </div>
-            
-
-
-            
-
-
-
-            <div class="grid md:grid-cols-4 grid-cols-1 w-full rounded-b-xl rounded-tr-xl bg-white col-span-2 gap-4 p-5 border-l-8 border-orange-400 relative border-y-2 border-y-orange-200 z-0 my-3 md:my-0">
-
-
-                <div class="flex w-full rounded-t-xl bg-white z-10 md:hidden space-x-3">
-                    <div class="w-1/3 flex flex-col justify-center items-center">
-                        <img src="/page-ldr-keunggulan-icons1.png" alt="keunggulan mitra LDR" />
+            {#if !showOutMarketing}
+                <div class=" w-full flex rounded-3xl pb-3 bg-yellow-100">
+                    <div class="w-1/2 p-24">
+                        {#if openStates.care}
+                            <img src="/page-paket-gold-inmarketing-symbols1.png" alt="Promo Features" class="w-full object-contain p-1">
+                        {:else if openStates.benefit2}
+                            <img src="/page-paket-gold-inmarketing-symbols2.png" alt="CMS Features" class="w-full object-contain p-1">
+                        {:else if openStates.benefit3}
+                            <img src="/page-paket-gold-inmarketing-symbols3.png" alt="Priority Listing Features" class="w-full object-contain p-1">
+                        {:else if openStates.benefit4}
+                            <img src="/page-paket-gold-inmarketing-symbols4.png" alt="Product Highlight Features" class="w-full object-contain p-1">
+                        {:else}
+                            <img src="/page-paket-gold-inmarketing-symbols4.png" alt="Default Image" class="w-full object-contain p-1">
+                        {/if}
                     </div>
-                    <div class="flex flex-col w-2/3 my-auto space-y-3">
-                        <div class="font-bold md:text-xl text-base">Dukungan Penuh Fasilitas Pendukung</div>
-                        <div class="font-light md:text-base text-sm">Sebagai mitra dari LDR anda akan mendapatkan dukungan fasilitas seperti:</div>
-                    </div>
-                </div>
 
-
-
-                <div class="flex flex-col h-full md:border-4 border-2 border-orange-400 rounded-xl bg-red-50">
-                    <div class="flex">
-                        <div class="bg-orange-400 w-16 h-16 flex items-center justify-center p-2 rounded-tl-lg">
-                            <img src="/page-paket-ldr-icon-tv32.png" alt="" class="">
-                        </div>
-                        <div class="font-bold md:text-xl text-base pl-4 my-auto py-2">TV Monitor<br>32 Inch</div>
-                    </div>
-                    <div class="font-light md:text-base text-sm px-3 pb-3 md:pt-0 pt-3">untuk zoom meeting, pelatihan dan komunikasi dengan tim Lubkita.com</div>
-                </div>
-                <div class="flex flex-col h-full md:border-4 border-2 border-orange-400 rounded-xl bg-red-50">
-                    <div class="flex">
-                        <div class="bg-orange-400 w-16 h-16 flex items-center justify-center p-2 rounded-tl-lg">
-                            <img src="/page-paket-ldr-icon-setpc.png" alt="" class="">
-                        </div>
-                        <div class="font-bold md:text-xl text-base pl-4 my-auto py-2">Komputer<br>lengkap</div>
-                    </div>
-                    <div class="font-light md:text-base text-sm px-3 pb-3 md:pt-0 pt-3">untuk menjalankan kegiatan dropshipping dan mengelola akun Lubkita.com</div>
-                </div>
-                <div class="flex flex-col h-full md:border-4 border-2 border-orange-400 rounded-xl bg-red-50">
-                    <div class="flex">
-                        <div class="bg-orange-400 w-16 h-16 flex items-center justify-center p-2 rounded-tl-lg">
-                            <img src="/page-paket-ldr-icon-pelatihan.png" alt="" class="">
-                        </div>
-                        <div class="font-bold md:text-xl text-base pl-4 my-auto py-2">Pelatihan<br>Digital 3 hari</div>
-                    </div>
-                    <div class="font-light md:text-base text-sm px-3 pb-3 md:pt-0 pt-3">pelatihan intensif tentang cara menggunakan Lubkita.com menjadi seller dan mengelola bisnis online.</div>
-                </div>
-                <div class="flex flex-col h-full md:border-4 border-2 border-orange-400 rounded-xl bg-red-50">
-                    <div class="flex">
-                        <div class="bg-orange-400 w-16 h-16 flex items-center justify-center p-2 rounded-tl-lg">
-                            <img src="/page-paket-ldr-icon-mitralubkita.png" alt="" class="">
-                        </div>
-                        <div class="font-bold md:text-xl text-base pl-4 my-auto py-2">Admin<br>Pendukung</div>
-                    </div>
-                    <div class="font-light md:text-base text-sm px-3 pb-3 md:pt-0 pt-3">Tim admin Lubkita.com siap membantu pengusaha yang bergabung dengan Lubkita.com</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="flex flex-col p-5 ">
-        <div class="bg-orange-700 w-fit rounded-t-3xl px-6 py-3 mx-auto md:text-4xl text-2xl font-extralight shadow-2xl shadow-slate-500 mt-10 text-white">HUB Bisnis Kreatif LDR</div>
-
-
-
-
-
-
-            <div class="md:py-8 py-4 bg-orange-700 md:rounded-3xl rounded-xl">
-                <div class="grid grid-cols-2 md:grid-cols-4 w-full md:h-[60vh] h-[90vh] md:gap-0 gap-2">
-                    <!-- svelte-ignore a11y_no_static_element_interactions -->
-                    <!-- svelte-ignore a11y_click_events_have_key_events -->
-                    <div class="flex flex-col cursor-pointer hover:bg-slate-300 transition-colors relative group" 
-                        on:click={() => selectedOption = 'pelatihan'}
-                        class:selected={selectedOption === 'pelatihan'}>
-                        <img 
-                            src="/page-paket-ldr-pelatihandigital2.png" 
-                            alt="Pelatihan Digital Background" 
-                            class="absolute inset-0 w-full h-full object-cover z-0 transition-all duration-300"
-                            class:brightness-50={selectedOption !== 'pelatihan'}
-                            class:brightness-100={selectedOption === 'pelatihan'}
-                        />
-                        <div class="md:text-xl text-sm text-left font-bold hover:text-white transition-colors relative z-10 text-white w-fit p-2 md:p-5 rounded-br-3xl group-[.selected]:bg-orange-700 group-[.selected]:text-white group-[.selected]:bg-opacity-90">
-                            Pelatihan<br>Digital
-                        </div>
-                        <div class="text-xs md:text-xl font-light text-left md:p-4 p-2 bg-white/90 text-white transition-all duration-300 absolute bottom-0 left-0 right-0 group-[.selected]:bg-orange-700 group-[.selected]:bg-opacity-90"
-                            class:opacity-0={selectedOption !== 'pelatihan'}
-                            class:translate-y-full={selectedOption !== 'pelatihan'}>
-                            {menuContent.pelatihan}
-                        </div>
-                    </div>
-    
-    
-    
-    
-    
-                    <!-- svelte-ignore a11y_click_events_have_key_events -->
-                    <!-- svelte-ignore a11y_no_static_element_interactions -->
-                    <div class="flex flex-col cursor-pointer hover:bg-slate-300 transition-colors relative group"
-                        on:click={() => selectedOption = 'pemasaran'}
-                        class:selected={selectedOption === 'pemasaran'}>
-                        <img 
-                            src="/page-paket-ldr-pelatihandigital.png" 
-                            alt="Pelatihan Digital Background" 
-                            class="absolute inset-0 w-full h-full object-cover z-0 transition-all duration-300"
-                            class:brightness-50={selectedOption !== 'pemasaran'}
-                            class:brightness-100={selectedOption === 'pemasaran'}
-                        />
-                        <div class="md:text-xl text-sm text-left font-bold hover:text-white transition-colors relative z-10 text-white w-fit p-2 md:p-5 rounded-br-3xl group-[.selected]:bg-orange-700 group-[.selected]:text-white group-[.selected]:bg-opacity-90">
-                            Usaha<br>Pemasaran Digital
-                        </div>
-                        <div class="text-xs md:text-xl text-left md:p-4 p-2 bg-white/90 text-black transition-all duration-300 absolute bottom-0 left-0 right-0 group-[.selected]:bg-orange-700 group-[.selected]:text-white group-[.selected]:bg-opacity-90"
-                            class:opacity-0={selectedOption !== 'pemasaran'}
-                            class:translate-y-full={selectedOption !== 'pemasaran'}>
-                            {menuContent.pemasaran}
-                        </div>
-                    </div>
-    
-    
-    
-    
-    
-                    <!-- svelte-ignore a11y_click_events_have_key_events -->
-                    <!-- svelte-ignore a11y_no_static_element_interactions -->
-                    <div class="flex flex-col cursor-pointer hover:bg-slate-300 transition-colors relative group"
-                        on:click={() => selectedOption = 'jaringan'}
-                        class:selected={selectedOption === 'jaringan'}>
-                        <img 
-                            src="/page-paket-ldr-membangunjaringan.png" 
-                            alt="Pelatihan Digital Background" 
-                            class="absolute inset-0 w-full h-full object-cover z-0 transition-all duration-300"
-                            class:brightness-50={selectedOption !== 'jaringan'}
-                            class:brightness-100={selectedOption === 'jaringan'}
-                        />
-                        <div class="md:text-xl text-sm text-left font-bold hover:text-white transition-colors relative z-10 text-white w-fit p-2 md:p-5 md:rounded-br-3xl rounded-br-xl group-[.selected]:bg-orange-700 group-[.selected]:text-white group-[.selected]:bg-opacity-90">
-                            Membangun<br>Jaringan
-                        </div>
-                        <div class="text-xs md:text-xl text-left md:p-4 p-2 bg-white/90 text-black transition-all duration-300 absolute bottom-0 left-0 right-0 group-[.selected]:bg-orange-700 group-[.selected]:text-white group-[.selected]:bg-opacity-90"
-                            class:opacity-0={selectedOption !== 'jaringan'}
-                            class:translate-y-full={selectedOption !== 'jaringan'}>
-                            {menuContent.jaringan}
-                        </div>
-                    </div>
-    
-    
-    
-    
-    
-                    <!-- svelte-ignore a11y_click_events_have_key_events -->
-                    <!-- svelte-ignore a11y_no_static_element_interactions -->
-                    <div class="flex flex-col cursor-pointer hover:bg-slate-300 transition-colors relative group"
-                        on:click={() => selectedOption = 'pendampingan'}
-                        class:selected={selectedOption === 'pendampingan'}>
-                        <img 
-                            src="/page-paket-ldr-pendampingumkm.png" 
-                            alt="Pelatihan Digital Background" 
-                            class="absolute inset-0 w-full h-full object-cover z-0 transition-all duration-300"
-                            class:brightness-50={selectedOption !== 'pendampingan'}
-                            class:brightness-100={selectedOption === 'pendampingan'}
-                        />
-                        <div class="md:text-xl text-sm text-left font-bold hover:text-white transition-colors relative z-10 text-white w-fit p-2 md:p-5 rounded-br-3xl group-[.selected]:bg-orange-700 group-[.selected]:text-white group-[.selected]:bg-opacity-90">
-                            Pendampingan<br>Bisnis Digital
-                        </div>
-                        <div class="text-xs md:text-xl text-left md:p-4 p-2 bg-white/90 text-black transition-all duration-300 absolute bottom-0 left-0 right-0 group-[.selected]:bg-orange-700 group-[.selected]:text-white group-[.selected]:bg-opacity-90"
-                            class:opacity-0={selectedOption !== 'pendampingan'}
-                            class:translate-y-full={selectedOption !== 'pendampingan'}>
-                            {menuContent.pendampingan}
-                        </div>
-                    </div>
-                </div>
-                </div>
-
-
-
-
-
+                    <div class="flex flex-col space-y-3 w-1/2 justify-center">
         
-    </div>
-
-    <div class="relative">
-        <div class="absolute inset-x-0 top-0 h-24 md:h-64 bg-gradient-to-b from-orange-300 to-transparent z-10"></div>
-        <div class="flex py-32 md:px-10 px-5" style="background-image: url('/page-ldr-footerwallpaper1.png'); background-size: cover; background-position: center;">
-            <div class="md:w-3/5 w-full flex flex-col p-10 rounded-3xl bg-orange-700/70 z-20">
-                <div class="text-orange-100 md:text-5xl text-3xl font-bold mb-10 ">5 Dampak LDR terhadap bisnis</div>
-                <div class="space-y-5">
-                    <div class="flex space-x-3">
-                        <div class="flex justify-center items-center bg-orange-200 rounded-full md:text-xl text-base md:w-14 md:h-14 w-10 h-10 min-w-[2.0rem] md:min-w-[3.5rem] shrink-0 font-bold my-auto">1</div>
-                        <div class="flex flex-col text-orange-100">
-                            <div class="font-bold md:text-2xl text-lg">Pasar yang Luas</div>
-                            <div class="md:text-xl text-sm font-light">Kesempatan untuk mendapatkan pasar berbagai daerah di seluruh Indonesia.</div>
-                        </div>
+                    <div class="accordion-item p-4 mr-3 rounded-xl hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+                        <button
+                            class="w-full flex items-center gap-3"
+                            on:click={() => toggleDropdown('care')}
+                        >
+                            <div class="flex-1 border-b border-slate-300 flex items-center justify-between">
+                                <span class="lg:text-2xl md:text-lg text-base font-semibold py-1 text-left text-yellow-800 ">Promo (Flashsale & Premium Bandages Gold)</span>
+                                <svg 
+                                    class="h-6 w-6 transition-transform duration-300 {openStates.care ? 'rotate-180' : ''}"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    fill="none"
+                                >
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </div>
+                        </button>
+                        
+                        {#if openStates.care}
+                            <div transition:slide={{ duration: 300 }} class="mt-3 md:text-base text-sm">
+                                Di paket Gold, kamu mendapatkan akses penuh ke sistem flash sale dan profil tokomu akan menerima badges Membership Gold dan Verified Seller,yang menandakan toko mu adalah toko terpercaya dengan promo-promo esklusif.
+                            </div>
+                        {/if}
                     </div>
-                    <div class="border-t border-orange-200"></div>
-                    <div class="flex space-x-3">
-                        <div class="flex justify-center items-center bg-orange-200 rounded-full md:text-xl text-base md:w-14 md:h-14 w-10 h-10 min-w-[2.0rem] md:min-w-[3.5rem] shrink-0 font-bold my-auto">2</div>
-                        <div class="flex flex-col text-orange-100">
-                            <div class="font-bold md:text-2xl text-lg">Semakin Banyak</div>
-                            <div class="md:text-xl text-sm font-light">Dengan menjangkau pasar yang luas, kalian bisa mendapatkan keuntungan yangsemakin banyak.</div>
-                        </div>
+        
+        
+                    <div class="accordion-item p-4 mr-3 rounded-xl hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+                        <button 
+                            class="w-full flex items-center gap-3"
+                            on:click={() => toggleDropdown('benefit2')}
+                        >
+                            <div class="flex-1 border-b border-slate-300 flex items-center justify-between">
+                                <span class="lg:text-2xl md:text-lg text-base font-semibold py-1 text-left text-yellow-800 ">Dashboard Sistem Manajemen Konten (CMS)</span>
+                                <svg 
+                                    class="h-6 w-6 transition-transform duration-300 {openStates.benefit2 ? 'rotate-180' : ''}"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    fill="none"
+                                >
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </div>
+                        </button>
+                        
+                        {#if openStates.benefit2}
+                            <div transition:slide={{ duration: 300 }} class="mt-3 md:text-base text-sm">
+                                Penjual memiliki kemampuan untuk menambahkan produk mereka sendiri ke platform. Ini berarti mereka dapat membuat daftar produk baru, termasuk deskripsi yang detail, gambar, dan kategorisasi, tanpa perlu melewati proses persetujuan yang panjang. Penjual dapat menentukan harga produk mereka secara mandiri. Mereka memiliki otonomi untuk menyesuaikan harga berdasarkan kondisi pasar, persaingan, dan strategi bisnis mereka sendiri.
+                            </div>
+                        {/if}
                     </div>
-                    <div class="border-t border-orange-200"></div>
-                    <div class="flex space-x-3">
-                        <div class="flex justify-center items-center bg-orange-200 rounded-full md:text-xl text-base md:w-14 md:h-14 w-10 h-10 min-w-[2.0rem] md:min-w-[3.5rem] shrink-0 font-bold my-auto">3</div>
-                        <div class="flex flex-col text-orange-100">
-                            <div class="font-bold md:text-2xl text-lg">Pelatihan dan Inovasi</div>
-                            <div class="md:text-xl text-sm font-light">Bisnis akan mendapatkan pelatihan dan invoasi agar produk selalu bisa terjual.</div>
-                        </div>
+        
+                    <div class="accordion-item p-4 mr-3 rounded-xl hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+                        <button 
+                            class="w-full flex items-center gap-3"
+                            on:click={() => toggleDropdown('benefit3')}
+                        >
+                            <div class="flex-1 border-b border-slate-300 flex items-center justify-between">
+                                <span class="lg:text-2xl md:text-lg text-base font-semibold py-1 text-left text-yellow-800 ">Prioritas Listing (Daftar Prioritas) & Toko Pilihan</span>
+                                <svg 
+                                    class="h-6 w-6 transition-transform duration-300 {openStates.benefit3 ? 'rotate-180' : ''}"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    fill="none"
+                                >
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </div>
+                        </button>
+                        
+                        {#if openStates.benefit3}
+                            <div transition:slide={{ duration: 300 }} class="mt-3 md:text-base text-sm">
+                                Membantu produk Anda muncul lebih sering di hasil pencarian yang relevan, serta memberikan posisi khusus di halaman kategori produk. Ketika pembeli menjelajahi kategori tertentu, produk Anda akan mendapat slot premium di bagian atas halaman kategori tersebut.
+                            </div>
+                        {/if}
                     </div>
-                    <div class="border-t border-orange-200"></div>
-                    <div class="flex space-x-3">
-                        <div class="flex justify-center items-center bg-orange-200 rounded-full md:text-xl text-base md:w-14 md:h-14 w-10 h-10 min-w-[2.0rem] md:min-w-[3.5rem] shrink-0 font-bold my-auto">4</div>
-                        <div class="flex flex-col text-orange-100">
-                            <div class="font-bold md:text-2xl text-lg">Fleksibilitas dan Skalabilitas</div>
-                            <div class="md:text-xl text-sm font-light">Mengelola inventaris dan menyesuaikan stok dengan cepat sesuai permintaan pasar tanpa perlu memperbesar ruang penyimpanan fisik.</div>
-                        </div>
-                    </div>
-                    <div class="border-t border-orange-200"></div>
-                    <div class="flex space-x-3">
-                        <div class="flex justify-center items-center bg-orange-200 rounded-full md:text-xl text-base md:w-14 md:h-14 w-10 h-10 min-w-[2.0rem] md:min-w-[3.5rem] shrink-0 font-bold my-auto">5</div>
-                        <div class="flex flex-col text-orange-100">
-                            <div class="font-bold md:text-2xl text-lg">Pengurangan Biaya Operasional</div>
-                            <div class="md:text-xl text-sm font-light">Tidak perlu membuka toko fisik, mengurangi kebutuhan akan staf, dan meminimalkan biaya pemasaran tradisional.</div>
-                        </div>
+        
+        
+                    <div class="accordion-item p-4 mr-3 rounded-xl hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+                        <button 
+                            class="w-full flex items-center gap-3"
+                            on:click={() => toggleDropdown('benefit4')}
+                        >
+                            <div class="flex-1 border-b border-slate-300 flex items-center justify-between">
+                                <span class="lg:text-2xl md:text-lg text-base font-semibold py-1 text-left text-yellow-800 ">Produk Highlight (Produk Unggulan)</span>
+                                <svg 
+                                    class="h-6 w-6 transition-transform duration-300 {openStates.benefit4 ? 'rotate-180' : ''}"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    fill="none"
+                                >
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </div>
+                        </button>
+                        
+                        {#if openStates.benefit4}
+                            <div transition:slide={{ duration: 300 }} class="mt-3 md:text-base text-sm">
+                                Produk Unggulan (Product Highlight) adalah fitur yang memungkinkan penjual untuk menonjolkan produk-produk terpilih di toko online mereka. Fitur ini memungkinkan produk tertentu mendapatkan penempatan khusus yang lebih menonjol, biasanya di bagian atas toko atau di posisi strategis lainnya.
+                            </div>
+                        {/if}
                     </div>
                 </div>
+        
+        
+        
+        
+        
+        
+        
+                </div>
+            {:else}
+                <div class=" w-full flex space-y-3 bg-yellow-200 rounded-3xl pb-3">
+                
+                
+                    <div class="flex rounded-t-2xl text-2xl font-bold justify-start w-1/2 " style="background-image: url('/page-paket-benefit2.png'); background-size: cover; background-position: center;">
+                        <div class="bg-yellow-50 w-fit md:text-3xl text-xl p-5 h-fit rounded-br-2xl rounded-tl-2xl">IN MARKETING</div>
+                    </div>
+
+                    <div class="flex flex-col space-y-3 w-1/2">
+                    <div class="accordion-item bg-yellow-50 border-yellow-300 p-4 mr-3 rounded-xl hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+                        <button 
+                            class="w-full flex items-center gap-3"
+                            on:click={() => toggleDropdown('care2')}
+                        >
+                            <img 
+                                src="/page-paket-gold-outmarketing-icons1.png" 
+                                alt="Weezer Symbol" 
+                                class="w-[10%] aspect-square object-contain p-1"
+                            />
+                            <div class="flex-1 border-b border-slate-300 flex items-center justify-between">
+                                <span class="md:text-2xl text-base font-semibold py-1 text-left text-yellow-800 ">SEO (Pengaturan Kata Kunci)</span>
+                                <svg 
+                                    class="h-6 w-6 transition-transform duration-300 {openStates.care2 ? 'rotate-180' : ''}"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    fill="none"
+                                >
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </div>
+                        </button>
+                        
+                        {#if openStates.care2}
+                            <div transition:slide={{ duration: 300 }} class="mt-3 md:text-base text-sm">
+                                Kami hadir dengan solusi SEO yang tepat untuk mendongkrak visibilitas bisnismu di Google! Dalam paket GOLD ini, kamu mendapatkan layanan optimasi untuk 4 kata kunci strategis - 2 kata kunci persaingan rendah dan 2 kata kunci persaingan menengah, yang dirancang khusus untuk memaksimalkan peluang bisnismu muncul di halaman pertama Google!
+                            </div>
+                        {/if}
+                    </div>
+        
+        
+                    <div class="accordion-item bg-yellow-50 border-yellow-300 p-4 mr-3 rounded-xl hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+                        <button 
+                            class="w-full flex items-center gap-3"
+                            on:click={() => toggleDropdown('benefit2_2')}
+                        >
+                            <img 
+                                src="/page-paket-gold-outmarketing-icons2.png" 
+                                alt="Weezer Symbol" 
+                                class="w-[10%] aspect-square object-contain p-1"
+                            />
+                            <div class="flex-1 border-b border-slate-300 flex items-center justify-between">
+                                <span class="md:text-2xl text-base font-semibold py-1 text-left text-yellow-800 ">Promosi oleh Google ADS</span>
+                                <svg 
+                                    class="h-6 w-6 transition-transform duration-300 {openStates.benefit2_2 ? 'rotate-180' : ''}"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    fill="none"
+                                >
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </div>
+                        </button>
+                        
+                        {#if openStates.benefit2_2}
+                            <div transition:slide={{ duration: 300 }} class="mt-3 md:text-base text-sm">
+                                Fitur "Promosi oleh Google" dalam paket GOLD memberikan layanan periklanan Google Ads dengan detail sebagai berikut: <b>DAPATKAN BUDGET 1JT/15 HARI UNTUK PROMOSI BISNISMU DI GOOGLE! </b>
+                            </div>
+                        {/if}
+                    </div>
+        
+                    <div class="accordion-item bg-yellow-50 border-yellow-300 p-4 mr-3 rounded-xl hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+                        <button 
+                            class="w-full flex items-center gap-3"
+                            on:click={() => toggleDropdown('benefit3_2')}
+                        >
+                            <img 
+                                src="/page-paket-gold-outmarketing-icons3.png" 
+                                alt="Weezer Symbol" 
+                                class="w-[10%] aspect-square object-contain p-1"
+                            />
+                            <div class="flex-1 border-b border-slate-300 flex items-center justify-between">
+                                <span class="md:text-2xl text-base font-semibold py-1 text-left text-yellow-800 ">Pilihan Template Design Promosi</span>
+                                <svg 
+                                    class="h-6 w-6 transition-transform duration-300 {openStates.benefit3_2 ? 'rotate-180' : ''}"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    fill="none"
+                                >
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </div>
+                        </button>
+                        
+                        {#if openStates.benefit3_2}
+                            <div transition:slide={{ duration: 300 }} class="mt-3 md:text-base text-sm">
+                                Tampil menarik di dunia digital tak perlu lagi ribet dan mahal! Paket Template Design Promosi kami hadir dengan koleksi lengkap template profesional yang siap pakai untuk semua kebutuhan promosimu. Dari feed Instagram yang eye-catching, banner marketplace yang menarik klik, hingga design email marketing yang bikin customer penasaran - semuanya ada dalam satu paket lengkap!
+                            </div>
+                        {/if}
+                    </div>
+        
+        
+                    <div class="accordion-item bg-yellow-50 border-yellow-300 p-4 mr-3 rounded-xl hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+                        <button 
+                            class="w-full flex items-center gap-3"
+                            on:click={() => toggleDropdown('benefit4_2')}
+                        >
+                            <img 
+                                src="/page-paket-gold-outmarketing-icons4.png" 
+                                alt="Weezer Symbol" 
+                                class="w-[10%] aspect-square object-contain p-1"
+                            />
+                            <div class="flex-1 border-b border-slate-300 flex items-center justify-between">
+                                <span class="md:text-2xl text-base font-semibold py-1 text-left text-yellow-800 ">Repost Video Profile 60 Detik</span>
+                                <svg 
+                                    class="h-6 w-6 transition-transform duration-300 {openStates.benefit4_2 ? 'rotate-180' : ''}"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    fill="none"
+                                >
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </div>
+                        </button>
+                        
+                        {#if openStates.benefit4_2}
+                            <div transition:slide={{ duration: 300 }} class="mt-3 md:text-base text-sm">
+                                Media sosial kami, baik Instagram dan TikTok telah memiliki banyak pengikut secara online. Nikmati pengalaman video profil toko/produk anda di posting ulang oleh media sosial kami dengan banyak pengikut, yang hal ini akan meningkatkan jumlah orang yang menyaksikan, menyukai, dan membagikan konten video profile anda.
+                            </div>
+                        {/if}
+                    </div>
+        
+        
+        
+        
+        
+                    <div class="accordion-item bg-yellow-50 border-yellow-300 p-4 mr-3 rounded-xl hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+                        <button 
+                            class="w-full flex items-center gap-3"
+                            on:click={() => toggleDropdown('benefit5_2')}
+                        >
+                            <img 
+                                src="/page-paket-gold-outmarketing-icons5.png" 
+                                alt="Weezer Symbol" 
+                                class="w-[10%] aspect-square object-contain p-1"
+                            />
+                            <div class="flex-1 border-b border-slate-300 flex items-center justify-between">
+                                <span class="md:text-2xl text-base font-semibold py-1 text-left text-yellow-800 ">Social Media</span>
+                                <svg 
+                                    class="h-6 w-6 transition-transform duration-300 {openStates.benefit5_2 ? 'rotate-180' : ''}"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    fill="none"
+                                >
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </div>
+                        </button>
+                        
+                        {#if openStates.benefit5_2}
+                            <div transition:slide={{ duration: 300 }} class="mt-3 md:text-base text-sm">
+                                Kami memiliki akun media sosial dengan follower yang cukup besar untuk membantu engagment toko anda dengan, 5 curated konten feed posts (Beranda), 3 professional konten video reels, Premium copywriting (Naskah Konten Premium), Viral optimization strategy" (Pengoptimalan Strategi Viral).
+                            </div>
+                        {/if}
+                    </div>
+                </div>
+            
+                </div>
+            {/if}
+        </div>
+    
+    
+        <div class="mt-10 p-10 py-56 text-center flex flex-col space-y-4" style="background-image: url('/page-paket-gold-mapicon2.png'); background-size: cover; background-position: center;"> 
+            <div class="md:text-5xl font-bold italic text-xl">
+                PEMASARAN EKSKLUSIF<br>BISNIS ANDA MELALUI PAKET GOLD
+            </div>
+            <div class="md:text-xl text-sm italic font-light">
+                Kembangkan jangkauan pengenalan produk anda demi kemajuan ekonomi bersama.
+            </div>
+        </div>
+    
+    
+        
+        {#if mounted}
+        <div class="bg-amber-100 md:text-4xl text-xl rounded-t-3xl font-extralight shadow-2xl shadow-slate-500 w-fit mx-auto px-10 py-5 ">Mengapa paket Gold?</div>
+            <div class="px-4">
+                <Carousel
+                    particlesToShow={width >= 768 ? 3 : 1}
+                    particlesToScroll={1}
+                    autoplay={shouldEnableCarousel()}
+                    autoplayDuration={10000}
+                    arrows={shouldEnableCarousel()}
+                    dots={shouldEnableCarousel()}
+                    let:loaded
+                >
+                    <div class="carousel-item p-4">
+                        <img 
+                            src="/page-paket-gold-keunggulan1.png" 
+                            alt="Transformasi Visual" 
+                            class="w-full h-auto object-cover rounded-lg mb-4"
+                        />
+                        <h3 class="text-xl font-bold mb-2">💫 Transformasi Visual</h3>
+                        <p class="text-gray-600">
+                            Produk lokal Anda tampil profesional dan modern dengan Template Visual Branding dan deskripsi produk yang menjual dan SEO-friendly.
+                        </p>
+                    </div>
+    
+                    <div class="carousel-item p-4">
+                        <img 
+                            src="/page-paket-gold-keunggulan2.png" 
+                            alt="Jangkauan Tanpa Batas" 
+                            class="w-full h-auto object-cover rounded-lg mb-4"
+                        />
+                        <h3 class="text-xl font-bold mb-2">🚀 Jangkauan Tanpa Batas</h3>
+                        <p class="text-gray-600">
+                            Jaringan Akses Nasional dengan sistem distribusi terintegrasi, peluang ekspansi pasar yang luas, dan koneksi dengan pembeli di seluruh Indonesia.
+                        </p>
+                    </div>
+    
+                    <div class="carousel-item p-4">
+                        <img 
+                            src="/page-paket-gold-keunggulan3.png" 
+                            alt="Keunggulan Platform" 
+                            class="w-full h-auto object-cover rounded-lg mb-4"
+                        />
+                        <h3 class="text-xl font-bold mb-2">🌐 Keunggulan Platform</h3>
+                        <p class="text-gray-600">
+                            Interface yang mudah digunakan dengan sistem pembayaran yang aman.
+                        </p>
+                    </div>
+                </Carousel>
+            </div>
+        {/if}
+    
+    
+        <div class="flex justify-center my-10">
+            <div class="flex flex-col items-center w-5/6">
+    
+                <a href="https://www.lubkita.com/landing_page/register" class="flex flex-col justify-center md:mt-10 mt-5">
+                    <button class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-8 rounded-full transform hover:scale-105 transition-all duration-200 shadow-lg uppercase tracking-wider text-lg">
+                        Daftar Membership Gold Sekarang
+                    </button>
+                </a>
+                <button 
+                    on:click={() => showPdfModal = true} 
+                    class="inline-flex items-center gap-2 bg-white border-2 border-yellow-500 text-yellow-600 hover:bg-yellow-50 px-6 py-2 rounded-full mt-6 transition-all duration-200 font-medium"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    Lihat Panduan Membership
+                </button>
+            </div>
+        </div>
+    </div>             
+    </div>
+    
+    {#if showPdfModal}
+    <div class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg w-full max-w-4xl">
+            <div class="flex justify-between items-center p-4 ">
+                <h3 class="md:text-xl text-sm font-semibold bg-yellow-200 p-2 rounded-lg">Panduan Membership Gold</h3>
+                <button 
+                    on:click={() => showPdfModal = false}
+                    class="text-gray-500 hover:text-gray-700"
+                >
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="h-[70vh] overflow-y-auto p-4">
+                <iframe
+                    src="/panduan-membership-gold2.pdf"
+                    title="Panduan Membership PDF"
+                    class="w-full h-full"
+                ></iframe>
             </div>
         </div>
     </div>
-
-</div>
-
-<style>
-  /* Svelte scopes styles automatically, no need for scoped attribute */
-  input, textarea {
-    @apply p-3;
-  }
-</style>
-
-<script lang="ts">
-    let selectedOption: 'pelatihan' | 'pemasaran' | 'jaringan' | 'pendampingan' = 'pelatihan';
-    let isWebcamSelected = false;
+    {/if}
     
-    const menuContent = {
-        pelatihan: "Memberikan pelatihan untuk petani dan pelaku usaha mikro dalam mengelola hasil tani, produksi, dan pemasaran menggunakan teknologi digital.",
-        pemasaran: "Membantu pelaku usaha desa memasarkan produk melalui Lubkita.com dan platform e-commerce lainnya, termasuk pelatihan pemasaran digital dan pengelolaan transaksi online.",
-        jaringan: "Membangun jaringan antar pelaku usaha desa untuk berbagi pengalaman, informasi, dan memperluas kolaborasi bisnis.",
-        pendampingan: "Menyediakan layanan pendampingan dan bimbingan ekslusif untuk mengelola usaha dan meningkatkan kesempatan untuk meraih keuntungan yang lebih besar."
+    <style>
+    /* Svelte scopes styles automatically, no need for scoped attribute */
+    
+    input, textarea {
+    @apply p-3;
+    }
+    
+    :global(.carousel-item) {
+        @apply bg-amber-100;
+        border-radius: 0.0rem;
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+        height: 100%;
+        transition: transform 0.2s;
+    }
+    
+    :global(.carousel-item:hover) {
+        transform: translateY(-4px);
+    }
+    
+    /* Add styles for disabled carousel state */
+    :global(.carousel-disabled) {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+    </style>
+    
+    <script lang="ts">
+    import { slide } from 'svelte/transition';
+    import Carousel from 'svelte-carousel';
+    import { onMount } from 'svelte';
+    
+    let width: number;
+    let showPdfModal = false;
+    let mounted = false;
+    
+    // Number of carousel items - update this if you change the number of items
+    const TOTAL_ITEMS = 3;
+    
+    function shouldEnableCarousel() {
+        // Enable carousel if:
+        // 1. Screen is mobile (width < 768) OR
+        // 2. Number of items is more than 3
+        return width < 768 || TOTAL_ITEMS > 3;
+    }
+    
+    onMount(() => {
+        mounted = true;
+        width = window.innerWidth;
+        window.addEventListener('resize', () => {
+            width = window.innerWidth;
+        });
+    
+        return () => {
+            window.removeEventListener('resize', () => {
+                width = window.innerWidth;
+            });
+        };
+    });
+    
+    let openStates = {
+        care: false,
+        benefit2: false,
+        benefit3: false,
+        benefit4: false,
+    
+        care2: false,
+        benefit2_2: false,
+        benefit3_2: false,
+        benefit4_2: false,
+        benefit5_2: false
     };
-</script>
+    
+    /** @param {string} key */
+    function toggleDropdown(key: keyof typeof openStates): void {
+        let currentState = false;
+        if (key === 'care') currentState = openStates.care;
+        else if (key === 'benefit2') currentState = openStates.benefit2;
+        else if (key === 'benefit3') currentState = openStates.benefit3;
+        else if (key === 'benefit4') currentState = openStates.benefit4;
+        
+        else if (key === 'care2') currentState = openStates.care2;
+        else if (key === 'benefit2_2') currentState = openStates.benefit2_2;
+        else if (key === 'benefit3_2') currentState = openStates.benefit3_2;
+        else if (key === 'benefit4_2') currentState = openStates.benefit4_2;
+    
+        openStates = {
+            care: false,
+            benefit2: false,
+            benefit3: false,
+            benefit4: false,
+            care2: false,
+            benefit2_2: false,
+            benefit3_2: false,
+            benefit4_2: false,
+            benefit5_2: false,
+            [key]: !currentState
+        };
+    }
+
+    // Add state for toggle
+    let showOutMarketing = false;
+    </script>

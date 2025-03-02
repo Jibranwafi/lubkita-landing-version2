@@ -370,7 +370,7 @@
         </div>
         <div class="md:w-full flex md:p-10 p-4 m-5 md:m-0 md:space-x-10 space-y-5 md:space-y-0 md:flex-row flex-col md:mx-auto bg-white md:bg-transparent shadow-lg md:shadow-none rounded-2xl">
             <div class="text-right flex flex-col justify-center md:space-y-5 space-y-2 md:w-1/4 w-full">
-                <div class="md:text-4xl text-xl font-bold text-left md:text-right">Kami menawarkan paket untuk berbagai kebutuhan bisnis anda!</div>
+                <div class="md:text-4xl text-xl font-bold text-left md:text-right">Berikut adalah paket yang tersedia untuk anda</div>
                 <div class="md:flex hidden text-4xl border-2 border-yellow-700 rounded-full px-2 w-fit ml-auto text-yellow-700">→</div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:w-3/4 w-full">
@@ -378,7 +378,7 @@
                     <div class="space-y-3 p-10 flex flex-col rounded-xl h-[50vh] justify-center text-center text-white" style="background-image: url('/page-home-paketkami-gold.png'); background-size: cover; background-position: center;">
                         <div class="md:text-4xl text-2xl font-bold">Paket Gold</div>
                         <div class="md:text-base font-thin">Solusi sempurna untuk bisnis yang siap naik level di dunia digital!</div>
-                        <a href="/pendaftaran/LDR0B" class="md:opacity-0 md:group-hover:opacity-100 text-center mt-4 bg-black bg-opacity-50 py-2 px-4 rounded-lg text-white font-bold transition-opacity duration-300 hover:bg-opacity-70 md:text-base text-sm">
+                        <a href="/paket-kami/paket-gold" class="md:opacity-0 md:group-hover:opacity-100 text-center mt-4 bg-black bg-opacity-50 py-2 px-4 rounded-lg text-white font-bold transition-opacity duration-300 hover:bg-opacity-70 md:text-base text-sm">
                             Ketahui Lebih Lanjut
                         </a>
                     </div>
@@ -388,7 +388,7 @@
                     <div class="space-y-3 p-10 flex flex-col rounded-xl h-[50vh] justify-center text-center text-white" style="background-image: url('/page-home-paketkami-ldr.png'); background-size: cover; background-position: center;">
                         <div class="md:text-4xl text-2xl font-bold">Paket LDR</div>
                         <div class="md:text-base font-thin">Digitalisasikan Bisinis dan Grosir Anda Sekarang Juga!</div>
-                        <a href="/pendaftaran/LDR0A" class="md:opacity-0 md:group-hover:opacity-100 text-center mt-4 bg-black bg-opacity-50 py-2 px-4 rounded-lg text-white font-bold transition-opacity duration-300 hover:bg-opacity-70 md:text-base text-sm">
+                        <a href="/paket-kami/paket-ldr" class="md:opacity-0 md:group-hover:opacity-100 text-center mt-4 bg-black bg-opacity-50 py-2 px-4 rounded-lg text-white font-bold transition-opacity duration-300 hover:bg-opacity-70 md:text-base text-sm">
                             Ketahui Lebih Lanjut
                         </a>
                     </div>
@@ -398,7 +398,7 @@
                     <div class="space-y-3 p-10 flex flex-col rounded-xl h-[50vh] justify-center text-center text-white" style="background-image: url('/page-home-paketkami-platinum.png'); background-size: cover; background-position: center;">
                         <div class="md:text-4xl text-2xl font-bold">Paket Platinum</div>
                         <div class="md:text-base font-thin">Paket ultimate untuk mendominasi pasar dan bisnis digital!</div>
-                        <a href="/pendaftaran/LDR0C" class="md:opacity-0 md:group-hover:opacity-100 text-center mt-4 bg-black bg-opacity-50 py-2 px-4 rounded-lg text-white font-bold transition-opacity duration-300 hover:bg-opacity-70 md:text-base text-sm">
+                        <a href="/paket-kami/paket-platinum" class="md:opacity-0 md:group-hover:opacity-100 text-center mt-4 bg-black bg-opacity-50 py-2 px-4 rounded-lg text-white font-bold transition-opacity duration-300 hover:bg-opacity-70 md:text-base text-sm">
                             Ketahui Lebih Lanjut
                         </a>
                     </div>
@@ -407,13 +407,13 @@
         </div>
 
 
-        <div class="flex justify-center md:mx-10 md:mt-20">
-            <div class="flex flex-col bg-yellow-300 mx-4 md:mx-0 rounded-t-none md:rounded-t-3xl w-full bg-opacity-70 hover:shadow-lg shadow-slate-200 md:pb-5 pb-10">
+        <div class="flex justify-center md:mx-10 md:my-16">
+            <div class="flex flex-col bg-yellow-100 mx-4 md:mx-0 rounded-t-none md:rounded-3xl w-full md:shadow-lg shadow-slate-500 md:pb-5 pb-10">
                 <div class="flex md:justify-end flex-col w-full mx-auto md:my-5 md:mt-10 my-5 md:space-y-5 space-y-2">
-                    <div class="flex w-fit mx-auto md:space-x-8 space-x-0 md:flex-row flex-col items-center">
-                        <div class="my-auto text-2xl md:text-4xl font-bold text-center mb-2 md:mb-0">Review Pengguna LDR</div>
+                    <div class="flex w-fit mx-auto md:space-x-8 space-x-0 md:flex-row flex-col items-center px-10 md:px-0">
+                        <div class="my-auto text-xl md:text-4xl font-bold text-center mb-2 md:mb-0">Review Pengguna LDR</div>
                         <div class="my-auto text-2xl md:text-4xl font-bold text-center hidden md:block">•</div>
-                        <div class="bg-white md:py-2 py-1 md:px-5 px-4 md:text-2xl text-sm font-light rounded-full w-fit text-center">
+                        <div class="bg-white text-yellow-600 shadow-sm md:py-2 py-1 md:px-5 px-4 md:text-xl text-sm font-light rounded-full w-fit text-center">
                             {videoTitles[currentVideoIndex ?? 0]}
                         </div>
                     </div>
@@ -458,7 +458,7 @@
                                         <div slot="prev" let:showPrevPage>
                                             <button 
                                                 on:click={showPrevPage} 
-                                                class="hidden md:block absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 text-3xl rounded-r z-10"
+                                                class="hidden md:block absolute left-0 top-1/2 transform -translate-y-1/2 text-white p-2 text-3xl rounded-r z-10 hover:scale-110 bg-yellow-800 transition-transform duration-300 hover:bg-amber-700"
                                             >
                                                 ←
                                             </button>
@@ -467,7 +467,7 @@
                                         <div slot="next" let:showNextPage>
                                             <button 
                                                 on:click={showNextPage} 
-                                                class="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 text-3xl rounded-l z-10"
+                                                class="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 text-white p-2 text-3xl rounded-l z-10 hover:scale-110 bg-yellow-800 transition-transform duration-300 hover:bg-amber-700"
                                             >
                                                 →
                                             </button>
