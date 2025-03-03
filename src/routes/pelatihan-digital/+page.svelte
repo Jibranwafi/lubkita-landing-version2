@@ -1,4 +1,5 @@
 <script lang="ts">
+import { fade } from 'svelte/transition';
 interface Video {
     id: string;
     title: string;
@@ -45,30 +46,71 @@ let videos: Video[] = [
         duration: '1:54',
         type: 'youtube-video'
     },
-//    {
-//        id: '4',
-//        title: 'Cara Maksimalkan Traffic Marketing di Medsos',
-//        description: 'Pelajari dasar-dasar digital marketing dan strategi pemasaran online yang efektif.',
-//        youtubeId: '',
-//        duration: '',
-//        type: 'materi',
-//        thumbnail: '/page-paket-gold2.jpeg',
-//        materiContent: [
-//            { url: '/samplevideo1.mp4', type: 'local-video' },
-//            { url: '/samplevideo2.mp4', type: 'local-video' },
-//            { url: '/samplegif2.gif', type: 'gif' },
-//            { url: '/samplevideo3.mp4', type: 'local-video' },
-//        ]
-//   },
-//    {
-//        id: '5',
-//        title: 'Perbedaan Member Gold dan Platinum',
-//       description: 'Pelajari dasar-dasar digital marketing dan strategi pemasaran online yang efektif.',
-//        videoUrl: '/lubkita-animasi1.mp4',
-//        duration: '10:30',
-//        type: 'local-video',
-//        thumbnail: '/page-videopelatihan-thumbnail.png'
-//    },
+    {
+        id: '4',
+        title: 'Pola Pembelian Digital',
+        description: 'Di tengah derasnya arus perubahan teknologi yang mengubah setiap aspek kehidupan kita, transformasi digital telah menjadi lebih dari sekadar buzzword-ia adalah imperatif bisnis yang menentukan kelangsungan hidup organisasi di abad ke-21.',
+        youtubeId: '',
+        duration: '',
+        type: 'materi',
+        thumbnail: '/polapembeliandigital1.png',
+        materiContent: [
+            { url: '/polapembeliandigital1.png', type: 'image' },
+            { url: '/polapembeliandigital2.png', type: 'image' },
+            { url: '/polapembeliandigital3.png', type: 'image' },
+            { url: '/polapembeliandigital4.png', type: 'image' },
+            { url: '/polapembeliandigital5.png', type: 'image' },
+            { url: '/polapembeliandigital6.png', type: 'image' },
+            { url: '/polapembeliandigital7.png', type: 'image' },
+            { url: '/polapembeliandigital8.png', type: 'image' },
+            { url: '/polapembeliandigital9.png', type: 'image' },
+            { url: '/polapembeliandigital10.png', type: 'image' },
+            { url: '/polapembeliandigital11.png', type: 'image' },
+            { url: '/polapembeliandigital12.png', type: 'image' },
+            { url: '/polapembeliandigital13.png', type: 'image' },
+            { url: '/polapembeliandigital14.png', type: 'image' },
+            { url: '/polapembeliandigital15.png', type: 'image' },
+            { url: '/polapembeliandigital16.png', type: 'image' },
+            { url: '/polapembeliandigital17.png', type: 'image' },
+            
+            
+        ]
+    },
+    {
+        id: '5',
+        title: 'Transformasi Bisnis di Era Digital',
+        description: 'Transformasi digital telah menjadi imperatif bisnis di abad ke-21, bukan sekadar tren sementara. Kita menyaksikan bagaimana perusahaan raksasa seperti Kodak terpuruk karena gagal beradaptasi, sementara startup inovatif seperti Instagram meroket menjadi platform bernilai miliaran dolar.',
+        youtubeId: '',
+        duration: '',
+        type: 'materi',
+        thumbnail: '/transformasibisnis1.png',
+        materiContent: [
+            { url: '/transformasibisnis1.png', type: 'image' },
+            { url: '/transformasibisnis2.png', type: 'image' },
+            { url: '/transformasibisnis3.png', type: 'image' },
+            { url: '/transformasibisnis4.png', type: 'image' },
+            { url: '/transformasibisnis5.png', type: 'image' },
+            { url: '/transformasibisnis6.png', type: 'image' },
+            { url: '/transformasibisnis7.png', type: 'image' },
+            { url: '/transformasibisnis8.png', type: 'image' },
+            { url: '/transformasibisnis9.png', type: 'image' },
+            { url: '/transformasibisnis10.png', type: 'image' },
+            { url: '/transformasibisnis11.png', type: 'image' },
+            { url: '/transformasibisnis12.png', type: 'image' },
+            { url: '/transformasibisnis13.png', type: 'image' },
+            { url: '/transformasibisnis14.png', type: 'image' },
+            { url: '/transformasibisnis15.png', type: 'image' },
+            { url: '/transformasibisnis16.png', type: 'image' },
+            { url: '/transformasibisnis17.png', type: 'image' },
+            { url: '/transformasibisnis18.png', type: 'image' },
+            { url: '/transformasibisnis19.png', type: 'image' },
+            
+            
+            
+            
+            
+        ]
+    },
 //    {
 //        id: '6',
 //        title: 'Bisnis Aman Grosir Berkelas',
@@ -314,7 +356,7 @@ function selectVideo(video: Video) {
                         ←
                     </button>
 
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-10/12 mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:w-10/12 w-full mx-auto">
                         {#each currentFeaturedVideos as video}
                             <!-- svelte-ignore a11y_click_events_have_key_events -->
                             <!-- svelte-ignore a11y_no_static_element_interactions -->
@@ -408,7 +450,7 @@ function selectVideo(video: Video) {
         {/if}
 
         {#if hasSelectedVideo && selectedVideo}
-            <div class="flex bg-yellow-100 {selectedVideo.type === 'youtube-video' || selectedVideo.type === 'local-video' ? 'md:flex-row md:p-16 p-8 md:space-y-0 space-y-10 md:space-x-10' : 'flex-col md:p-8 p-0 md:space-y-10 space-y-5 '} flex-col">
+            <div class="flex bg-yellow-100 {selectedVideo.type === 'youtube-video' || selectedVideo.type === 'local-video' ? 'md:flex-row md:p-16 p-5 md:space-y-0 space-y-10 md:space-x-10' : 'flex-col md:p-8 p-0 md:space-y-10 pb-10 '} flex-col">
                 <div class="{selectedVideo.type === 'youtube-video' || selectedVideo.type === 'local-video' ? 'md:w-2/3' : 'w-full'} relative">
                     {#if selectedVideo.type === 'youtube-video'}
                         <div class="w-full pb-[56.25%] relative">
@@ -434,11 +476,13 @@ function selectVideo(video: Video) {
                             </video>
                         </div>
                     {:else}
-                        <div class="flex flex-col">
+                        <div class="flex flex-col p-4 md:p-0">
                             <div class="w-full pb-[56.25%] relative">
                                 {#if selectedVideo.materiContent && selectedVideo.materiContent.length > 0}
-                                    {#if selectedVideo.materiContent[currentSlideIndex].type === 'local-video'}
+                                {#if selectedVideo.materiContent[currentSlideIndex].type === 'local-video'}
+                                    {#key currentSlideIndex}
                                         <video 
+                                            transition:fade={{ duration: 300 }}
                                             class="absolute top-0 left-0 w-full h-full object-contain rounded-xl bg-black"
                                             controls
                                             src={selectedVideo.materiContent[currentSlideIndex].url}
@@ -447,15 +491,19 @@ function selectVideo(video: Video) {
                                             <track kind="captions">
                                             Your browser does not support the video tag.
                                         </video>
-                                    {:else}
+                                    {/key}
+                                {:else}
+                                    {#key currentSlideIndex}
                                         <img 
+                                            transition:fade={{ duration: 300 }}
                                             src={selectedVideo.materiContent[currentSlideIndex].url}
                                             alt={`Slide ${currentSlideIndex + 1}`}
                                             class="absolute top-0 left-0 w-full h-full object-contain rounded-xl"
                                         />
-                                    {/if}
-                                    <!-- Carousel Controls -->
-                                    <div class="absolute inset-y-0 left-0 flex items-center">
+                                    {/key}
+                                {/if}
+                                    <!-- Desktop Carousel Controls -->
+                                    <div class="absolute inset-y-0 left-0 md:flex hidden items-center">
                                         <button 
                                             class="bg-black bg-opacity-50 text-white p-2 rounded-r"
                                             on:click={previousSlide}
@@ -463,7 +511,7 @@ function selectVideo(video: Video) {
                                             ←
                                         </button>
                                     </div>
-                                    <div class="absolute inset-y-0 right-0 flex items-center">
+                                    <div class="absolute inset-y-0 right-0 md:flex hidden items-center">
                                         <button 
                                             class="bg-black bg-opacity-50 text-white p-2 rounded-l"
                                             on:click={nextSlide}
@@ -477,22 +525,36 @@ function selectVideo(video: Video) {
                                     </div>
                                 {/if}
                             </div>
-                            <!-- Slide Indicators moved outside the video container -->
                             {#if selectedVideo.materiContent && selectedVideo.materiContent.length > 0}
-                                <div class="flex justify-center space-x-2 mt-4">
-                                    {#each selectedVideo.materiContent as _, index}
-                                        <div 
-                                            class="w-2 h-2 rounded-full {index === currentSlideIndex ? 'bg-black' : 'bg-gray-400'}"
-                                        ></div>
-                                    {/each}
-                                </div>
-                            {/if}
+                            <div class="flex justify-center space-x-2 mt-5">
+                                {#each selectedVideo.materiContent as _, index}
+                                    <div 
+                                        class="w-2 h-2 rounded-full {index === currentSlideIndex ? 'bg-black' : 'bg-gray-400'}"
+                                    ></div>
+                                {/each}
+                            </div>
+                        {/if}
+                            <!-- Mobile Carousel Controls moved below -->
+                            <div class="md:hidden flex justify-center space-x-3 pt-5 pb-5">
+                                <button 
+                                    class="bg-black bg-opacity-50 text-white p-2 rounded-full px-6 hover:scale-105 transition-all duration-300"
+                                    on:click={previousSlide}
+                                >
+                                    ←
+                                </button>
+                                <button 
+                                    class="bg-black bg-opacity-50 text-white p-2 rounded-full px-6 hover:scale-105 transition-all duration-300"
+                                    on:click={nextSlide}
+                                >
+                                    →
+                                </button>
+                            </div>
                         </div>
                     {/if}
                 </div>
 
-                <div class="{selectedVideo.type === 'youtube-video' || selectedVideo.type === 'local-video' ? 'md:w-1/3' : 'w-full'} flex flex-col space-y-4 {selectedVideo.type === 'materi' ? 'items-center text-center p-8' : ''}">
-                    <div class="font-semibold md:text-4xl text-2xl">{selectedVideo.title}</div>
+                <div class="{selectedVideo.type === 'youtube-video' || selectedVideo.type === 'local-video' ? 'md:w-1/3' : 'w-full'} flex flex-col space-y-2 md:space-y-4 {selectedVideo.type === 'materi' ? 'items-center text-center px-3' : ''}">
+                    <div class="font-semibold md:text-4xl text-xl">{selectedVideo.title}</div>
                     <div class="flex my-2 {selectedVideo.type === 'materi' ? 'justify-center' : ''}">
                         {#if selectedVideo.type === 'youtube-video' || selectedVideo.type === 'local-video'}
                             <div class="bg-red-100 px-2 md:text-xl text-sm">Video</div>
@@ -501,8 +563,8 @@ function selectVideo(video: Video) {
                             <div class="bg-teal-300 px-2 md:text-xl text-base">Materi Pelatihan</div>
                         {/if}
                     </div>
-                    <div class="text-base md:text-xl font-light break-words">{selectedVideo.description}</div>
-                    <div class="flex space-x-4 {selectedVideo.type === 'materi' ? 'justify-center' : ''}">
+                    <div class="text-sm md:text-xl font-light break-words">{selectedVideo.description}</div>
+                    <div class="flex space-x-4 pt-8 {selectedVideo.type === 'materi' ? 'justify-center' : ''}">
                         <button 
                             class="bg-amber-400 px-4 py-2 rounded-lg font-semibold disabled:opacity-50"
                             on:click={getPreviousVideo}

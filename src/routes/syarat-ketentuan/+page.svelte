@@ -394,7 +394,7 @@ let activeTab = 'lubkita';
                 <li>Dalam hal Lubkita membantu menyelesaikan kendala, maka sesuai dengan Syarat dan Ketentuan Poin C. 27 dan Poin D. 23, Pembeli dan Penjual menyetujui bahwa Lubkita berwenang untuk mengambil keputusan atas permasalahan tersebut dengan melihat bukti-bukti yang ada dan/atau bukti-bukti baru yang harus dilengkapi masing-masing pihak.</li>
                 <li>Lubkita berwenang untuk melakukan mediasi dan/atau mengambil keputusan untuk penyelesaian masalah didalam diskusi Pusat Resolusi, meskipun salah satu pihak (Pembeli atau Penjual) belum memberikan tanggapan atas solusi yang diberikan Pusat Resolusi dalam jangka waktu 2 x 24 jam, dalam hal:
                     <ol class="list-decimal ml-8 mt-2">
-                        <li>Adanya informasi dari pihak ketiga yang berkaitan dalam jalannya transaksi, yakni antara lain kurir pengiriman yang memberikan informasi terkait status terkini dari resi pengiriman paket;</li>
+                        <li>Adanya informasi dari pihak ketiga yang berkaitan dalam jalannya transaksi, yakni antara lain kurir pengiriman yang memberikan informasi terkini dari resi pengiriman paket;</li>
                         <li>Bukti dari Pembeli dan/atau Penjual yang dikirimkan melalui jalur komunikasi lain (email Lubkita, Layanan Pengguna, dan lainnya) yang perlu diteruskan ke Pusat Resolusi dengan dasar transparansi masalah;</li>
                         <li>Laporan dari salah satu pihak disebabkan adanya kelalaian Pembeli atau Penjual;</li>
                         <li>Salah satu pihak (Pembeli atau Penjual) terindikasi melakukan tindakan kecurangan;</li>
