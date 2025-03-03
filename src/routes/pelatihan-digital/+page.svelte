@@ -105,7 +105,59 @@ let videos: Video[] = [
             { url: '/transformasibisnis18.png', type: 'image' },
             { url: '/transformasibisnis19.png', type: 'image' },
             
+        ]
+    },
+    {
+        id: '6',
+        title: 'Bisnis Tradisional vs Bisnis Digital',
+        description: 'Perkembangan teknologi telah memicu transformasi fundamental dalam lanskap bisnis global.',
+        youtubeId: '',
+        duration: '',
+        type: 'materi',
+        thumbnail: '/bisnistradisional1.png',
+        materiContent: [
+            { url: '/bisnistradisional1.png', type: 'image' },
+            { url: '/bisnistradisional2.png', type: 'image' },
+            { url: '/bisnistradisional3.png', type: 'image' },
+            { url: '/bisnistradisional4.png', type: 'image' },
+            { url: '/bisnistradisional5.png', type: 'image' },
+            { url: '/bisnistradisional6.png', type: 'image' },
+            { url: '/bisnistradisional7.png', type: 'image' },
+            { url: '/bisnistradisional8.png', type: 'image' },
+            { url: '/bisnistradisional9.png', type: 'image' },
+            { url: '/bisnistradisional10.png', type: 'image' },
+            { url: '/bisnistradisional11.png', type: 'image' },
+            { url: '/bisnistradisional12.png', type: 'image' },
+            { url: '/bisnistradisional13.png', type: 'image' },
+            { url: '/bisnistradisional14.png', type: 'image' },
             
+        ]
+    },
+
+    {
+        id: '7',
+        title: 'Perkembangan E-commerce di Indonesia',
+        description: 'E-commerce di Indonesia telah menempuh perjalanan panjang dan dinamis, mengubah cara masyarakat berbelanja dan berbisnis. Evolusi ini tidak terjadi dalam semalam, melainkan melalui beberapa fase pertumbuhan yang memiliki karakteristik unik, tantangan berbeda, dan pencapaian signifikan.',
+        youtubeId: '',
+        duration: '',
+        type: 'materi',
+        thumbnail: '/perkembanganecommerce1.png',
+        materiContent: [
+            { url: '/perkembanganecommerce1.png', type: 'image' },
+            { url: '/perkembanganecommerce2.png', type: 'image' },
+            { url: '/perkembanganecommerce3.png', type: 'image' },
+            { url: '/perkembanganecommerce4.png', type: 'image' },
+            { url: '/perkembanganecommerce5.png', type: 'image' },
+            { url: '/perkembanganecommerce6.png', type: 'image' },
+            { url: '/perkembanganecommerce7.png', type: 'image' },
+            { url: '/perkembanganecommerce8.png', type: 'image' },
+            { url: '/perkembanganecommerce9.png', type: 'image' },
+            { url: '/perkembanganecommerce10.png', type: 'image' },
+            { url: '/perkembanganecommerce11.png', type: 'image' },
+            { url: '/perkembanganecommerce12.png', type: 'image' },
+            { url: '/perkembanganecommerce13.png', type: 'image' },
+            { url: '/perkembanganecommerce14.png', type: 'image' },
+            { url: '/perkembanganecommerce15.png', type: 'image' },
             
             
             
