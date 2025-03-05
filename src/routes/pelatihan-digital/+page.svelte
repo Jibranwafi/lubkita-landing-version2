@@ -789,7 +789,7 @@ function selectVideo(video: Video) {
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex flex-col w-full md:w-1/2 md:px-5 px-3 p-2 md:space-y-2">
+                            <div class="flex flex-col w-full md:w-1/2 md:px-5 px-3 p-2 md:space-y-2 justify-center">
                                 <div class="font-semibold lg:text-lg md:text-sm text-xs line-clamp-2">{video.title}</div>
                                 <div class="border-t border-amber-300 md:hidden my-2"></div>
                                 <div class="hidden md:block">
