@@ -1,7 +1,7 @@
 <script lang="ts">
     // You can add props or logic here if needed
-    export let companyName = "Lubkita";
-    export let year = new Date().getFullYear();
+    export const companyName = "Lubkita";
+    export const year = new Date().getFullYear();
   </script>
   
   <footer class="bg-yellow-800 md:px-10 md:pb-10 w-full flex flex-col p-5">

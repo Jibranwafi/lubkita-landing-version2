@@ -826,8 +826,10 @@ function selectVideo(video: Video) {
     </div>
 </div>
 
-<style lang="postcss">
-input, textarea {
-    @apply p-3;
-}
+<style>
+    /* Remove if not using these elements */
+    /* Or add input/textarea elements to your component if needed */
+    input, textarea {
+        padding: 0.75rem
+    }
 </style>
