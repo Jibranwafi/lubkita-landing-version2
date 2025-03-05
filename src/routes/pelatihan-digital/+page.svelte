@@ -522,7 +522,7 @@ function selectVideo(video: Video) {
 
         {#if hasSelectedVideo && selectedVideo}
             <div 
-                class="flex bg-white {selectedVideo.type === 'youtube-video' || selectedVideo.type === 'local-video' ? 'md:flex-row md:p-16 p-5 md:space-y-0 space-y-10 md:space-x-10' : 'flex-col md:p-8 p-0 md:space-y-10 pb-10 '} flex-col"
+                class="flex bg-amber-50 {selectedVideo.type === 'youtube-video' || selectedVideo.type === 'local-video' ? 'md:flex-row md:p-16 p-5 md:space-y-0 space-y-10 md:space-x-10' : 'flex-col md:p-8 p-0 md:space-y-10 pb-10 '} flex-col"
                 id="selected-video-content"
             >
                 <div class="{selectedVideo.type === 'youtube-video' || selectedVideo.type === 'local-video' ? 'md:w-2/3' : 'w-full'} relative">
@@ -810,7 +810,7 @@ function selectVideo(video: Video) {
             </div>
 
 
-            <div class=" bg-amber-200 flex justify-center space-x-2 rounded-2xl w-fit md:text-base text-sm mx-auto p-2 mt-10">
+            <div class=" bg-amber-100 flex justify-center space-x-2 rounded-2xl w-fit md:text-base text-sm mx-auto p-2 mt-10">
                 {#each Array(totalPages) as _, i}
                     <div 
                         class="px-4 py-2 w-fit rounded-xl cursor-pointer font-bold {currentPage === i + 1 ? 'bg-amber-300' : ''}"
