@@ -3,3 +3,8 @@ npm-debug.log
 .DS_Store
 .git
 .gitignore
+.env
+.env.*
+*.md
+.svelte-kit
+build
