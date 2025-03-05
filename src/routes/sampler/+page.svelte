@@ -1,551 +1,794 @@
-<div class="bg-white flex flex-col">
-
-    <div class="flex flex-col">
+<script lang="ts">
+    import { fade } from 'svelte/transition';
+    interface Video {
+        id: string;
+        title: string;
+        description: string;
+        duration: string;
+        type: 'youtube-video' | 'local-video' | 'materi';
+        youtubeId?: string;
+        videoUrl?: string;
+        thumbnail?: string;
+        materiContent?: {
+            url: string;
+            type: 'image' | 'gif' | 'local-video';
+        }[];
+    }
     
-            <img 
-                src="/paket-gold3.png" 
-                alt="LDR Wallpaper" 
-                class="w-full object-cover "
-            >
-        <div class="relative">
-            <div class="absolute inset-x-0 bottom-0 md:h-64 h-24 bg-gradient-to-t from-white to-transparent"></div>
-            <div class="absolute inset-x-0 bottom-0 md:h-64 h-24 bg-gradient-to-t from-white to-transparent md:flex hidden"></div>
-            <div class="absolute inset-x-0 bottom-0 md:h-64 h-24 bg-gradient-to-t from-white to-transparent md:flex hidden"></div>
-        </div>
-        <div class=" py-3 md:px-10 px-5 text-center text-3xl md:text-4xl font-bold italic">
-            Solusi sempurna untuk bisnis yang siap naik level di dunia digital!
-        </div>
-        <div class=" py-3 md:px-10 px-5 text-center text-base md:text-2xl italic mb-20">
-            Paket Gold memberikan Anda akses lengkap ke fitur promosi flashsale, dukungan iklan terintegrasi, dan priority support dengan respons cepat. Dengan 2 keyword SEO kompetitif menengah, paket social media starter (5 Feed + 3 Reels), dan traffic hingga 500 pengunjung/hari, bisnis Anda akan mendapat posisi listing prioritas 2 di marketplace. Lengkap dengan budget iklan Google 15/15 hari dan setup website profesional, paket Gold adalah investasi cerdas untuk membangun presence digital yang kuat.
-        </div>
+    interface Playlist {
+        name: string;
+        videoIds: string[];
+    }
     
-        <div class="flex flex-col space-y-6 md:space-y-0 p-5">
-            <div class="w-full flex justify-center mb-4">
-                <div class="bg-yellow-100 p-2 rounded-full flex items-center">
-                    <button 
-                        class="px-6 py-2 rounded-full transition-all duration-300 {!showOutMarketing ? 'bg-amber-300 text-yellow-900' : 'text-yellow-700'}"
-                        on:click={() => showOutMarketing = false}
-                    >
-                        IN MARKETING
-                    </button>
-                    <button 
-                        class="px-6 py-2 rounded-full transition-all duration-300 {showOutMarketing ? 'bg-amber-300 text-yellow-900' : 'text-yellow-700'}"
-                        on:click={() => showOutMarketing = true}
-                    >
-                        OUT MARKETING
-                    </button>
-                </div>
-            </div>
-
-            {#if !showOutMarketing}
-                <div class=" w-full flex rounded-3xl pb-3 bg-yellow-100">
-                    <div class="w-1/2 p-24">
-                        {#if openStates.care}
-                            <img src="/page-paket-gold-inmarketing-symbols1.png" alt="Promo Features" class="w-full object-contain p-1">
-                        {:else if openStates.benefit2}
-                            <img src="/page-paket-gold-inmarketing-symbols2.png" alt="CMS Features" class="w-full object-contain p-1">
-                        {:else if openStates.benefit3}
-                            <img src="/page-paket-gold-inmarketing-symbols3.png" alt="Priority Listing Features" class="w-full object-contain p-1">
-                        {:else if openStates.benefit4}
-                            <img src="/page-paket-gold-inmarketing-symbols4.png" alt="Product Highlight Features" class="w-full object-contain p-1">
-                        {:else}
-                            <img src="/page-paket-gold-inmarketing-symbols4.png" alt="Default Image" class="w-full object-contain p-1">
-                        {/if}
-                    </div>
-
-                    <div class="flex flex-col space-y-3 w-1/2 justify-center">
-        
-                    <div class="accordion-item p-4 mr-3 rounded-xl hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
-                        <button
-                            class="w-full flex items-center gap-3"
-                            on:click={() => toggleDropdown('care')}
-                        >
-                            <div class="flex-1 border-b border-slate-300 flex items-center justify-between">
-                                <span class="lg:text-2xl md:text-lg text-base font-semibold py-1 text-left text-yellow-800 ">Promo (Flashsale & Premium Bandages Gold)</span>
-                                <svg 
-                                    class="h-6 w-6 transition-transform duration-300 {openStates.care ? 'rotate-180' : ''}"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    fill="none"
-                                >
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                                </svg>
-                            </div>
-                        </button>
-                        
-                        {#if openStates.care}
-                            <div transition:slide={{ duration: 300 }} class="mt-3 md:text-base text-sm">
-                                Di paket Gold, kamu mendapatkan akses penuh ke sistem flash sale dan profil tokomu akan menerima badges Membership Gold dan Verified Seller,yang menandakan toko mu adalah toko terpercaya dengan promo-promo esklusif.
-                            </div>
-                        {/if}
-                    </div>
-        
-        
-                    <div class="accordion-item p-4 mr-3 rounded-xl hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
-                        <button 
-                            class="w-full flex items-center gap-3"
-                            on:click={() => toggleDropdown('benefit2')}
-                        >
-                            <div class="flex-1 border-b border-slate-300 flex items-center justify-between">
-                                <span class="lg:text-2xl md:text-lg text-base font-semibold py-1 text-left text-yellow-800 ">Dashboard Sistem Manajemen Konten (CMS)</span>
-                                <svg 
-                                    class="h-6 w-6 transition-transform duration-300 {openStates.benefit2 ? 'rotate-180' : ''}"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    fill="none"
-                                >
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                                </svg>
-                            </div>
-                        </button>
-                        
-                        {#if openStates.benefit2}
-                            <div transition:slide={{ duration: 300 }} class="mt-3 md:text-base text-sm">
-                                Penjual memiliki kemampuan untuk menambahkan produk mereka sendiri ke platform. Ini berarti mereka dapat membuat daftar produk baru, termasuk deskripsi yang detail, gambar, dan kategorisasi, tanpa perlu melewati proses persetujuan yang panjang. Penjual dapat menentukan harga produk mereka secara mandiri. Mereka memiliki otonomi untuk menyesuaikan harga berdasarkan kondisi pasar, persaingan, dan strategi bisnis mereka sendiri.
-                            </div>
-                        {/if}
-                    </div>
-        
-                    <div class="accordion-item p-4 mr-3 rounded-xl hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
-                        <button 
-                            class="w-full flex items-center gap-3"
-                            on:click={() => toggleDropdown('benefit3')}
-                        >
-                            <div class="flex-1 border-b border-slate-300 flex items-center justify-between">
-                                <span class="lg:text-2xl md:text-lg text-base font-semibold py-1 text-left text-yellow-800 ">Prioritas Listing (Daftar Prioritas) & Toko Pilihan</span>
-                                <svg 
-                                    class="h-6 w-6 transition-transform duration-300 {openStates.benefit3 ? 'rotate-180' : ''}"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    fill="none"
-                                >
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                                </svg>
-                            </div>
-                        </button>
-                        
-                        {#if openStates.benefit3}
-                            <div transition:slide={{ duration: 300 }} class="mt-3 md:text-base text-sm">
-                                Membantu produk Anda muncul lebih sering di hasil pencarian yang relevan, serta memberikan posisi khusus di halaman kategori produk. Ketika pembeli menjelajahi kategori tertentu, produk Anda akan mendapat slot premium di bagian atas halaman kategori tersebut.
-                            </div>
-                        {/if}
-                    </div>
-        
-        
-                    <div class="accordion-item p-4 mr-3 rounded-xl hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
-                        <button 
-                            class="w-full flex items-center gap-3"
-                            on:click={() => toggleDropdown('benefit4')}
-                        >
-                            <div class="flex-1 border-b border-slate-300 flex items-center justify-between">
-                                <span class="lg:text-2xl md:text-lg text-base font-semibold py-1 text-left text-yellow-800 ">Produk Highlight (Produk Unggulan)</span>
-                                <svg 
-                                    class="h-6 w-6 transition-transform duration-300 {openStates.benefit4 ? 'rotate-180' : ''}"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    fill="none"
-                                >
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                                </svg>
-                            </div>
-                        </button>
-                        
-                        {#if openStates.benefit4}
-                            <div transition:slide={{ duration: 300 }} class="mt-3 md:text-base text-sm">
-                                Produk Unggulan (Product Highlight) adalah fitur yang memungkinkan penjual untuk menonjolkan produk-produk terpilih di toko online mereka. Fitur ini memungkinkan produk tertentu mendapatkan penempatan khusus yang lebih menonjol, biasanya di bagian atas toko atau di posisi strategis lainnya.
-                            </div>
-                        {/if}
-                    </div>
-                </div>
-        
-        
-        
-        
-        
-        
-        
-                </div>
-            {:else}
-                <div class=" w-full flex space-y-3 bg-yellow-200 rounded-3xl pb-3">
+    let videos: Video[] = [
+        {
+            id: '1',
+            title: 'Masyarakat Sulawesi Tengah Antusias Menyambut Program Digitalisasi Lubkita',
+            description: 'Digitalisasi memiliki potensi besar untuk meningkatkan kualitas hidup masyarakat Sulawesi Tengah. Namun, berbagai tantangan perlu diatasi agar transformasi dapat berjalan secara inklusif dan berkelanjutan.',
+            youtubeId: 'EGIGaXAv5U4',
+            duration: '6:39',
+            type: 'youtube-video'
+        },
+        {
+            id: '2',
+            title: 'Bisnis Aman Grosir Berkelas',
+            description: 'Dalam era di mana kepercayaan semakin menipis, terutama dalam bisnis wholesale, Lubkita hadir sebagai solusi terdepan dengan komitmen pada keamanan. Kami memahami bahwa keamanan transaksi dan pengiriman barang menjadi prioritas utama.',
+            youtubeId: 'yoNpER_P_Ns',
+            duration: '2:14',
+            type: 'youtube-video'
+        },
+    
+        {
+            id: '3',
+            title: 'Testimoni Seller Lubkita',
+            description: 'Kami menyediakan berbagai macam produk dengan harga grosir yang sangat kompetitif. Kami bekerja sama dengan produsen langsung, sehingga Anda bisa mendapatkan harga terbaik tanpa perantara.',
+            youtubeId: 'g77BMHYMSDc',
+            duration: '1:54',
+            type: 'youtube-video'
+        },
+        {
+            id: '4',
+            title: 'Pola Pembelian Digital',
+            description: 'Di tengah derasnya arus perubahan teknologi yang mengubah setiap aspek kehidupan kita, transformasi digital telah menjadi lebih dari sekadar buzzword-ia adalah imperatif bisnis yang menentukan kelangsungan hidup organisasi di abad ke-21.',
+            youtubeId: '',
+            duration: '',
+            type: 'materi',
+            thumbnail: '/polapembeliandigital1.png',
+            materiContent: [
+                { url: '/polapembeliandigital1.png', type: 'image' },
+                { url: '/polapembeliandigital2.png', type: 'image' },
+                { url: '/polapembeliandigital3.png', type: 'image' },
+                { url: '/polapembeliandigital4.png', type: 'image' },
+                { url: '/polapembeliandigital5.png', type: 'image' },
+                { url: '/polapembeliandigital6.png', type: 'image' },
+                { url: '/polapembeliandigital7.png', type: 'image' },
+                { url: '/polapembeliandigital8.png', type: 'image' },
+                { url: '/polapembeliandigital9.png', type: 'image' },
+                { url: '/polapembeliandigital10.png', type: 'image' },
+                { url: '/polapembeliandigital11.png', type: 'image' },
+                { url: '/polapembeliandigital12.png', type: 'image' },
+                { url: '/polapembeliandigital13.png', type: 'image' },
+                { url: '/polapembeliandigital14.png', type: 'image' },
+                { url: '/polapembeliandigital15.png', type: 'image' },
+                { url: '/polapembeliandigital16.png', type: 'image' },
+                { url: '/polapembeliandigital17.png', type: 'image' },
                 
                 
-                    <div class="flex rounded-t-2xl text-2xl font-bold justify-start w-1/2 " style="background-image: url('/page-paket-benefit2.png'); background-size: cover; background-position: center;">
-                        <div class="bg-yellow-50 w-fit md:text-3xl text-xl p-5 h-fit rounded-br-2xl rounded-tl-2xl">IN MARKETING</div>
-                    </div>
-
-                    <div class="flex flex-col space-y-3 w-1/2">
-                    <div class="accordion-item bg-yellow-50 border-yellow-300 p-4 mr-3 rounded-xl hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
-                        <button 
-                            class="w-full flex items-center gap-3"
-                            on:click={() => toggleDropdown('care2')}
-                        >
-                            <img 
-                                src="/page-paket-gold-outmarketing-icons1.png" 
-                                alt="Weezer Symbol" 
-                                class="w-[10%] aspect-square object-contain p-1"
-                            />
-                            <div class="flex-1 border-b border-slate-300 flex items-center justify-between">
-                                <span class="md:text-2xl text-base font-semibold py-1 text-left text-yellow-800 ">SEO (Pengaturan Kata Kunci)</span>
-                                <svg 
-                                    class="h-6 w-6 transition-transform duration-300 {openStates.care2 ? 'rotate-180' : ''}"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    fill="none"
-                                >
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                                </svg>
-                            </div>
-                        </button>
-                        
-                        {#if openStates.care2}
-                            <div transition:slide={{ duration: 300 }} class="mt-3 md:text-base text-sm">
-                                Kami hadir dengan solusi SEO yang tepat untuk mendongkrak visibilitas bisnismu di Google! Dalam paket GOLD ini, kamu mendapatkan layanan optimasi untuk 4 kata kunci strategis - 2 kata kunci persaingan rendah dan 2 kata kunci persaingan menengah, yang dirancang khusus untuk memaksimalkan peluang bisnismu muncul di halaman pertama Google!
-                            </div>
-                        {/if}
-                    </div>
-        
-        
-                    <div class="accordion-item bg-yellow-50 border-yellow-300 p-4 mr-3 rounded-xl hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
-                        <button 
-                            class="w-full flex items-center gap-3"
-                            on:click={() => toggleDropdown('benefit2_2')}
-                        >
-                            <img 
-                                src="/page-paket-gold-outmarketing-icons2.png" 
-                                alt="Weezer Symbol" 
-                                class="w-[10%] aspect-square object-contain p-1"
-                            />
-                            <div class="flex-1 border-b border-slate-300 flex items-center justify-between">
-                                <span class="md:text-2xl text-base font-semibold py-1 text-left text-yellow-800 ">Promosi oleh Google ADS</span>
-                                <svg 
-                                    class="h-6 w-6 transition-transform duration-300 {openStates.benefit2_2 ? 'rotate-180' : ''}"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    fill="none"
-                                >
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                                </svg>
-                            </div>
-                        </button>
-                        
-                        {#if openStates.benefit2_2}
-                            <div transition:slide={{ duration: 300 }} class="mt-3 md:text-base text-sm">
-                                Fitur "Promosi oleh Google" dalam paket GOLD memberikan layanan periklanan Google Ads dengan detail sebagai berikut: <b>DAPATKAN BUDGET 1JT/15 HARI UNTUK PROMOSI BISNISMU DI GOOGLE! </b>
-                            </div>
-                        {/if}
-                    </div>
-        
-                    <div class="accordion-item bg-yellow-50 border-yellow-300 p-4 mr-3 rounded-xl hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
-                        <button 
-                            class="w-full flex items-center gap-3"
-                            on:click={() => toggleDropdown('benefit3_2')}
-                        >
-                            <img 
-                                src="/page-paket-gold-outmarketing-icons3.png" 
-                                alt="Weezer Symbol" 
-                                class="w-[10%] aspect-square object-contain p-1"
-                            />
-                            <div class="flex-1 border-b border-slate-300 flex items-center justify-between">
-                                <span class="md:text-2xl text-base font-semibold py-1 text-left text-yellow-800 ">Pilihan Template Design Promosi</span>
-                                <svg 
-                                    class="h-6 w-6 transition-transform duration-300 {openStates.benefit3_2 ? 'rotate-180' : ''}"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    fill="none"
-                                >
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                                </svg>
-                            </div>
-                        </button>
-                        
-                        {#if openStates.benefit3_2}
-                            <div transition:slide={{ duration: 300 }} class="mt-3 md:text-base text-sm">
-                                Tampil menarik di dunia digital tak perlu lagi ribet dan mahal! Paket Template Design Promosi kami hadir dengan koleksi lengkap template profesional yang siap pakai untuk semua kebutuhan promosimu. Dari feed Instagram yang eye-catching, banner marketplace yang menarik klik, hingga design email marketing yang bikin customer penasaran - semuanya ada dalam satu paket lengkap!
-                            </div>
-                        {/if}
-                    </div>
-        
-        
-                    <div class="accordion-item bg-yellow-50 border-yellow-300 p-4 mr-3 rounded-xl hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
-                        <button 
-                            class="w-full flex items-center gap-3"
-                            on:click={() => toggleDropdown('benefit4_2')}
-                        >
-                            <img 
-                                src="/page-paket-gold-outmarketing-icons4.png" 
-                                alt="Weezer Symbol" 
-                                class="w-[10%] aspect-square object-contain p-1"
-                            />
-                            <div class="flex-1 border-b border-slate-300 flex items-center justify-between">
-                                <span class="md:text-2xl text-base font-semibold py-1 text-left text-yellow-800 ">Repost Video Profile 60 Detik</span>
-                                <svg 
-                                    class="h-6 w-6 transition-transform duration-300 {openStates.benefit4_2 ? 'rotate-180' : ''}"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    fill="none"
-                                >
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                                </svg>
-                            </div>
-                        </button>
-                        
-                        {#if openStates.benefit4_2}
-                            <div transition:slide={{ duration: 300 }} class="mt-3 md:text-base text-sm">
-                                Media sosial kami, baik Instagram dan TikTok telah memiliki banyak pengikut secara online. Nikmati pengalaman video profil toko/produk anda di posting ulang oleh media sosial kami dengan banyak pengikut, yang hal ini akan meningkatkan jumlah orang yang menyaksikan, menyukai, dan membagikan konten video profile anda.
-                            </div>
-                        {/if}
-                    </div>
-        
-        
-        
-        
-        
-                    <div class="accordion-item bg-yellow-50 border-yellow-300 p-4 mr-3 rounded-xl hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
-                        <button 
-                            class="w-full flex items-center gap-3"
-                            on:click={() => toggleDropdown('benefit5_2')}
-                        >
-                            <img 
-                                src="/page-paket-gold-outmarketing-icons5.png" 
-                                alt="Weezer Symbol" 
-                                class="w-[10%] aspect-square object-contain p-1"
-                            />
-                            <div class="flex-1 border-b border-slate-300 flex items-center justify-between">
-                                <span class="md:text-2xl text-base font-semibold py-1 text-left text-yellow-800 ">Social Media</span>
-                                <svg 
-                                    class="h-6 w-6 transition-transform duration-300 {openStates.benefit5_2 ? 'rotate-180' : ''}"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    fill="none"
-                                >
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                                </svg>
-                            </div>
-                        </button>
-                        
-                        {#if openStates.benefit5_2}
-                            <div transition:slide={{ duration: 300 }} class="mt-3 md:text-base text-sm">
-                                Kami memiliki akun media sosial dengan follower yang cukup besar untuk membantu engagment toko anda dengan, 5 curated konten feed posts (Beranda), 3 professional konten video reels, Premium copywriting (Naskah Konten Premium), Viral optimization strategy" (Pengoptimalan Strategi Viral).
-                            </div>
-                        {/if}
-                    </div>
-                </div>
-            
-                </div>
-            {/if}
-        </div>
+            ]
+        },
+        {
+            id: '5',
+            title: 'Transformasi Bisnis di Era Digital',
+            description: 'Transformasi digital telah menjadi imperatif bisnis di abad ke-21, bukan sekadar tren sementara. Kita menyaksikan bagaimana perusahaan raksasa seperti Kodak terpuruk karena gagal beradaptasi, sementara startup inovatif seperti Instagram meroket menjadi platform bernilai miliaran dolar.',
+            youtubeId: '',
+            duration: '',
+            type: 'materi',
+            thumbnail: '/transformasibisnis1.png',
+            materiContent: [
+                { url: '/transformasibisnis1.png', type: 'image' },
+                { url: '/transformasibisnis2.png', type: 'image' },
+                { url: '/transformasibisnis3.png', type: 'image' },
+                { url: '/transformasibisnis4.png', type: 'image' },
+                { url: '/transformasibisnis5.png', type: 'image' },
+                { url: '/transformasibisnis6.png', type: 'image' },
+                { url: '/transformasibisnis7.png', type: 'image' },
+                { url: '/transformasibisnis8.png', type: 'image' },
+                { url: '/transformasibisnis9.png', type: 'image' },
+                { url: '/transformasibisnis10.png', type: 'image' },
+                { url: '/transformasibisnis11.png', type: 'image' },
+                { url: '/transformasibisnis12.png', type: 'image' },
+                { url: '/transformasibisnis13.png', type: 'image' },
+                { url: '/transformasibisnis14.png', type: 'image' },
+                { url: '/transformasibisnis15.png', type: 'image' },
+                { url: '/transformasibisnis16.png', type: 'image' },
+                { url: '/transformasibisnis17.png', type: 'image' },
+                { url: '/transformasibisnis18.png', type: 'image' },
+                { url: '/transformasibisnis19.png', type: 'image' },
+                
+            ]
+        },
+        {
+            id: '6',
+            title: 'Bisnis Tradisional vs Bisnis Digital',
+            description: 'Perkembangan teknologi telah memicu transformasi fundamental dalam lanskap bisnis global.',
+            youtubeId: '',
+            duration: '',
+            type: 'materi',
+            thumbnail: '/bisnistradisional1.png',
+            materiContent: [
+                { url: '/bisnistradisional1.png', type: 'image' },
+                { url: '/bisnistradisional2.png', type: 'image' },
+                { url: '/bisnistradisional3.png', type: 'image' },
+                { url: '/bisnistradisional4.png', type: 'image' },
+                { url: '/bisnistradisional5.png', type: 'image' },
+                { url: '/bisnistradisional6.png', type: 'image' },
+                { url: '/bisnistradisional7.png', type: 'image' },
+                { url: '/bisnistradisional8.png', type: 'image' },
+                { url: '/bisnistradisional9.png', type: 'image' },
+                { url: '/bisnistradisional10.png', type: 'image' },
+                { url: '/bisnistradisional11.png', type: 'image' },
+                { url: '/bisnistradisional12.png', type: 'image' },
+                { url: '/bisnistradisional13.png', type: 'image' },
+                { url: '/bisnistradisional14.png', type: 'image' },
+                
+            ]
+        },
     
+        {
+            id: '7',
+            title: 'Perkembangan E-commerce di Indonesia',
+            description: 'E-commerce di Indonesia telah menempuh perjalanan panjang dan dinamis, mengubah cara masyarakat berbelanja dan berbisnis. Evolusi ini tidak terjadi dalam semalam, melainkan melalui beberapa fase pertumbuhan yang memiliki karakteristik unik, tantangan berbeda, dan pencapaian signifikan.',
+            youtubeId: '',
+            duration: '',
+            type: 'materi',
+            thumbnail: '/perkembanganecommerce1.png',
+            materiContent: [
+                { url: '/perkembanganecommerce1.png', type: 'image' },
+                { url: '/perkembanganecommerce2.png', type: 'image' },
+                { url: '/perkembanganecommerce3.png', type: 'image' },
+                { url: '/perkembanganecommerce4.png', type: 'image' },
+                { url: '/perkembanganecommerce5.png', type: 'image' },
+                { url: '/perkembanganecommerce6.png', type: 'image' },
+                { url: '/perkembanganecommerce7.png', type: 'image' },
+                { url: '/perkembanganecommerce8.png', type: 'image' },
+                { url: '/perkembanganecommerce9.png', type: 'image' },
+                { url: '/perkembanganecommerce10.png', type: 'image' },
+                { url: '/perkembanganecommerce11.png', type: 'image' },
+                { url: '/perkembanganecommerce12.png', type: 'image' },
+                { url: '/perkembanganecommerce13.png', type: 'image' },
+                { url: '/perkembanganecommerce14.png', type: 'image' },
+                { url: '/perkembanganecommerce15.png', type: 'image' },
+                
+                
+                
+            ]
+        },
+    //    {
+    //        id: '6',
+    //        title: 'Bisnis Aman Grosir Berkelas',
+    //        description: 'Pelajari dasar-dasar digital marketing dan strategi pemasaran online yang efektif.',
+    //        youtubeId: 'yoNpER_P_Ns',
+    //        duration: '10:30',
+    //        type: 'youtube-video'
+    //    },
+    //    {
+    //        id: '7',
+    //        title: 'Bisnis Aman Grosir Berkelas',
+    //        description: 'Pelajari dasar-dasar digital marketing dan strategi pemasaran online yang efektif.',
+    //        youtubeId: 'yoNpER_P_Ns',
+    //        duration: '10:30',
+    //        type: 'youtube-video'
+    //    },
+    //    {
+    //        id: '8',
+    //        title: 'Bisnis Aman Grosir Berkelas',
+    //        description: 'Pelajari dasar-dasar digital marketing dan strategi pemasaran online yang efektif.',
+    //        youtubeId: 'yoNpER_P_Ns',
+    //        duration: '10:30',
+    //        type: 'youtube-video'
+    //    },
+    //    
+    //    {
+    //        id: '9',
+    //        title: 'Perbedaan Member Gold dan Platinum',
+    //        description: 'Pelajari dasar-dasar digital marketing dan strategi pemasaran online yang efektif.',
+    //        videoUrl: '/lubkita-animasi.mp4',
+    //        duration: '10:30',
+    //        type: 'local-video',
+    //        thumbnail: '/paket-platinum2.png'
+    //    },
+    //    {
+    //        id: '10',
+    //        title: 'Bisnis Aman Grosir Berkelas',
+    //        description: 'Pelajari dasar-dasar digital marketing dan strategi pemasaran online yang efektif.',
+    //        youtubeId: 'yoNpER_P_Ns',
+    //        duration: '10:30',
+    //        type: 'youtube-video'
+    //    },
+    //    {
+    //        id: '11',
+    //        title: 'Cara Maksimalkan Traffic Marketing di Medsos',
+    //        description: 'Pelajari dasar-dasar digital marketing dan strategi pemasaran online yang efektif.',
+    //        youtubeId: '',
+    //        duration: '',
+    //        type: 'materi',
+    //        thumbnail: '/page-paket-gold2.jpeg',
+    //        materiContent: [
+    //            { url: '/samplevideo1.mp4', type: 'local-video' },
+    //            { url: '/samplevideo2.mp4', type: 'local-video' },
+    //            { url: '/samplegif2.gif', type: 'gif' },
+    //            { url: '/samplevideo3.mp4', type: 'local-video' },
+    //        ]
+    //    },
     
-        <div class="mt-10 p-10 py-56 text-center flex flex-col space-y-4" style="background-image: url('/page-paket-gold-mapicon2.png'); background-size: cover; background-position: center;"> 
-            <div class="md:text-5xl font-bold italic text-xl">
-                PEMASARAN EKSKLUSIF<br>BISNIS ANDA MELALUI PAKET GOLD
-            </div>
-            <div class="md:text-xl text-sm italic font-light">
-                Kembangkan jangkauan pengenalan produk anda demi kemajuan ekonomi bersama.
-            </div>
-        </div>
+        // Add more videos as needed
+    ];
     
+    let playlists: Playlist[] = [
+        {
+            name: 'Pengenalan Lubkita',
+            videoIds: ['1', '2', '3', '1']
+        }, 
+        {
+            name: 'Testimoni Seller',
+            videoIds: ['3']
+        }, 
+    ];
     
-        
-        {#if mounted}
-        <div class="bg-amber-100 md:text-4xl text-xl rounded-t-3xl font-extralight shadow-2xl shadow-slate-500 w-fit mx-auto px-10 py-5 ">Mengapa paket Gold?</div>
-            <div class="px-4">
-                <Carousel
-                    particlesToShow={width >= 768 ? 3 : 1}
-                    particlesToScroll={1}
-                    autoplay={shouldEnableCarousel()}
-                    autoplayDuration={10000}
-                    arrows={shouldEnableCarousel()}
-                    dots={shouldEnableCarousel()}
-                    let:loaded
-                >
-                    <div class="carousel-item p-4">
-                        <img 
-                            src="/page-paket-gold-keunggulan1.png" 
-                            alt="Transformasi Visual" 
-                            class="w-full h-auto object-cover rounded-lg mb-4"
-                        />
-                        <h3 class="text-xl font-bold mb-2">💫 Transformasi Visual</h3>
-                        <p class="text-gray-600">
-                            Produk lokal Anda tampil profesional dan modern dengan Template Visual Branding dan deskripsi produk yang menjual dan SEO-friendly.
-                        </p>
-                    </div>
+    let selectedPlaylist: string = playlists[0].name;
+    let currentFeaturedPage = 0;
+    let featuredVideosPerPage: number;
     
-                    <div class="carousel-item p-4">
-                        <img 
-                            src="/page-paket-gold-keunggulan2.png" 
-                            alt="Jangkauan Tanpa Batas" 
-                            class="w-full h-auto object-cover rounded-lg mb-4"
-                        />
-                        <h3 class="text-xl font-bold mb-2">🚀 Jangkauan Tanpa Batas</h3>
-                        <p class="text-gray-600">
-                            Jaringan Akses Nasional dengan sistem distribusi terintegrasi, peluang ekspansi pasar yang luas, dan koneksi dengan pembeli di seluruh Indonesia.
-                        </p>
-                    </div>
+    // Use browser-only code to check screen width
+    $: featuredVideosPerPage = typeof window !== 'undefined' && window.innerWidth < 768 ? 1 : 3;
     
-                    <div class="carousel-item p-4">
-                        <img 
-                            src="/page-paket-gold-keunggulan3.png" 
-                            alt="Keunggulan Platform" 
-                            class="w-full h-auto object-cover rounded-lg mb-4"
-                        />
-                        <h3 class="text-xl font-bold mb-2">🌐 Keunggulan Platform</h3>
-                        <p class="text-gray-600">
-                            Interface yang mudah digunakan dengan sistem pembayaran yang aman.
-                        </p>
-                    </div>
-                </Carousel>
-            </div>
-        {/if}
-    
-    
-        <div class="flex justify-center my-10">
-            <div class="flex flex-col items-center w-5/6">
-    
-                <a href="https://www.lubkita.com/landing_page/register" class="flex flex-col justify-center md:mt-10 mt-5">
-                    <button class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-8 rounded-full transform hover:scale-105 transition-all duration-200 shadow-lg uppercase tracking-wider text-lg">
-                        Daftar Membership Gold Sekarang
-                    </button>
-                </a>
-                <button 
-                    on:click={() => showPdfModal = true} 
-                    class="inline-flex items-center gap-2 bg-white border-2 border-yellow-500 text-yellow-600 hover:bg-yellow-50 px-6 py-2 rounded-full mt-6 transition-all duration-200 font-medium"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                    Lihat Panduan Membership
-                </button>
-            </div>
-        </div>
-    </div>             
-    </div>
-    
-    {#if showPdfModal}
-    <div class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-        <div class="bg-white rounded-lg w-full max-w-4xl">
-            <div class="flex justify-between items-center p-4 ">
-                <h3 class="md:text-xl text-sm font-semibold bg-yellow-200 p-2 rounded-lg">Panduan Membership Gold</h3>
-                <button 
-                    on:click={() => showPdfModal = false}
-                    class="text-gray-500 hover:text-gray-700"
-                >
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-            <div class="h-[70vh] overflow-y-auto p-4">
-                <iframe
-                    src="/panduan-membership-gold2.pdf"
-                    title="Panduan Membership PDF"
-                    class="w-full h-full"
-                ></iframe>
-            </div>
-        </div>
-    </div>
-    {/if}
-    
-    <style>
-    /* Svelte scopes styles automatically, no need for scoped attribute */
-    
-    input, textarea {
-    @apply p-3;
-    }
-    
-    :global(.carousel-item) {
-        @apply bg-amber-100;
-        border-radius: 0.0rem;
-        box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
-        height: 100%;
-        transition: transform 0.2s;
-    }
-    
-    :global(.carousel-item:hover) {
-        transform: translateY(-4px);
-    }
-    
-    /* Add styles for disabled carousel state */
-    :global(.carousel-disabled) {
-        display: flex;
-        justify-content: space-between;
-        gap: 1rem;
-    }
-    </style>
-    
-    <script lang="ts">
-    import { slide } from 'svelte/transition';
-    import Carousel from 'svelte-carousel';
-    import { onMount } from 'svelte';
-    
-    let width: number;
-    let showPdfModal = false;
-    let mounted = false;
-    
-    // Number of carousel items - update this if you change the number of items
-    const TOTAL_ITEMS = 3;
-    
-    function shouldEnableCarousel() {
-        // Enable carousel if:
-        // 1. Screen is mobile (width < 768) OR
-        // 2. Number of items is more than 3
-        return width < 768 || TOTAL_ITEMS > 3;
-    }
-    
-    onMount(() => {
-        mounted = true;
-        width = window.innerWidth;
+    // Add window resize listener
+    if (typeof window !== 'undefined') {
         window.addEventListener('resize', () => {
-            width = window.innerWidth;
+            featuredVideosPerPage = window.innerWidth < 768 ? 1 : 3;
+        });
+    }
+    
+    let selectedVideo: Video | null = null;
+    let currentPage = 1;
+    const videosPerPage = 6;
+    
+    // Add new state for carousel
+    let currentSlideIndex = 0;
+    
+    // Add these variables after the existing let declarations
+    let searchQuery = '';
+    let showFilters = false;
+    let selectedFilter = 'all'; // Can be 'all', 'video', or 'materi'
+    
+    // Add this new state variable after other let declarations
+    let hasSelectedVideo = false;
+    
+    function getVideoSource(video: Video) {
+        if (video.type === 'youtube-video' && video.youtubeId) {
+            return `https://www.youtube.com/embed/${video.youtubeId}`;
+        }
+        return video.videoUrl || '';
+    }
+    
+    function getNextVideo() {
+        const currentIndex = videos.findIndex(v => v.id === selectedVideo?.id);
+        if (currentIndex < videos.length - 1) {
+            selectedVideo = videos[currentIndex + 1];
+        }
+    }
+    
+    function getPreviousVideo() {
+        const currentIndex = videos.findIndex(v => v.id === selectedVideo?.id);
+        if (currentIndex > 0) {
+            selectedVideo = videos[currentIndex - 1];
+        }
+    }
+    
+    function nextSlide() {
+        if (selectedVideo?.materiContent) {
+            currentSlideIndex = (currentSlideIndex + 1) % selectedVideo.materiContent.length;
+            // After changing slide, play video if it's a local video
+            if (selectedVideo.materiContent[currentSlideIndex].type === 'local-video') {
+                setTimeout(() => {
+                    const videoElement = document.querySelector('video');
+                    if (videoElement) {
+                        videoElement.play();
+                    }
+                }, 0);
+            }
+        }
+    }
+    
+    function previousSlide() {
+        if (selectedVideo?.materiContent) {
+            currentSlideIndex = (currentSlideIndex - 1 + selectedVideo.materiContent.length) % selectedVideo.materiContent.length;
+        }
+    }
+    
+    // Update the filtering logic
+    $: filteredVideos = videos
+        .filter(video => {
+            const matchesSearch = video.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                video.description.toLowerCase().includes(searchQuery.toLowerCase());
+            const matchesFilter = selectedFilter === 'all' || 
+                                (selectedFilter === 'video' && (video.type === 'youtube-video' || video.type === 'local-video')) ||
+                                (selectedFilter === 'materi' && video.type === 'materi');
+            return matchesSearch && matchesFilter;
         });
     
-        return () => {
-            window.removeEventListener('resize', () => {
-                width = window.innerWidth;
-            });
-        };
-    });
+    $: paginatedVideos = filteredVideos.slice(
+        (currentPage - 1) * videosPerPage,
+        currentPage * videosPerPage
+    );
+    $: totalPages = Math.ceil(filteredVideos.length / videosPerPage);
     
-    let openStates = {
-        care: false,
-        benefit2: false,
-        benefit3: false,
-        benefit4: false,
-    
-        care2: false,
-        benefit2_2: false,
-        benefit3_2: false,
-        benefit4_2: false,
-        benefit5_2: false
-    };
-    
-    /** @param {string} key */
-    function toggleDropdown(key: keyof typeof openStates): void {
-        let currentState = false;
-        if (key === 'care') currentState = openStates.care;
-        else if (key === 'benefit2') currentState = openStates.benefit2;
-        else if (key === 'benefit3') currentState = openStates.benefit3;
-        else if (key === 'benefit4') currentState = openStates.benefit4;
-        
-        else if (key === 'care2') currentState = openStates.care2;
-        else if (key === 'benefit2_2') currentState = openStates.benefit2_2;
-        else if (key === 'benefit3_2') currentState = openStates.benefit3_2;
-        else if (key === 'benefit4_2') currentState = openStates.benefit4_2;
-    
-        openStates = {
-            care: false,
-            benefit2: false,
-            benefit3: false,
-            benefit4: false,
-            care2: false,
-            benefit2_2: false,
-            benefit3_2: false,
-            benefit4_2: false,
-            benefit5_2: false,
-            [key]: !currentState
-        };
+    function getPlaylistVideos(playlistName: string): Video[] {
+        const playlist = playlists.find(p => p.name === playlistName);
+        if (!playlist) return [];
+        return playlist.videoIds
+            .map(id => videos.find(v => v.id === id))
+            .filter((v): v is Video => v !== undefined);
     }
-
-    // Add state for toggle
-    let showOutMarketing = false;
+    
+    function nextFeaturedPage() {
+        const playlistVideos = getPlaylistVideos(selectedPlaylist);
+        const maxPages = Math.ceil(playlistVideos.length / featuredVideosPerPage) - 1;
+        currentFeaturedPage = Math.min(currentFeaturedPage + 1, maxPages);
+    }
+    
+    function previousFeaturedPage() {
+        currentFeaturedPage = Math.max(currentFeaturedPage - 1, 0);
+    }
+    
+    $: currentFeaturedVideos = getPlaylistVideos(selectedPlaylist).slice(
+        currentFeaturedPage * featuredVideosPerPage,
+        (currentFeaturedPage + 1) * featuredVideosPerPage
+    );
+    
+    $: hasNextPage = currentFeaturedVideos.length === featuredVideosPerPage &&
+        currentFeaturedPage < Math.ceil(getPlaylistVideos(selectedPlaylist).length / featuredVideosPerPage) - 1;
+    
+    $: hasPreviousPage = currentFeaturedPage > 0;
+    
+    // Add this computed property to check if there are any videos in playlists
+    $: hasPlaylistVideos = playlists.some(playlist => playlist.videoIds.length > 0);
+    
+    // Update the video selection logic to set hasSelectedVideo
+    function selectVideo(video: Video) {
+        selectedVideo = video;
+        hasSelectedVideo = true;
+    }
     </script>
+    
+    <div class="bg-red-300 flex flex-col">
+        
+        <div class=" bg-yellow-300">
+            <div class="flex flex-col relative">
+                <img 
+                    src="/page-videopelatihan-header3.png" 
+                    alt="LDR Wallpaper" 
+                    class="w-full object-cover h-[40vh] md:h-auto"
+                >
+                <div class="absolute inset-x-0 bottom-0 md:h-64 h-24 bg-gradient-to-t from-amber-200 to-transparent"></div>
+            </div>
+        </div>
+        <div class="flex w-full flex-col">
+            
+            {#if hasPlaylistVideos}
+                <div class="p-3 py-10 w-full flex flex-col bg-amber-200 space-y-4">
+                    <div class="text-center text-4xl font-bold">
+                        Featured Videos
+                    </div>
+    
+                    <div class="flex p-3 space-x-4 justify-center w-full">
+                        {#each playlists as playlist}
+                            <button 
+                                class="flex flex-col justify-center p-2 px-4 rounded-full font-semibold transition-colors {selectedPlaylist === playlist.name ? 'bg-yellow-700 text-white' : 'text-black border-4 border-yellow-400 bg-yellow-100'}"
+                                on:click={() => {
+                                    selectedPlaylist = playlist.name;
+                                    currentFeaturedPage = 0;
+                                }}
+                            >
+                                {playlist.name}
+                            </button>
+                        {/each}
+                    </div>
+    
+                    <div class="flex md:flex-row flex-col">
+                        <button 
+                            class="w-1/12 md:flex flex-col justify-center items-center text-3xl font-bold hidden
+                                transition-all duration-300
+                                {hasPreviousPage 
+                                    ? 'text-black cursor-pointer hover:scale-125 hover:text-amber-600 active:scale-95' 
+                                    : 'text-gray-400 cursor-not-allowed opacity-50'}"
+                            on:click={previousFeaturedPage}
+                            disabled={!hasPreviousPage}
+                        >
+                            ←
+                        </button>
+    
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:w-10/12 w-full mx-auto">
+                            {#each currentFeaturedVideos as video}
+                                <!-- svelte-ignore a11y_click_events_have_key_events -->
+                                <!-- svelte-ignore a11y_no_static_element_interactions -->
+                                <div 
+                                    class="bg-white flex flex-col space-y-2 cursor-pointer transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl active:scale-95 hover:bg-yellow-300"
+                                    on:click={() => selectVideo(video)}
+                                >
+                                    <div class="relative border-b-8 border-l-8 border-t-8 bg-slate-700 overflow-hidden
+                                        {video.type === 'youtube-video' || video.type === 'local-video' ? 'border-red-200' : 'border-teal-300'}">
+                                        <!-- Container with 16:9 aspect ratio -->
+                                        <div class="pb-[56.25%]">
+                                            <img 
+                                                src={video.type === 'youtube-video' 
+                                                    ? `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`
+                                                    : video.thumbnail || '/thumbnails/default-video.jpg'}
+                                                alt={video.title}
+                                                class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                                            />
+                                        </div>
+                                        <div class="absolute bottom-0 right-0 w-fit flex ml-auto rounded-tl-full px-5 md:text-xl text-base font-bold border-l-8 border-t-8 transition-colors duration-300
+                                            {video.type === 'youtube-video' || video.type === 'local-video' 
+                                                ? 'bg-red-200 border-red-200 hover:bg-red-300 hover:border-red-300' 
+                                                : 'bg-teal-300 border-teal-300 hover:bg-teal-400 hover:border-teal-400'}">
+                                            {video.type === 'youtube-video' || video.type === 'local-video' ? `Video • ${video.duration}` : 'Materi'}
+                                        </div>
+                                    </div>
+                                    <div class="p-4 transition-colors duration-300 hover:bg-yellow-300 space-y-4">
+                                        <div class="font-semibold md:text-2xl text-lg">{video.title}</div>
+                                        <div class="line-clamp-2 md:text-lg text-sm">{video.description}</div>
+                                    </div>
+                                </div>
+                            {/each}
+                        </div>
+                        <div class="flex justify-center space-x-2 mt-7 md:hidden">
+                            {#each Array(Math.ceil(getPlaylistVideos(selectedPlaylist).length / featuredVideosPerPage)) as _, index}
+                                <button 
+                                    class="w-3 h-3 rounded-full transition-all duration-300 {currentFeaturedPage === index ? 'bg-yellow-700 scale-125' : 'bg-yellow-400 hover:bg-yellow-500'}"
+                                    on:click={() => currentFeaturedPage = index}
+                                />
+                            {/each}
+                        </div>
+                        <div class="flex w-full justify-center md:hidden pt-5 space-x-4">
+                            <button 
+                            class="w-1/12 flex flex-col justify-center items-center text-3xl font-bold 
+                                transition-all duration-300
+                                {hasPreviousPage 
+                                    ? 'text-black cursor-pointer hover:scale-125 hover:text-amber-600 active:scale-95' 
+                                    : 'text-gray-400 cursor-not-allowed opacity-50'}"
+                            on:click={previousFeaturedPage}
+                            disabled={!hasPreviousPage}
+                            >
+                                ←
+                            </button>
+                            <button 
+                            class="w-1/12 flex flex-col justify-center items-center text-3xl font-bold
+                                transition-all duration-300
+                                {hasNextPage 
+                                    ? 'text-black cursor-pointer hover:scale-125 hover:text-amber-600 active:scale-95' 
+                                    : 'text-gray-400 cursor-not-allowed opacity-50'}"
+                            on:click={nextFeaturedPage}
+                            disabled={!hasNextPage}
+                            >
+                                →
+                            </button>
+                        </div>
+    
+                        <button 
+                            class="w-1/12 md:flex flex-col justify-center items-center text-3xl font-bold hidden
+                                transition-all duration-300
+                                {hasNextPage 
+                                    ? 'text-black cursor-pointer hover:scale-125 hover:text-amber-600 active:scale-95' 
+                                    : 'text-gray-400 cursor-not-allowed opacity-50'}"
+                            on:click={nextFeaturedPage}
+                            disabled={!hasNextPage}
+                        >
+                            →
+                        </button>
+                    </div>
+    
+                    <div class=" justify-center space-x-2 mt-7 md:flex hidden">
+                        {#each Array(Math.ceil(getPlaylistVideos(selectedPlaylist).length / featuredVideosPerPage)) as _, index}
+                            <button 
+                                class="w-3 h-3 rounded-full transition-all duration-300 {currentFeaturedPage === index ? 'bg-yellow-700 scale-125' : 'bg-yellow-400 hover:bg-yellow-500'}"
+                                on:click={() => currentFeaturedPage = index}
+                            />
+                        {/each}
+                    </div>
+    
+                    <!-- Add pagination dots -->
+                </div>
+            {/if}
+    
+            {#if hasSelectedVideo && selectedVideo}
+                <div class="flex bg-white {selectedVideo.type === 'youtube-video' || selectedVideo.type === 'local-video' ? 'md:flex-row md:p-16 p-5 md:space-y-0 space-y-10 md:space-x-10' : 'flex-col md:p-8 p-0 md:space-y-10 pb-10 '} flex-col">
+                    <div class="{selectedVideo.type === 'youtube-video' || selectedVideo.type === 'local-video' ? 'md:w-2/3' : 'w-full'} relative">
+                        {#if selectedVideo.type === 'youtube-video'}
+                            <div class="w-full pb-[56.25%] relative">
+                                <iframe
+                                    class="absolute top-0 left-0 w-full h-full rounded-xl"
+                                    src={getVideoSource(selectedVideo)}
+                                    title={selectedVideo.title}
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen
+                                ></iframe>
+                            </div>
+                        {:else if selectedVideo.type === 'local-video'}
+                            <div class="w-full pb-[56.25%]">
+                                <video 
+                                    class="absolute top-0 left-0 w-full h-full object-contain rounded-xl bg-black"
+                                    controls
+                                    src={getVideoSource(selectedVideo)}
+                                    autoplay
+                                >
+                                    <track kind="captions">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        {:else}
+                            <div class="flex flex-col p-4 md:p-0">
+                                <div class="w-full pb-[56.25%] relative">
+                                    {#if selectedVideo.materiContent && selectedVideo.materiContent.length > 0}
+                                    {#if selectedVideo.materiContent[currentSlideIndex].type === 'local-video'}
+                                        {#key currentSlideIndex}
+                                            <video 
+                                                transition:fade={{ duration: 300 }}
+                                                class="absolute top-0 left-0 w-full h-full object-contain rounded-xl bg-black"
+                                                controls
+                                                src={selectedVideo.materiContent[currentSlideIndex].url}
+                                                autoplay
+                                            >
+                                                <track kind="captions">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        {/key}
+                                    {:else}
+                                        {#key currentSlideIndex}
+                                            <img 
+                                                transition:fade={{ duration: 300 }}
+                                                src={selectedVideo.materiContent[currentSlideIndex].url}
+                                                alt={`Slide ${currentSlideIndex + 1}`}
+                                                class="absolute top-0 left-0 w-full h-full object-contain rounded-xl"
+                                            />
+                                        {/key}
+                                    {/if}
+                                        <!-- Desktop Carousel Controls -->
+                                        <div class="absolute inset-y-0 left-0 md:flex hidden items-center">
+                                            <button 
+                                                class="bg-black bg-opacity-50 text-white p-2 rounded-r"
+                                                on:click={previousSlide}
+                                            >
+                                                ←
+                                            </button>
+                                        </div>
+                                        <div class="absolute inset-y-0 right-0 md:flex hidden items-center">
+                                            <button 
+                                                class="bg-black bg-opacity-50 text-white p-2 rounded-l"
+                                                on:click={nextSlide}
+                                            >
+                                                →
+                                            </button>
+                                        </div>
+                                    {:else}
+                                        <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-gray-200 rounded-xl">
+                                            No content available
+                                        </div>
+                                    {/if}
+                                </div>
+                                {#if selectedVideo.materiContent && selectedVideo.materiContent.length > 0}
+                                <div class="flex justify-center space-x-2 mt-5">
+                                    {#each selectedVideo.materiContent as _, index}
+                                        <div 
+                                            class="w-2 h-2 rounded-full {index === currentSlideIndex ? 'bg-black' : 'bg-gray-400'}"
+                                        ></div>
+                                    {/each}
+                                </div>
+                            {/if}
+                                <!-- Mobile Carousel Controls moved below -->
+                                <div class="md:hidden flex justify-center space-x-3 pt-5 pb-5">
+                                    <button 
+                                        class="bg-black bg-opacity-50 text-white p-2 rounded-full px-6 hover:scale-105 transition-all duration-300"
+                                        on:click={previousSlide}
+                                    >
+                                        ←
+                                    </button>
+                                    <button 
+                                        class="bg-black bg-opacity-50 text-white p-2 rounded-full px-6 hover:scale-105 transition-all duration-300"
+                                        on:click={nextSlide}
+                                    >
+                                        →
+                                    </button>
+                                </div>
+                            </div>
+                        {/if}
+                    </div>
+    
+                    <div class="{selectedVideo.type === 'youtube-video' || selectedVideo.type === 'local-video' ? 'md:w-1/3' : 'w-full'} flex flex-col space-y-2 md:space-y-4 {selectedVideo.type === 'materi' ? 'items-center text-center px-3' : ''}">
+                        <div class="font-semibold md:text-4xl text-xl">{selectedVideo.title}</div>
+                        <div class="flex my-2 {selectedVideo.type === 'materi' ? 'justify-center' : ''}">
+                            {#if selectedVideo.type === 'youtube-video' || selectedVideo.type === 'local-video'}
+                                <div class="bg-red-100 px-2 md:text-xl text-sm">Video</div>
+                                <div class="bg-red-400 px-2 text-red-100 font-bold md:text-xl text-sm">{selectedVideo.duration}</div>
+                            {:else}
+                                <div class="bg-teal-300 px-2 md:text-xl text-base">Materi Pelatihan</div>
+                            {/if}
+                        </div>
+                        <div class="text-sm md:text-xl font-light break-words">{selectedVideo.description}</div>
+                        <div class="flex space-x-4 pt-8 {selectedVideo.type === 'materi' ? 'justify-center' : ''}">
+                            <button 
+                                class="bg-amber-400 px-4 py-2 rounded-lg font-semibold disabled:opacity-50"
+                                on:click={getPreviousVideo}
+                                disabled={videos.findIndex(v => v.id === (selectedVideo?.id ?? '')) === 0}
+                            >
+                                Video Sebelumnya
+                            </button>
+                            <button 
+                                class="bg-amber-400 px-4 py-2 rounded-lg font-semibold disabled:opacity-50"
+                                on:click={getNextVideo}
+                                disabled={videos.findIndex(v => v.id === (selectedVideo?.id ?? '')) === videos.length - 1}
+                            >
+                                Video Selanjutnya
+                            </button>
+                        </div>
+                        <!--
+                        <div class="text-xl font-semibold flex flex-col">
+                            Share video ini
+                            <div class="flex space-x-2">
+                                <button class="border-2 border-yellow-400 px-4 py-2 rounded hover:bg-yellow-400 transition-colors">
+                                    <i class="fab fa-facebook"></i>
+                                </button>
+                                <button class="border-2 border-yellow-400 px-4 py-2 rounded hover:bg-yellow-400 transition-colors">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+                                <button class="border-2 border-yellow-400 px-4 py-2 rounded hover:bg-yellow-400 transition-colors">
+                                    <i class="fab fa-whatsapp"></i>
+                                </button>
+                                <button class="border-2 border-yellow-400 px-4 py-2 rounded hover:bg-yellow-400 transition-colors">
+                                    <i class="fab fa-telegram"></i>
+                                </button>
+                            </div>
+                        </div>
+                        -->
+                    </div>
+                </div>
+            {/if}
+    
+            <div class="flex flex-col p-3 py-10 bg-yellow-100">
+                <div class="p-5">
+                    <div class="text-2xl md:text-4xl font-bold text-center">Jelajahi Materi Pelatihan Digital Kami</div>
+                </div>
+                
+                <div class="p-5 flex justify-center w-full mx-auto relative md:text-base text-sm ">
+                    <input
+                        type="text"
+                        bind:value={searchQuery}
+                        placeholder="Cari materi pelatihan..."
+                        class="rounded-l-full w-1/2 bg-white focus:outline-none focus:ring-2 focus:ring-orange-400 md:text-base text-sm"
+                    />
+                    <button 
+                        class="w-fit rounded-r-full px-5 bg-orange-400 hover:bg-orange-500 transition-colors flex flex-col justify-center items-center font-bold text-white md:text-base text-sm"
+                    >
+                        Cari
+                    </button>
+    
+    
+                    <div class="relative">
+                        <button 
+                            class="border-4 border-slate-400 w-fit md:mx-5 mx-3 md:px-0 px-2 flex bg-slate-300 rounded-2xl hover:bg-slate-400 transition-colors"
+                            on:click={() => showFilters = !showFilters}
+                        >
+    
+                            <div class="py-2 w-fit flex flex-col justify-center items-center my-auto md:px-5 px-2">
+                                <img src="/page-videopelatihan-sort-icon.png" alt="filter" class="w-6 h-auto">
+                            </div>
+                        </button>
+    
+                        {#if showFilters}
+                            <div class="absolute top-full mt-2 right-0 bg-white rounded-xl shadow-xl p-6 z-10 min-w-[250px] border-2 border-amber-200">
+                                <div class="flex flex-col space-y-4">
+                                    <div class="font-semibold text-lg border-b pb-2 text-amber-800">Filter Konten</div>
+                                    <label class="flex items-center space-x-3 cursor-pointer p-2 hover:bg-amber-50 rounded-lg transition-colors">
+                                        <input 
+                                            type="radio" 
+                                            bind:group={selectedFilter} 
+                                            value="all"
+                                            class="form-radio text-amber-500 w-5 h-5 focus:ring-amber-500"
+                                        >
+                                        <div class="flex items-center space-x-2">
+                                            <img src="/page-videopelatihan-all-icon.png" alt="all" class="w-5 h-5">
+                                            <span class="text-gray-700">Semua Konten</span>
+                                        </div>
+                                    </label>
+                                    <label class="flex items-center space-x-3 cursor-pointer p-2 hover:bg-amber-50 rounded-lg transition-colors">
+                                        <input 
+                                            type="radio" 
+                                            bind:group={selectedFilter} 
+                                            value="video"
+                                            class="form-radio text-amber-500 w-5 h-5 focus:ring-amber-500"
+                                        >
+                                        <div class="flex items-center space-x-2">
+                                            <img src="/page-videopelatihan-video-icon.png" alt="video" class="w-5 h-5">
+                                            <span class="text-gray-700">Video</span>
+                                        </div>
+                                    </label>
+                                    <label class="flex items-center space-x-3 cursor-pointer p-2 hover:bg-amber-50 rounded-lg transition-colors">
+                                        <input 
+                                            type="radio" 
+                                            bind:group={selectedFilter} 
+                                            value="materi"
+                                            class="form-radio text-amber-500 w-5 h-5 focus:ring-amber-500"
+                                        >
+                                        <div class="flex items-center space-x-2">
+                                            <img src="/page-videopelatihan-materi-icon.png" alt="materi" class="w-5 h-5">
+                                            <span class="text-gray-700">Materi</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        {/if}
+                    </div>
+                </div> 
+    
+    
+                
+                <div class="min-h-[600px]">
+                    <div class="grid grid-cols-1 md:grid-cols-1 gap-4 p-3 h-fit ">
+                        {#each paginatedVideos as video}
+                            <!-- svelte-ignore a11y_click_events_have_key_events -->
+                            <!-- svelte-ignore a11y_no_static_element_interactions -->
+                            <div 
+                                class="flex flex-col md:flex-row bg-white cursor-pointer hover:bg-yellow-200 transition-colors shadow-md "
+                                on:click={() => selectVideo(video)}
+                            > 
+                                <div class="w-full md:w-1/4">
+                                    <div class="pb-[56.25%] relative">
+                                        <img 
+                                            src={video.type === 'youtube-video' 
+                                                ? `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`
+                                                : video.thumbnail || '/thumbnails/default-video.jpg'}
+                                            alt={video.title}
+                                            class="absolute top-0 left-0 w-full h-full object-cover"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col w-full md:w-3/4 p-5 space-y-2">
+                                    <div class="font-semibold md:text-lg text-lg line-clamp-1">{video.title}</div>
+                                    {#if video.type === 'youtube-video' || video.type === 'local-video'}
+                                        <div class="flex">
+                                            <div class="bg-red-200 px-2 font-light md:text-base text-sm">Video</div>
+                                            <div class="bg-red-400 px-2 md:text-base text-sm font-bold text-red-100">{video.duration}</div>
+                                        </div>
+                                    {:else}
+                                        <div class="bg-teal-300 px-2 font-light text-lg w-fit">Materi Pelatihan</div>
+                                    {/if}
+                                    <div class="line-clamp-2 md:text-base text-sm">{video.description}</div>
+                                </div>
+                            </div>
+                        {/each}
+                    </div>
+                </div>
+    
+    
+                <div class=" bg-amber-200 flex justify-center space-x-2 rounded-2xl w-fit md:text-base text-sm mx-auto p-2 mt-10">
+                    {#each Array(totalPages) as _, i}
+                        <div 
+                            class="px-4 py-2 w-fit rounded-xl cursor-pointer font-bold {currentPage === i + 1 ? 'bg-amber-400' : ''}"
+                            on:click|preventDefault={() => {
+                                currentPage = i + 1;
+                            }}
+                        >
+                            {i + 1}
+                        </div>
+                    {/each}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <style lang="postcss">
+    input, textarea {
+        @apply p-3;
+    }
+    </style>

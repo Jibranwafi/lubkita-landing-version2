@@ -12,6 +12,7 @@ interface Video {
     materiContent?: {
         url: string;
         type: 'image' | 'gif' | 'local-video';
+        videoButtons?: boolean; // Add this new property
     }[];
 }
 
@@ -85,25 +86,25 @@ let videos: Video[] = [
         type: 'materi',
         thumbnail: '/transformasibisnis1.png',
         materiContent: [
-            { url: '/transformasibisnis1.png', type: 'image' },
-            { url: '/transformasibisnis2.png', type: 'image' },
-            { url: '/transformasibisnis3.png', type: 'image' },
-            { url: '/transformasibisnis4.png', type: 'image' },
-            { url: '/transformasibisnis5.png', type: 'image' },
-            { url: '/transformasibisnis6.png', type: 'image' },
-            { url: '/transformasibisnis7.png', type: 'image' },
-            { url: '/transformasibisnis8.png', type: 'image' },
-            { url: '/transformasibisnis9.png', type: 'image' },
-            { url: '/transformasibisnis10.png', type: 'image' },
-            { url: '/transformasibisnis11.png', type: 'image' },
-            { url: '/transformasibisnis12.png', type: 'image' },
-            { url: '/transformasibisnis13.png', type: 'image' },
-            { url: '/transformasibisnis14.png', type: 'image' },
-            { url: '/transformasibisnis15.png', type: 'image' },
-            { url: '/transformasibisnis16.png', type: 'image' },
-            { url: '/transformasibisnis17.png', type: 'image' },
-            { url: '/transformasibisnis18.png', type: 'image' },
-            { url: '/transformasibisnis19.png', type: 'image' },
+            { url: '/transformasibisnis1.mp4', type: 'local-video', videoButtons: false },
+            { url: '/transformasibisnis2.mp4', type: 'local-video', videoButtons: false },
+            { url: '/transformasibisnis3.mp4', type: 'local-video', videoButtons: false },
+            { url: '/transformasibisnis4.mp4', type: 'local-video', videoButtons: false },
+            { url: '/transformasibisnis5.mp4', type: 'local-video', videoButtons: false },
+            { url: '/transformasibisnis6.mp4', type: 'local-video', videoButtons: false },
+            { url: '/transformasibisnis7.mp4', type: 'local-video', videoButtons: false },
+            { url: '/transformasibisnis8.mp4', type: 'local-video', videoButtons: false },
+            { url: '/transformasibisnis9.mp4', type: 'local-video', videoButtons: false },
+            { url: '/transformasibisnis10.mp4', type: 'local-video', videoButtons: false },
+            { url: '/transformasibisnis11.mp4', type: 'local-video', videoButtons: false },
+            { url: '/transformasibisnis12.mp4', type: 'local-video', videoButtons: false },
+            { url: '/transformasibisnis13.mp4', type: 'local-video', videoButtons: false },
+            { url: '/transformasibisnis14.mp4', type: 'local-video', videoButtons: false },
+            { url: '/transformasibisnis15.mp4', type: 'local-video', videoButtons: false },
+            { url: '/transformasibisnis16.mp4', type: 'local-video', videoButtons: false },
+            { url: '/transformasibisnis17.mp4', type: 'local-video', videoButtons: false },
+            { url: '/transformasibisnis18.mp4', type: 'local-video', videoButtons: false },
+            { url: '/transformasibisnis19.mp4', type: 'local-video', videoButtons: false },
             
         ]
     },
@@ -116,20 +117,20 @@ let videos: Video[] = [
         type: 'materi',
         thumbnail: '/bisnistradisional1.png',
         materiContent: [
-            { url: '/bisnistradisional1.png', type: 'image' },
-            { url: '/bisnistradisional2.png', type: 'image' },
-            { url: '/bisnistradisional3.png', type: 'image' },
-            { url: '/bisnistradisional4.png', type: 'image' },
-            { url: '/bisnistradisional5.png', type: 'image' },
-            { url: '/bisnistradisional6.png', type: 'image' },
-            { url: '/bisnistradisional7.png', type: 'image' },
-            { url: '/bisnistradisional8.png', type: 'image' },
-            { url: '/bisnistradisional9.png', type: 'image' },
-            { url: '/bisnistradisional10.png', type: 'image' },
-            { url: '/bisnistradisional11.png', type: 'image' },
-            { url: '/bisnistradisional12.png', type: 'image' },
-            { url: '/bisnistradisional13.png', type: 'image' },
-            { url: '/bisnistradisional14.png', type: 'image' },
+            { url: '/bisnistradisional1.mp4', type: 'local-video', videoButtons: false},
+            { url: '/bisnistradisional2.mp4', type: 'local-video', videoButtons: false},
+            { url: '/bisnistradisional3.mp4', type: 'local-video', videoButtons: false},
+            { url: '/bisnistradisional4.mp4', type: 'local-video', videoButtons: false},
+            { url: '/bisnistradisional5.mp4', type: 'local-video', videoButtons: false},
+            { url: '/bisnistradisional6.mp4', type: 'local-video', videoButtons: false},
+            { url: '/bisnistradisional7.mp4', type: 'local-video', videoButtons: false},
+            { url: '/bisnistradisional8.mp4', type: 'local-video', videoButtons: false},
+            { url: '/bisnistradisional9.mp4', type: 'local-video', videoButtons: false},
+            { url: '/bisnistradisional10.mp4', type: 'local-video', videoButtons: false},
+            { url: '/bisnistradisional11.mp4', type: 'local-video', videoButtons: false},
+            { url: '/bisnistradisional12.mp4', type: 'local-video', videoButtons: false},
+            { url: '/bisnistradisional13.mp4', type: 'local-video', videoButtons: false},
+            { url: '/bisnistradisional14.mp4', type: 'local-video', videoButtons: false},
             
         ]
     },
@@ -227,7 +228,7 @@ let videos: Video[] = [
 let playlists: Playlist[] = [
     {
         name: 'Pengenalan Lubkita',
-        videoIds: ['1', '2', '3', '1']
+        videoIds: ['7', '2', '4', '5']
     }, 
     {
         name: 'Testimoni Seller',
@@ -275,6 +276,7 @@ function getNextVideo() {
     const currentIndex = videos.findIndex(v => v.id === selectedVideo?.id);
     if (currentIndex < videos.length - 1) {
         selectedVideo = videos[currentIndex + 1];
+        currentSlideIndex = 0; // Reset carousel when moving to next video
     }
 }
 
@@ -282,6 +284,7 @@ function getPreviousVideo() {
     const currentIndex = videos.findIndex(v => v.id === selectedVideo?.id);
     if (currentIndex > 0) {
         selectedVideo = videos[currentIndex - 1];
+        currentSlideIndex = 0; // Reset carousel when moving to previous video
     }
 }
 
@@ -354,14 +357,26 @@ $: hasPreviousPage = currentFeaturedPage > 0;
 // Add this computed property to check if there are any videos in playlists
 $: hasPlaylistVideos = playlists.some(playlist => playlist.videoIds.length > 0);
 
-// Update the video selection logic to set hasSelectedVideo
+// Update the video selection logic to include scrolling
 function selectVideo(video: Video) {
     selectedVideo = video;
     hasSelectedVideo = true;
+    currentSlideIndex = 0; // Reset carousel to first slide when selecting new video
+    
+    // Add smooth scrolling behavior
+    setTimeout(() => {
+        const videoElement = document.querySelector('#selected-video-content');
+        if (videoElement) {
+            videoElement.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }, 100);
 }
 </script>
 
-<div class="bg-red-300 flex flex-col">
+<div class="flex flex-col">
     
     <div class=" bg-yellow-300">
         <div class="flex flex-col relative">
@@ -377,14 +392,14 @@ function selectVideo(video: Video) {
         
         {#if hasPlaylistVideos}
             <div class="p-3 py-10 w-full flex flex-col bg-amber-200 space-y-4">
-                <div class="text-center text-4xl font-bold">
+                <div class="text-center md:text-4xl text-2xl font-bold">
                     Featured Videos
                 </div>
 
-                <div class="flex p-3 space-x-4 justify-center w-full">
+                <div class="flex p-3 md:space-x-4 space-x-2 justify-center w-full">
                     {#each playlists as playlist}
                         <button 
-                            class="flex flex-col justify-center p-2 px-4 rounded-full font-semibold transition-colors {selectedPlaylist === playlist.name ? 'bg-yellow-700 text-white' : 'text-black border-4 border-yellow-400 bg-yellow-100'}"
+                            class="md:text-base text-xs flex flex-col justify-center p-2 px-4 rounded-full font-semibold transition-colors {selectedPlaylist === playlist.name ? 'bg-yellow-700 text-white' : 'text-black md:border-4 border-2 border-yellow-400 bg-yellow-100 active:scale-95'}"
                             on:click={() => {
                                 selectedPlaylist = playlist.name;
                                 currentFeaturedPage = 0;
@@ -413,7 +428,7 @@ function selectVideo(video: Video) {
                             <!-- svelte-ignore a11y_click_events_have_key_events -->
                             <!-- svelte-ignore a11y_no_static_element_interactions -->
                             <div 
-                                class="bg-white flex flex-col space-y-2 cursor-pointer transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl active:scale-95 hover:bg-yellow-300"
+                                class="bg-white flex flex-col space-y-2 cursor-pointer transform transition-all duration-300 hover:scale-[1.02] active:scale-95 hover:shadow-xl hover:bg-yellow-300"
                                 on:click={() => selectVideo(video)}
                             >
                                 <div class="relative border-b-8 border-l-8 border-t-8 bg-slate-700 overflow-hidden
@@ -488,7 +503,7 @@ function selectVideo(video: Video) {
                     </button>
                 </div>
 
-                <div class=" justify-center space-x-2 mt-7 md:flex hidden">
+                <div class=" justify-center space-x-2 py-10 md:flex hidden">
                     {#each Array(Math.ceil(getPlaylistVideos(selectedPlaylist).length / featuredVideosPerPage)) as _, index}
                         <button 
                             class="w-3 h-3 rounded-full transition-all duration-300 {currentFeaturedPage === index ? 'bg-yellow-700 scale-125' : 'bg-yellow-400 hover:bg-yellow-500'}"
@@ -501,8 +516,15 @@ function selectVideo(video: Video) {
             </div>
         {/if}
 
+
+
+
+
         {#if hasSelectedVideo && selectedVideo}
-            <div class="flex bg-yellow-100 {selectedVideo.type === 'youtube-video' || selectedVideo.type === 'local-video' ? 'md:flex-row md:p-16 p-5 md:space-y-0 space-y-10 md:space-x-10' : 'flex-col md:p-8 p-0 md:space-y-10 pb-10 '} flex-col">
+            <div 
+                class="flex bg-white {selectedVideo.type === 'youtube-video' || selectedVideo.type === 'local-video' ? 'md:flex-row md:p-16 p-5 md:space-y-0 space-y-10 md:space-x-10' : 'flex-col md:p-8 p-0 md:space-y-10 pb-10 '} flex-col"
+                id="selected-video-content"
+            >
                 <div class="{selectedVideo.type === 'youtube-video' || selectedVideo.type === 'local-video' ? 'md:w-2/3' : 'w-full'} relative">
                     {#if selectedVideo.type === 'youtube-video'}
                         <div class="w-full pb-[56.25%] relative">
@@ -536,7 +558,7 @@ function selectVideo(video: Video) {
                                         <video 
                                             transition:fade={{ duration: 300 }}
                                             class="absolute top-0 left-0 w-full h-full object-contain rounded-xl bg-black"
-                                            controls
+                                            controls={selectedVideo.materiContent[currentSlideIndex].videoButtons ?? true}
                                             src={selectedVideo.materiContent[currentSlideIndex].url}
                                             autoplay
                                         >
@@ -605,9 +627,9 @@ function selectVideo(video: Video) {
                     {/if}
                 </div>
 
-                <div class="{selectedVideo.type === 'youtube-video' || selectedVideo.type === 'local-video' ? 'md:w-1/3' : 'w-full'} flex flex-col space-y-2 md:space-y-4 {selectedVideo.type === 'materi' ? 'items-center text-center px-3' : ''}">
+                <div class="{selectedVideo.type === 'youtube-video' || selectedVideo.type === 'local-video' ?  'md:w-1/3 text-center md:text-left' : 'w-full'} flex flex-col space-y-2 md:space-y-4 {selectedVideo.type === 'materi' ? 'items-center text-center px-3' : ''}">
                     <div class="font-semibold md:text-4xl text-xl">{selectedVideo.title}</div>
-                    <div class="flex my-2 {selectedVideo.type === 'materi' ? 'justify-center' : ''}">
+                    <div class="flex my-2 md:justify-start justify-center {selectedVideo.type === 'materi' ? 'justify-center' : ''}">
                         {#if selectedVideo.type === 'youtube-video' || selectedVideo.type === 'local-video'}
                             <div class="bg-red-100 px-2 md:text-xl text-sm">Video</div>
                             <div class="bg-red-400 px-2 text-red-100 font-bold md:text-xl text-sm">{selectedVideo.duration}</div>
@@ -616,16 +638,16 @@ function selectVideo(video: Video) {
                         {/if}
                     </div>
                     <div class="text-sm md:text-xl font-light break-words">{selectedVideo.description}</div>
-                    <div class="flex space-x-4 pt-8 {selectedVideo.type === 'materi' ? 'justify-center' : ''}">
+                    <div class="flex space-x-4 pt-8 md:justify-start justify-center {selectedVideo.type === 'materi' ? 'justify-center' : ''}">
                         <button 
-                            class="bg-amber-400 px-4 py-2 rounded-lg font-semibold disabled:opacity-50"
+                            class="bg-amber-400 px-4 py-2 rounded-lg font-semibold disabled:opacity-50 text-sm md:text-base"
                             on:click={getPreviousVideo}
                             disabled={videos.findIndex(v => v.id === (selectedVideo?.id ?? '')) === 0}
                         >
                             Video Sebelumnya
                         </button>
                         <button 
-                            class="bg-amber-400 px-4 py-2 rounded-lg font-semibold disabled:opacity-50"
+                            class="bg-amber-400 px-4 py-2 rounded-lg font-semibold disabled:opacity-50 text-sm md:text-base"
                             on:click={getNextVideo}
                             disabled={videos.findIndex(v => v.id === (selectedVideo?.id ?? '')) === videos.length - 1}
                         >
@@ -654,29 +676,32 @@ function selectVideo(video: Video) {
                 </div>
             </div>
         {/if}
-
-        <div class="flex flex-col p-3 py-10 bg-amber-300">
-            <div class="p-5">
+        <div class="flex flex-col py-10 bg-amber-200">
+            
+            <div class="p-5 hidden md:block">
                 <div class="text-2xl md:text-4xl font-bold text-center">Jelajahi Materi Pelatihan Digital Kami</div>
             </div>
+            <div class="p-5 block md:hidden">
+                <div class="text-2xl md:text-4xl font-bold text-center">Jelajahi Materi<br>Pelatihan Digital Kami</div>
+            </div>
             
-            <div class="bg-amber-300 p-5 flex justify-center w-full mx-auto relative md:text-base text-sm ">
+            <div class="md:p-5 flex justify-center w-full mx-auto relative md:text-base text-sm my-3 md:my-0">
                 <input
                     type="text"
                     bind:value={searchQuery}
                     placeholder="Cari materi pelatihan..."
-                    class="rounded-l-full w-1/2 bg-white focus:outline-none focus:ring-2 focus:ring-orange-400 md:text-base text-sm"
+                    class="md:rounded-l-full rounded-l-xl w-1/2 bg-white focus:outline-none focus:ring-2 focus:ring-orange-400 md:text-base text-sm border-none"
                 />
                 <button 
-                    class="w-fit rounded-r-full px-5 bg-orange-400 hover:bg-orange-500 transition-colors flex flex-col justify-center items-center font-bold text-white md:text-base text-sm"
+                    class="w-fit md:rounded-r-full rounded-r-xl md:px-5 px-3 bg-orange-400 hover:bg-orange-500 transition-colors flex flex-col justify-center items-center font-bold text-white md:text-base text-sm"
                 >
                     Cari
                 </button>
 
 
-                <div class="relative">
+                <div class="relative pl-4">
                     <button 
-                        class="border-4 border-slate-400 w-fit md:mx-5 mx-3 md:px-0 px-2 flex bg-slate-300 rounded-2xl hover:bg-slate-400 transition-colors"
+                        class="md:border-4 border-2 border-slate-400 w-fit md:mx-5 md:px-0 px-2 flex bg-slate-300 rounded-2xl hover:bg-slate-400 transition-colors"
                         on:click={() => showFilters = !showFilters}
                     >
 
@@ -733,37 +758,51 @@ function selectVideo(video: Video) {
 
 
             
-            <div class="min-h-[600px] bg-amber-300">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-3 h-fit ">
+            <div class="min-h-[600px]">
+                <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4 gap-2 p-3 h-fit">
                     {#each paginatedVideos as video}
                         <!-- svelte-ignore a11y_click_events_have_key_events -->
                         <!-- svelte-ignore a11y_no_static_element_interactions -->
                         <div 
-                            class="flex flex-col md:flex-row bg-yellow-100 cursor-pointer hover:bg-yellow-200 transition-colors"
+                            class="flex flex-row bg-yellow-50 cursor-pointer transform transition-all duration-300 hover:scale-[1.02] hover:bg-yellow-200 active:scale-95  shadow-md shadow-amber-300"
                             on:click={() => selectVideo(video)}
                         > 
-                            <div class="w-full md:w-1/2">
+                            <div class="w-full md:w-1/2 border-l-4 md:border-none {video.type === 'materi' ? 'border-teal-300' : 'border-red-200'}">
                                 <div class="pb-[56.25%] relative">
                                     <img 
                                         src={video.type === 'youtube-video' 
                                             ? `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`
                                             : video.thumbnail || '/thumbnails/default-video.jpg'}
                                         alt={video.title}
-                                        class="absolute top-0 left-0 w-full h-full object-cover"
+                                        class="absolute top-0 left-0 w-full h-full object-cover "
                                     />
+                                    <!-- Add mobile-only tag position -->
+                                    <div class="absolute bottom-0 left-0 md:hidden borde">
+                                        {#if video.type === 'youtube-video' || video.type === 'local-video'}
+                                            <div class="flex">
+                                                <div class="bg-red-200 px-2 font-light text-xs py-1">Video</div>
+                                                <div class="bg-red-400 px-2 text-xs font-bold text-red-100 py-1 rounded-tr-xl">{video.duration}</div>
+                                            </div>
+                                        {:else}
+                                            <div class="bg-teal-300 px-2 font-light text-xs w-fit py-1 rounded-tr-xl">Materi Pelatihan</div>
+                                        {/if}
+                                    </div>
                                 </div>
                             </div>
-                            <div class="flex flex-col w-full md:w-1/2 p-5 space-y-2">
-                                <div class="font-semibold md:text-2xl text-lg line-clamp-2">{video.title}</div>
-                                {#if video.type === 'youtube-video' || video.type === 'local-video'}
-                                    <div class="flex">
-                                        <div class="bg-red-200 px-2 font-light md:text-lg text-sm">Video</div>
-                                        <div class="bg-red-400 px-2 md:text-lg text-sm font-bold text-red-100">{video.duration}</div>
-                                    </div>
-                                {:else}
-                                    <div class="bg-teal-300 px-2 font-light text-lg w-fit">Materi Pelatihan</div>
-                                {/if}
-                                <div class="line-clamp-2 md:text-base text-sm">{video.description}</div>
+                            <div class="flex flex-col w-full md:w-1/2 md:px-5 px-3 p-2 md:space-y-2">
+                                <div class="font-semibold lg:text-lg md:text-sm text-xs line-clamp-2">{video.title}</div>
+                                <div class="border-t border-amber-300 md:hidden my-2"></div>
+                                <div class="hidden md:block">
+                                    {#if video.type === 'youtube-video' || video.type === 'local-video'}
+                                        <div class="flex">
+                                            <div class="bg-red-200 px-2 font-light lg:text-base md:text-xs text-xs">Video</div>
+                                            <div class="bg-red-400 px-2 lg:text-base md:text-xs text-xs font-bold text-red-100">{video.duration}</div>
+                                        </div>
+                                    {:else}
+                                        <div class="bg-teal-300 px-2 font-light lg:text-base md:text-xs text-xs w-fit">Materi Pelatihan</div>
+                                    {/if}
+                                </div>
+                                <div class="line-clamp-2 lg:text-base md:text-sm text-xs">{video.description}</div>
                             </div>
                         </div>
                     {/each}
@@ -771,10 +810,10 @@ function selectVideo(video: Video) {
             </div>
 
 
-            <div class=" bg-amber-200 flex justify-center py-5 space-x-2 rounded-3xl w-1/2 md:text-base text-sm mx-auto">
+            <div class=" bg-amber-200 flex justify-center space-x-2 rounded-2xl w-fit md:text-base text-sm mx-auto p-2 mt-10">
                 {#each Array(totalPages) as _, i}
                     <div 
-                        class="px-5 py-2 w-fit rounded-xl cursor-pointer font-bold {currentPage === i + 1 ? 'bg-amber-400' : ''}"
+                        class="px-4 py-2 w-fit rounded-xl cursor-pointer font-bold {currentPage === i + 1 ? 'bg-amber-300' : ''}"
                         on:click|preventDefault={() => {
                             currentPage = i + 1;
                         }}
