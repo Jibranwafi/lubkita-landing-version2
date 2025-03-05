@@ -32,6 +32,36 @@ let videos: Video[] = [
     },
     {
         id: '2',
+        title: 'Digitalisasi Usaha Untuk Kemajuan Desa',
+        description: 'Mengapa digitalisasi usaha penting untuk usaha kita?',
+        youtubeId: '',
+        duration: '',
+        type: 'materi',
+        thumbnail: '/digitalisasiusaha1.png',
+        materiContent: [
+            { url: '/digitalisasiusaha1.png', type: 'image' },
+            { url: '/digitalisasiusaha2.png', type: 'image' },
+            { url: '/digitalisasiusaha3.png', type: 'image' },
+            { url: '/digitalisasiusaha4.png', type: 'image' },
+            { url: '/digitalisasiusaha5.png', type: 'image' },
+            { url: '/digitalisasiusaha6.png', type: 'image' },
+            { url: '/digitalisasiusaha7.png', type: 'image' },
+            { url: '/digitalisasiusaha8.png', type: 'image' },
+            { url: '/digitalisasiusaha9.png', type: 'image' },
+            { url: '/digitalisasiusaha10.png', type: 'image' },
+            { url: '/digitalisasiusaha11.png', type: 'image' },
+            { url: '/digitalisasiusaha12.png', type: 'image' },
+            { url: '/digitalisasiusaha13.png', type: 'image' },
+            { url: '/digitalisasiusaha14.png', type: 'image' },
+            { url: '/digitalisasiusaha15.png', type: 'image' },
+            { url: '/digitalisasiusaha16.png', type: 'image' },
+            { url: '/digitalisasiusaha17.png', type: 'image' },
+            
+            
+        ]
+    },
+    {
+        id: '3',
         title: 'Bisnis Aman Grosir Berkelas',
         description: 'Dalam era di mana kepercayaan semakin menipis, terutama dalam bisnis wholesale, Lubkita hadir sebagai solusi terdepan dengan komitmen pada keamanan. Kami memahami bahwa keamanan transaksi dan pengiriman barang menjadi prioritas utama.',
         youtubeId: 'yoNpER_P_Ns',
@@ -40,7 +70,7 @@ let videos: Video[] = [
     },
 
     {
-        id: '3',
+        id: '4',
         title: 'Testimoni Seller Lubkita',
         description: 'Kami menyediakan berbagai macam produk dengan harga grosir yang sangat kompetitif. Kami bekerja sama dengan produsen langsung, sehingga Anda bisa mendapatkan harga terbaik tanpa perantara.',
         youtubeId: 'g77BMHYMSDc',
@@ -48,7 +78,7 @@ let videos: Video[] = [
         type: 'youtube-video'
     },
     {
-        id: '4',
+        id: '5',
         title: 'Pola Pembelian Digital',
         description: 'Di tengah derasnya arus perubahan teknologi yang mengubah setiap aspek kehidupan kita, transformasi digital telah menjadi lebih dari sekadar buzzword-ia adalah imperatif bisnis yang menentukan kelangsungan hidup organisasi di abad ke-21.',
         youtubeId: '',
@@ -78,7 +108,7 @@ let videos: Video[] = [
         ]
     },
     {
-        id: '5',
+        id: '6',
         title: 'Transformasi Bisnis di Era Digital',
         description: 'Transformasi digital telah menjadi imperatif bisnis di abad ke-21, bukan sekadar tren sementara. Kita menyaksikan bagaimana perusahaan raksasa seperti Kodak terpuruk karena gagal beradaptasi, sementara startup inovatif seperti Instagram meroket menjadi platform bernilai miliaran dolar.',
         youtubeId: '',
@@ -109,7 +139,7 @@ let videos: Video[] = [
         ]
     },
     {
-        id: '6',
+        id: '7',
         title: 'Bisnis Tradisional vs Bisnis Digital',
         description: 'Perkembangan teknologi telah memicu transformasi fundamental dalam lanskap bisnis global.',
         youtubeId: '',
@@ -136,7 +166,7 @@ let videos: Video[] = [
     },
 
     {
-        id: '7',
+        id: '8',
         title: 'Perkembangan E-commerce di Indonesia',
         description: 'E-commerce di Indonesia telah menempuh perjalanan panjang dan dinamis, mengubah cara masyarakat berbelanja dan berbisnis. Evolusi ini tidak terjadi dalam semalam, melainkan melalui beberapa fase pertumbuhan yang memiliki karakteristik unik, tantangan berbeda, dan pencapaian signifikan.',
         youtubeId: '',
@@ -228,7 +258,7 @@ let videos: Video[] = [
 let playlists: Playlist[] = [
     {
         name: 'Pengenalan Lubkita',
-        videoIds: ['7', '2', '4', '5']
+        videoIds: ['7', '3', '4', '5']
     }, 
     {
         name: 'Testimoni Seller',
@@ -826,10 +856,10 @@ function selectVideo(video: Video) {
     </div>
 </div>
 
-<style>
+<style lang="postcss">
     /* Remove if not using these elements */
     /* Or add input/textarea elements to your component if needed */
     input, textarea {
-        padding: 0.75rem
+        padding: 0.75rem;
     }
 </style>
