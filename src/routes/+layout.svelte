@@ -10,4 +10,4 @@
 {@render children()}
 
 
-<Footer companyName="Lumbung Artha Kita" />
+<Footer companyName="Lubkita" />
