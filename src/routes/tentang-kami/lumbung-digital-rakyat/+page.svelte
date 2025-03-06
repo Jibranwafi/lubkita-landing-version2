@@ -3,18 +3,17 @@
         class="flex flex-col w-full bg-center bg-no-repeat bg-cover h-auto min-h-[100vh]"
         style="background-image: url('/page-ldr-headerwallpaper.png');"
     >
-        <div class=" rounded-r-3xl bg-orange-600/85 my-auto md:w-1/2 w-4/5 p-5 md:p-10">
-        <div class="font-bold md:text-5xl text-3xl text-white ">LUMBUNG DIGITAL RAKYAT
-        </div>
+        <div class="rounded-r-3xl bg-orange-600/85 my-auto md:w-1/2 w-4/5 p-5 md:p-10 z-50">
+            <div class="font-bold md:text-5xl text-3xl text-white">LUMBUNG DIGITAL RAKYAT</div>
 
-        <div class="flex flex-col space-y-4 md:my-10 my-6">
-            <div class="md:text-xl text-sm font-light text-white">
-            Lumbung Digital Rakyat (LDR) Mitra sukses pengusaha desa, dalam proses digitalisasi pasar. Lumbung Digital Rakyat (LDR), kunci sukses dalam memperluas jangkauan bisnis anda di Lubkita.com, platform dikhususkan untuk mengembangkan memberdayakan ekonomi lokal dalam digitalisasi dan pelatihan.
+            <div class="flex flex-col space-y-4 md:my-10 my-6">
+                <div class="md:text-xl text-sm font-light text-white">
+                Lumbung Digital Rakyat (LDR) Mitra sukses pengusaha desa, dalam proses digitalisasi pasar. Lumbung Digital Rakyat (LDR), kunci sukses dalam memperluas jangkauan bisnis anda di Lubkita.com, platform dikhususkan untuk mengembangkan memberdayakan ekonomi lokal dalam digitalisasi dan pelatihan.
+                </div>
+                <div class="md:text-xl text-sm font-light text-white">
+                LDR memberikan dukungan teknis dan pelatihan digital, memastikan pengusaha desa dapat memanfaatkan teknologi dengan efektif untuk mengembangkan bisnis mereka.
+                </div>
             </div>
-            <div class="md:text-xl text-sm font-light text-white">
-            LDR memberikan dukungan teknis dan pelatihan digital, memastikan pengusaha desa dapat memanfaatkan teknologi dengan efektif untuk mengembangkan bisnis mereka.
-            </div>
-        </div>
         </div>
     </div>
     <div class="relative">
@@ -25,30 +24,38 @@
         <div class="bg-orange-600 p-7 flex flex-col justify-center md:w-1/5 w-full text-white md:text-4xl text-2xl font-bold md:rounded-l-3xl md:rounded-tr-none rounded-t-3xl text-left md:text-right ">
             Sebagai <span class="px-2 bg-orange-100 text-orange-600 w-fit md:ml-auto mr-auto md:mr-0">mitra LDR</span> anda akan mendapatkan berbagai keunggulan berikut:
         </div>
-        <div class="bg-orange-100 md:grid md:grid-cols-2 gap-4 md:w-4/5 w-full md:px-7 px-4 md:py-5">
+        <div class="bg-orange-50 md:grid md:grid-cols-2 gap-4 md:w-4/5 w-full md:px-7 px-4 md:py-5">
 
 
-            <div class="flex w-full  border-l-8 border-orange-400 p-4 md:space-x-8 space-x-3 rounded-xl bg-white border-y-2 border-y-orange-200 my-3 md:my-0">
-                <div class="w-1/3 flex flex-col justify-center items-center">
+            <div class="flex w-full  border-l-8 border-orange-400 p-4 md:space-x-8 space-x-3 rounded-xl bg-orange-100 border-y-2 border-y-orange-200 my-3 md:my-0">
+                <div class="w-1/3 flex-col justify-center items-center hidden md:flex">
                     <img src="/page-ldr-keunggulan-icons4.png" alt="keunggulan mitra LDR" />
                 </div>
-                <div class="flex flex-col w-2/3 my-auto space-y-3">
-                    <div class="font-bold md:text-xl text-base">Fee Bergabung</div>
+                <div class="flex flex-col md:w-2/3 my-auto space-y-3 w-full">
+                    <div class="flex space-x-3 md:hidden">
+                        <div class="font-bold md:text-xl text-xl flex flex-col justify-center w-2/3">Fee<br>Bergabung</div>    
+                        <img src="/page-ldr-keunggulan-icons4.png" alt="keunggulan mitra LDR" class="w-1/3" />
+                    </div>
+                    <div class="font-bold md:text-xl text-base hidden md:block">Fee Bergabung</div>
                     <div class="font-light md:text-base text-sm">Dapatkan fee sebesar Rp. 2.000.000 untuk setiap pengusaha atau distributor yang berhasil bergabung dengan Lubkita.com melalu jaringan anda.⁠</div>
                 </div>
             </div>
-            <div class="flex w-full  border-l-8 border-orange-400 p-4 md:space-x-8 space-x-3 rounded-xl bg-white border-y-2 border-y-orange-200 my-3 md:my-0">
-                <div class="w-1/3 flex flex-col justify-center items-center">
+            <div class="flex w-full  border-l-8 border-orange-400 p-4 md:space-x-8 space-x-3 rounded-xl bg-orange-100 border-y-2 border-y-orange-200 my-3 md:my-0">
+                <div class="w-1/3 flex-col justify-center items-center hidden md:flex">
                     <img src="/page-ldr-keunggulan-icons2.png" alt="keunggulan mitra LDR" />
                 </div>
-                <div class="flex flex-col w-2/3 my-auto space-y-3">
-                    <div class="font-bold md:text-xl text-base">Komisi Transaksi</div>
+                <div class="flex flex-col md:w-2/3 my-auto space-y-3 w-full">
+                    <div class="flex space-x-3 md:hidden">
+                        <div class="font-bold md:text-xl text-xl flex flex-col justify-center w-2/3">Komisi<br>Transaksi</div>
+                        <img src="/page-ldr-keunggulan-icons2.png" alt="keunggulan mitra LDR" class="w-1/3" />
+                    </div>
+                    <div class="font-bold md:text-xl text-base hidden md:block">Komisi Transaksi</div>
                     <div class="font-light md:text-base text-sm">Raih komisi sebesar Rp.2000 untuk setiap transaksi yang dilakukan oleh pengusaha yang anda ajak bergabung.</div>
                 </div>
             </div>
             
 
-            <div class="w-full  border-l-8 border-orange-400 p-4 md:space-x-8 space-x-3 rounded-t-xl bg-white -mb-5 relative border-t-2 border-y-orange-200 z-10 hidden md:flex">
+            <div class="w-full  border-l-8 border-orange-400 p-4 md:space-x-8 space-x-3 rounded-t-xl bg-orange-100 -mb-5 relative border-t-2 border-y-orange-200 z-10 hidden md:flex">
                 <div class="w-1/3 flex flex-col justify-center items-center">
                     <img src="/page-ldr-keunggulan-icons1.png" alt="keunggulan mitra LDR" />
                 </div>
@@ -58,12 +65,16 @@
                 </div>
             </div>
 
-            <div class="flex w-full  border-l-8 border-orange-400 p-4 md:space-x-8 space-x-3 bg-white rounded-xl border-y-2 border-y-orange-200 my-3 md:my-0">
-                <div class="w-1/3 flex flex-col justify-center items-center">
+            <div class="flex w-full  border-l-8 border-orange-400 p-4 md:space-x-8 space-x-3 bg-orange-100 rounded-xl border-y-2 border-y-orange-200 my-3 md:my-0">
+                <div class="w-1/3 flex-col justify-center items-center hidden md:flex">
                     <img src="/page-ldr-keunggulan-icons3.png" alt="keunggulan mitra LDR" />
                 </div>
-                <div class="flex flex-col w-2/3 my-auto space-y-3">
-                    <div class="font-bold md:text-xl text-base">Member Gold Lubkita.com</div>
+                <div class="flex flex-col md:w-2/3 my-auto space-y-3 w-full">
+                    <div class="flex space-x-3 md:hidden">
+                        <div class="font-bold md:text-xl text-xl flex flex-col justify-center w-2/3">Member Gold<br>Lubkita.com</div>
+                        <img src="/page-ldr-keunggulan-icons3.png" alt="keunggulan mitra LDR" class="w-1/3" />
+                    </div>
+                    <div class="font-bold md:text-xl text-base hidden md:block">Member Gold Lubkita.com</div>
                     <div class="font-light md:text-base text-sm">Nikmati fasilitas member gold Lubkita.com yang memberikan akses ke berbagai fitur dan keunggulan eksklusif.</div>
                 </div>
             </div>
@@ -74,51 +85,55 @@
 
 
 
-            <div class="grid md:grid-cols-4 grid-cols-1 w-full rounded-b-xl rounded-tr-xl bg-white col-span-2 gap-4 p-5 border-l-8 border-orange-400 relative border-y-2 border-y-orange-200 z-0 my-3 md:my-0">
+            <div class="grid md:grid-cols-4 grid-cols-1 w-full rounded-b-xl rounded-tr-xl bg-orange-100 col-span-2 gap-4 p-5 border-l-8 border-orange-400 relative border-y-2 border-y-orange-200 z-0 my-3 md:my-0">
 
 
-                <div class="flex w-full rounded-t-xl bg-white z-10 md:hidden space-x-3">
-                    <div class="w-1/3 flex flex-col justify-center items-center">
+                <div class="flex w-full rounded-t-xl bg-orange-100 z-10 md:hidden space-x-3">
+                    <div class="w-1/3 flex-col justify-center items-center hidden md:flex">
                         <img src="/page-ldr-keunggulan-icons1.png" alt="keunggulan mitra LDR" />
                     </div>
-                    <div class="flex flex-col w-2/3 my-auto space-y-3">
-                        <div class="font-bold md:text-xl text-base">Dukungan Penuh Fasilitas Pendukung</div>
+                    <div class="flex flex-col md:w-2/3 my-auto space-y-3 w-full">
+                        <div class="flex space-x-3 md:hidden">
+                            <div class="font-bold md:text-xl text-xl flex flex-col justify-center w-2/3">Dukungan<br>Fasilitas Penuh</div>
+                            <img src="/page-ldr-keunggulan-icons1.png" alt="keunggulan mitra LDR" class="w-1/3" />
+                        </div>
+                        <div class="font-bold md:text-xl text-base hidden md:block">Dukungan Penuh Fasilitas Pendukung</div>
                         <div class="font-light md:text-base text-sm">Sebagai mitra dari LDR anda akan mendapatkan dukungan fasilitas seperti:</div>
                     </div>
                 </div>
 
 
 
-                <div class="flex flex-col h-full md:border-4 border-2 border-orange-400 rounded-xl bg-red-50">
+                <div class="flex flex-col h-full md:border-t-4 md:border-r-4 border-t-2 border-r-2 shadow-sm shadow-orange-400 border-orange-400 rounded-xl">
                     <div class="flex">
-                        <div class="bg-orange-400 w-16 h-16 flex items-center justify-center p-2 rounded-tl-lg">
+                        <div class="bg-orange-400 w-16 h-16 flex items-center justify-center p-2 rounded-tl-lg rounded-br-lg">
                             <img src="/page-paket-ldr-icon-tv32.png" alt="" class="">
                         </div>
                         <div class="font-bold md:text-xl text-base pl-4 my-auto py-2">TV Monitor<br>32 Inch</div>
                     </div>
                     <div class="font-light md:text-base text-sm px-3 pb-3 md:pt-0 pt-3">untuk zoom meeting, pelatihan dan komunikasi dengan tim Lubkita.com</div>
                 </div>
-                <div class="flex flex-col h-full md:border-4 border-2 border-orange-400 rounded-xl bg-red-50">
+                <div class="flex flex-col h-full md:border-t-4 md:border-r-4 border-t-2 border-r-2 shadow-sm shadow-orange-400 border-orange-400 rounded-xl">
                     <div class="flex">
-                        <div class="bg-orange-400 w-16 h-16 flex items-center justify-center p-2 rounded-tl-lg">
+                        <div class="bg-orange-400 w-16 h-16 flex items-center justify-center p-2 rounded-tl-lg rounded-br-lg">
                             <img src="/page-paket-ldr-icon-setpc.png" alt="" class="">
                         </div>
                         <div class="font-bold md:text-xl text-base pl-4 my-auto py-2">Komputer<br>lengkap</div>
                     </div>
                     <div class="font-light md:text-base text-sm px-3 pb-3 md:pt-0 pt-3">untuk menjalankan kegiatan dropshipping dan mengelola akun Lubkita.com</div>
                 </div>
-                <div class="flex flex-col h-full md:border-4 border-2 border-orange-400 rounded-xl bg-red-50">
+                <div class="flex flex-col h-full md:border-t-4 md:border-r-4 border-t-2 border-r-2 shadow-sm shadow-orange-400 border-orange-400 rounded-xl">
                     <div class="flex">
-                        <div class="bg-orange-400 w-16 h-16 flex items-center justify-center p-2 rounded-tl-lg">
+                        <div class="bg-orange-400 w-16 h-16 flex items-center justify-center p-2 rounded-tl-lg rounded-br-lg">
                             <img src="/page-paket-ldr-icon-pelatihan.png" alt="" class="">
                         </div>
                         <div class="font-bold md:text-xl text-base pl-4 my-auto py-2">Pelatihan<br>Digital 3 hari</div>
                     </div>
                     <div class="font-light md:text-base text-sm px-3 pb-3 md:pt-0 pt-3">pelatihan intensif tentang cara menggunakan Lubkita.com menjadi seller dan mengelola bisnis online.</div>
                 </div>
-                <div class="flex flex-col h-full md:border-4 border-2 border-orange-400 rounded-xl bg-red-50">
+                <div class="flex flex-col h-full md:border-t-4 md:border-r-4 border-t-2 border-r-2 shadow-sm shadow-orange-400 border-orange-400 rounded-xl">
                     <div class="flex">
-                        <div class="bg-orange-400 w-16 h-16 flex items-center justify-center p-2 rounded-tl-lg">
+                        <div class="bg-orange-400 w-16 h-16 flex items-center justify-center p-2 rounded-tl-lg rounded-br-lg">
                             <img src="/page-paket-ldr-icon-mitralubkita.png" alt="" class="">
                         </div>
                         <div class="font-bold md:text-xl text-base pl-4 my-auto py-2">Admin<br>Pendukung</div>
