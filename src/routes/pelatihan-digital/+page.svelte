@@ -68,9 +68,45 @@ let videos: Video[] = [
         duration: '2:14',
         type: 'youtube-video'
     },
-
     {
         id: '4',
+        title: 'Cara Pengoperasian E-Commerce Lubkkita',
+        description: 'Mari kita cek bagaimana cara pengoperasian Lubkita',
+        youtubeId: '',
+        duration: '',
+        type: 'materi',
+        thumbnail: '/carapengoperasian1.png',
+        materiContent: [
+            { url: '/carapengoperasian1.png', type: 'image' },
+            { url: '/carapengoperasian2.png', type: 'image' },
+            { url: '/carapengoperasian3.png', type: 'image' },
+            { url: '/carapengoperasian4.png', type: 'image' },
+            { url: '/carapengoperasian5.png', type: 'image' },
+            { url: '/carapengoperasian6.png', type: 'image' },
+            { url: '/carapengoperasian7.png', type: 'image' },
+            { url: '/carapengoperasian8.png', type: 'image' },
+            { url: '/carapengoperasian9.png', type: 'image' },
+            { url: '/carapengoperasian10.png', type: 'image' },
+            { url: '/carapengoperasian11.png', type: 'image' },
+            { url: '/carapengoperasian12.png', type: 'image' },
+            { url: '/carapengoperasian13.png', type: 'image' },
+            { url: '/carapengoperasian14.png', type: 'image' },
+            { url: '/carapengoperasian15.png', type: 'image' },
+            { url: '/carapengoperasian16.png', type: 'image' },
+            { url: '/carapengoperasian17.png', type: 'image' },
+            { url: '/carapengoperasian18.png', type: 'image' },
+            { url: '/carapengoperasian19.png', type: 'image' },
+            { url: '/carapengoperasian20.png', type: 'image' },
+            { url: '/carapengoperasian21.png', type: 'image' },
+            { url: '/carapengoperasian22.png', type: 'image' },
+            { url: '/carapengoperasian23.png', type: 'image' },
+
+            
+            
+        ]
+    },
+    {
+        id: '5',
         title: 'Testimoni Seller Lubkita',
         description: 'Kami menyediakan berbagai macam produk dengan harga grosir yang sangat kompetitif. Kami bekerja sama dengan produsen langsung, sehingga Anda bisa mendapatkan harga terbaik tanpa perantara.',
         youtubeId: 'g77BMHYMSDc',
@@ -78,7 +114,7 @@ let videos: Video[] = [
         type: 'youtube-video'
     },
     {
-        id: '5',
+        id: '6',
         title: 'Pola Pembelian Digital',
         description: 'Di tengah derasnya arus perubahan teknologi yang mengubah setiap aspek kehidupan kita, transformasi digital telah menjadi lebih dari sekadar buzzword-ia adalah imperatif bisnis yang menentukan kelangsungan hidup organisasi di abad ke-21.',
         youtubeId: '',
@@ -108,7 +144,7 @@ let videos: Video[] = [
         ]
     },
     {
-        id: '6',
+        id: '7',
         title: 'Transformasi Bisnis di Era Digital',
         description: 'Transformasi digital telah menjadi imperatif bisnis di abad ke-21, bukan sekadar tren sementara. Kita menyaksikan bagaimana perusahaan raksasa seperti Kodak terpuruk karena gagal beradaptasi, sementara startup inovatif seperti Instagram meroket menjadi platform bernilai miliaran dolar.',
         youtubeId: '',
@@ -139,7 +175,7 @@ let videos: Video[] = [
         ]
     },
     {
-        id: '7',
+        id: '8',
         title: 'Bisnis Tradisional vs Bisnis Digital',
         description: 'Perkembangan teknologi telah memicu transformasi fundamental dalam lanskap bisnis global.',
         youtubeId: '',
@@ -166,7 +202,7 @@ let videos: Video[] = [
     },
 
     {
-        id: '8',
+        id: '9',
         title: 'Perkembangan E-commerce di Indonesia',
         description: 'E-commerce di Indonesia telah menempuh perjalanan panjang dan dinamis, mengubah cara masyarakat berbelanja dan berbisnis. Evolusi ini tidak terjadi dalam semalam, melainkan melalui beberapa fase pertumbuhan yang memiliki karakteristik unik, tantangan berbeda, dan pencapaian signifikan.',
         youtubeId: '',
@@ -189,9 +225,32 @@ let videos: Video[] = [
             { url: '/perkembanganecommerce13.png', type: 'image' },
             { url: '/perkembanganecommerce14.png', type: 'image' },
             { url: '/perkembanganecommerce15.png', type: 'image' },
-            
-            
-            
+        ]
+    },
+    {
+        id: '10',
+        title: 'Memahami Search Engine Optimization (SEO)',
+        description: 'Memahami, Menerapkan, dan Memanfaatkan Search Engine Optimization.',
+        youtubeId: '',
+        duration: '',
+        type: 'materi',
+        thumbnail: '/searchoptimization1.png',
+        materiContent: [
+            { url: '/searchoptimization1.png', type: 'image' },
+            { url: '/searchoptimization2.png', type: 'image' },
+            { url: '/searchoptimization3.png', type: 'image' },
+            { url: '/searchoptimization4.png', type: 'image' },
+            { url: '/searchoptimization5.png', type: 'image' },
+            { url: '/searchoptimization6.png', type: 'image' },
+            { url: '/searchoptimization7.png', type: 'image' },
+            { url: '/searchoptimization8.png', type: 'image' },
+            { url: '/searchoptimization9.png', type: 'image' },
+            { url: '/searchoptimization10.png', type: 'image' },
+            { url: '/searchoptimization11.png', type: 'image' },
+            { url: '/searchoptimization12.png', type: 'image' },
+            { url: '/searchoptimization13.png', type: 'image' },
+            { url: '/searchoptimization14.png', type: 'image' },
+            { url: '/searchoptimization15.png', type: 'image' },
         ]
     },
 //    {
