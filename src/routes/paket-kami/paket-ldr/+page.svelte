@@ -6,7 +6,7 @@
     <div class="flex flex-col">
         <div class="flex flex-col relative">
             <img 
-                src="/paket-ldr2.png" 
+                src="/paket-ldr3.png" 
                 alt="LDR Wallpaper" 
                 class="w-full object-cover h-[vh] md:h-auto"
             >
