@@ -253,6 +253,31 @@ let videos: Video[] = [
             { url: '/searchoptimization15.png', type: 'image' },
         ]
     },
+    {
+        id: '11',
+        title: 'Belajar Pemasaran Digital',
+        description: 'Pemasaran digital adalah cara kita mempromosikan produk atau jasa melalui internet dan perangkat digital. Bedanya dengan pemasaran biasa, kita tidak perlu memasang iklan di TV atau koran, tapi kita bisa melakukannya di internet!',
+        youtubeId: '',
+        duration: '',
+        type: 'materi',
+        thumbnail: '/belajarpemasaran1.png',
+        materiContent: [
+            { url: '/belajarpemasaran1.png', type: 'image' },
+            { url: '/belajarpemasaran2.png', type: 'image' },
+            { url: '/belajarpemasaran3.png', type: 'image' },
+            { url: '/belajarpemasaran4.png', type: 'image' },
+            { url: '/belajarpemasaran5.png', type: 'image' },
+            { url: '/belajarpemasaran6.png', type: 'image' },
+            { url: '/belajarpemasaran7.png', type: 'image' },
+            { url: '/belajarpemasaran8.png', type: 'image' },
+            { url: '/belajarpemasaran9.png', type: 'image' },
+            { url: '/belajarpemasaran10.png', type: 'image' },
+            { url: '/belajarpemasaran11.png', type: 'image' },
+            { url: '/belajarpemasaran12.png', type: 'image' },
+            { url: '/belajarpemasaran13.png', type: 'image' },
+
+        ]
+    },
 //    {
 //        id: '6',
 //        title: 'Bisnis Aman Grosir Berkelas',
