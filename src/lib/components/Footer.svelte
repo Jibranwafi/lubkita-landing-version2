@@ -21,7 +21,7 @@
         <div class="flex flex-col text-white w-1/2 md:justify-center space-y-7 justify-end">
             <div class="space-y-2 flex flex-col md:text-lg text-xs font-semibold">
                 <a href="/" class="hover:scale-110 hover:underline transition-all">Beranda</a>
-                <a href="/katalog-ldr.pdf" target="_blank" rel="noopener noreferrer" class="hover:scale-110 hover:underline transition-all">Katalog kami</a>
+                <a href="/katalog-ldr2.pdf" target="_blank" rel="noopener noreferrer" class="hover:scale-110 hover:underline transition-all">Katalog kami</a>
                 <a href="/panduan-membership-gold2.pdf" target="_blank" rel="noopener noreferrer" class="hover:scale-110 hover:underline transition-all">Panduan membership gold</a>
                 <a href="/panduan-membership-platinum.pdf" target="_blank" rel="noopener noreferrer" class="hover:scale-110 hover:underline transition-all">Panduan membership platinum</a>
                 <a href="https://lubkita.com" class="hover:scale-110 hover:underline transition-all">Lubkita.com</a>

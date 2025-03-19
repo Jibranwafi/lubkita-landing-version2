@@ -590,7 +590,7 @@
             </div>
             <div class="h-[70vh] overflow-y-auto p-4">
                 <iframe
-                    src="/lubkita-ldr.pdf"
+                    src="/katalog-ldr2.pdf"
                     title="Panduan Membership PDF"
                     class="w-full h-full"
                 ></iframe>

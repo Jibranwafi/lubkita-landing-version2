@@ -14,6 +14,7 @@ interface Video {
         type: 'image' | 'gif' | 'local-video';
         videoButtons?: boolean; // Add this new property
     }[];
+    playlist?: string; // Add this new property
 }
 
 interface Playlist {
@@ -339,18 +340,35 @@ let videos: Video[] = [
     // Add more videos as needed
 ];
 
-let playlists: Playlist[] = [
+let playlists: { name: string; videoIds: string[]; type: 'featured' | 'content' }[] = [
     {
         name: 'Pengenalan Lubkita',
-        videoIds: ['7', '3', '4', '5']
-    }, 
+        videoIds: ['7', '3', '4', '5'],
+        type: 'featured'
+    },
     {
         name: 'Testimoni Seller',
-        videoIds: ['3']
-    }, 
+        videoIds: ['3'],
+        type: 'featured'
+    },
+    {
+        name: 'Digitalisasi Usaha',
+        videoIds: ['1', '2', '3'],
+        type: 'content'
+    },
+    {
+        name: 'Materi Pelatihan',
+        videoIds: ['2', '4', '6', '9', '10', '11'],
+        type: 'content'
+    },
+    {
+        name: 'Video Tutorial',
+        videoIds: ['3', '5'],
+        type: 'content'
+    }
 ];
 
-let selectedPlaylist: string = playlists[0].name;
+let selectedPlaylist: string = playlists.find(p => p.type === 'featured')?.name || '';
 let currentFeaturedPage = 0;
 let featuredVideosPerPage: number;
 
@@ -374,7 +392,7 @@ let currentSlideIndex = 0;
 // Add these variables after the existing let declarations
 let searchQuery = '';
 let showFilters = false;
-let selectedFilter = 'all'; // Can be 'all', 'video', or 'materi'
+let selectedContentPlaylist = 'all';
 
 // Add this new state variable after other let declarations
 let hasSelectedVideo = false;
@@ -428,10 +446,11 @@ $: filteredVideos = videos
     .filter(video => {
         const matchesSearch = video.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                             video.description.toLowerCase().includes(searchQuery.toLowerCase());
-        const matchesFilter = selectedFilter === 'all' || 
-                            (selectedFilter === 'video' && (video.type === 'youtube-video' || video.type === 'local-video')) ||
-                            (selectedFilter === 'materi' && video.type === 'materi');
-        return matchesSearch && matchesFilter;
+        
+        const matchesPlaylist = selectedContentPlaylist === 'all' || 
+                              playlists.find(p => p.name === selectedContentPlaylist)?.videoIds.includes(video.id);
+        
+        return matchesSearch && matchesPlaylist;
     });
 
 $: paginatedVideos = filteredVideos.slice(
@@ -511,7 +530,7 @@ function selectVideo(video: Video) {
                 </div>
 
                 <div class="flex p-3 md:space-x-4 space-x-2 justify-center w-full">
-                    {#each playlists as playlist}
+                    {#each playlists.filter(p => p.type === 'featured') as playlist}
                         <button 
                             class="md:text-base text-xs flex flex-col justify-center p-2 px-4 rounded-full font-semibold transition-colors {selectedPlaylist === playlist.name ? 'bg-yellow-700 text-white' : 'text-black md:border-4 border-2 border-yellow-400 bg-yellow-100 active:scale-95'}"
                             on:click={() => {
@@ -825,45 +844,38 @@ function selectVideo(video: Video) {
                     </button>
 
                     {#if showFilters}
-                        <div class="absolute top-full mt-2 right-0 bg-white rounded-xl shadow-xl p-6 z-10 min-w-[250px] border-2 border-amber-200">
+                        <div class="absolute top-full mt-2 right-0 bg-white rounded-xl shadow-xl p-6 z-10 min-w-[300px] border-2 border-amber-200">
                             <div class="flex flex-col space-y-4">
-                                <div class="font-semibold text-lg border-b pb-2 text-amber-800">Filter Konten</div>
+                                <div class="font-semibold text-lg border-b pb-2 text-amber-800">Pilih Playlist</div>
+                                
                                 <label class="flex items-center space-x-3 cursor-pointer p-2 hover:bg-amber-50 rounded-lg transition-colors">
                                     <input 
                                         type="radio" 
-                                        bind:group={selectedFilter} 
+                                        bind:group={selectedContentPlaylist} 
                                         value="all"
                                         class="form-radio text-amber-500 w-5 h-5 focus:ring-amber-500"
                                     >
                                     <div class="flex items-center space-x-2">
-                                        <img src="/page-videopelatihan-all-icon.png" alt="all" class="w-5 h-5">
                                         <span class="text-gray-700">Semua Konten</span>
                                     </div>
                                 </label>
-                                <label class="flex items-center space-x-3 cursor-pointer p-2 hover:bg-amber-50 rounded-lg transition-colors">
-                                    <input 
-                                        type="radio" 
-                                        bind:group={selectedFilter} 
-                                        value="video"
-                                        class="form-radio text-amber-500 w-5 h-5 focus:ring-amber-500"
-                                    >
-                                    <div class="flex items-center space-x-2">
-                                        <img src="/page-videopelatihan-video-icon.png" alt="video" class="w-5 h-5">
-                                        <span class="text-gray-700">Video</span>
-                                    </div>
-                                </label>
-                                <label class="flex items-center space-x-3 cursor-pointer p-2 hover:bg-amber-50 rounded-lg transition-colors">
-                                    <input 
-                                        type="radio" 
-                                        bind:group={selectedFilter} 
-                                        value="materi"
-                                        class="form-radio text-amber-500 w-5 h-5 focus:ring-amber-500"
-                                    >
-                                    <div class="flex items-center space-x-2">
-                                        <img src="/page-videopelatihan-materi-icon.png" alt="materi" class="w-5 h-5">
-                                        <span class="text-gray-700">Materi</span>
-                                    </div>
-                                </label>
+                                
+                                {#each playlists.filter(p => p.type === 'content') as playlist}
+                                    <label class="flex items-center space-x-3 cursor-pointer p-2 hover:bg-amber-50 rounded-lg transition-colors">
+                                        <input 
+                                            type="radio" 
+                                            bind:group={selectedContentPlaylist} 
+                                            value={playlist.name}
+                                            class="form-radio text-amber-500 w-5 h-5 focus:ring-amber-500"
+                                        >
+                                        <div class="flex items-center space-x-2">
+                                            <span class="text-gray-700">{playlist.name}</span>
+                                            <span class="bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full">
+                                                {playlist.videoIds.length} item
+                                            </span>
+                                        </div>
+                                    </label>
+                                {/each}
                             </div>
                         </div>
                     {/if}
