@@ -358,12 +358,12 @@ let playlists: { name: string; videoIds: string[]; type: 'featured' | 'content' 
     },
     {
         name: 'Materi Pelatihan',
-        videoIds: ['2', '4', '6', '9', '10', '11'],
+        videoIds: ['2', '4', '6', '7', '8', '9', '10', '11'],
         type: 'content'
     },
     {
         name: 'Video Tutorial',
-        videoIds: ['3', '5'],
+        videoIds: ['1', '3', '5'],
         type: 'content'
     }
 ];
